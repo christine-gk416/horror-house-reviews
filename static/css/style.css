@@ -1,3 +1,154 @@
+html,
+body {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.navbar-colour {
+  background-color: #E84A4D;
+}
+
+nav .nav-wrapper {
+  width: 100%;
+}
+
+.nav-link-style {
+  color: #F5F3F4!important;
+    font-size: 22px;
+    font-family: 'Crimson text', sans-serif;
+    font-weight: 500;
+    text-shadow: 1px 1px 1px #660708;
+}
+
+a:active {
+  background-color: #161214 !important;
+}
+
+h1 {
+  font-family: 'Cinzel', sans-serif;
+  font-weight: 600;
+  color: #D3D3D3;
+  text-shadow: 1px 1px 6px black;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 1px 1px 2px black;
+  color: #F5F3F4;
+}
+
+h3 {
+    font-size: 2rem !important;
+    font-family: Arial;
+    text-shadow: 1px 1px 2px black;
+  color: #F5F3F4;
+}
+
+.card-margin {
+  margin-left: 25% !important;
+  margin-top: 10%;
+  margin-bottom: 3%;
+}
+
+.card-colour {
+  background-color: #3e4c59 !important;
+}
+
+.btn-styles {
+  background-color: #E84A4D !important;
+  border-radius: 25px  !important;
+  font-family: 'Crimson Text';
+  text-transform: capitalize  !important;
+  font-size: 22px  !important;
+  border: #F5F3F4 0.75px solid !important
+}
+
+.icon-sec-background {
+  background-color: #3e4c59 !important;
+  max-width: 100% !important;
+}
+
+.icon-styles {
+  color: #E84A4D;
+}
+
+.mobile-icon {
+  color: #161214;
+  font-size: 26px;
+}
+
+.page-footer {
+  background-color: #E84A4D !important;
+}
+
+ul li {
+  float:left;
+  display:inline;
+  padding-left: 10px;
+  font-size: 20px;
+  color: #F5F3F4;
+}
+
+a i {
+  color: #161214;
+}
+
+
+/*---Contact Form--*/
+
+.hide-form {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.form-font {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  text-transform: none;
+  color: #ffca85;
+}
+
+.label-display {
+  display: block;
+}
+
+.label-width {
+  width: 60%;
+}
+
+#close-form {
+  color: #e5e8f0;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#close-form:hover,
+#close-form:focus {
+  color: #087e8b;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.contact-pop {
+  margin: 6% auto;
+  padding: 12px;
+  border: 1px solid #888;
+  background-color: #011638;
+  width: 35%;
+}
+
 /* Custom Stylesheet */
 /**
  * Use this file to override Materialize files so you can update
@@ -13,6 +164,10 @@ nav .brand-logo {
 
 p {
   line-height: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  text-shadow: 1px 1px 2px black;
+  color: #F5F3F4;
 }
 
 .sidenav-trigger {
@@ -20,7 +175,7 @@ p {
 }
 
 .parallax-container {
-  min-height: 380px;
+  min-height: 770px;
   line-height: 0;
   height: auto;
   color: rgba(255,255,255,.9);
@@ -55,3 +210,4 @@ p {
 footer.page-footer {
   margin: 0;
 }
+
