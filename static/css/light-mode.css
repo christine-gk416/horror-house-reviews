@@ -1,11 +1,15 @@
 /* Light Mode */
 
 .navbar-colour {
-    background-color: #F5F3F4;
+    background-color: #F5F3F4 !important;
   }
 
   a:active {
     background-color: #161214 !important;
+  }
+
+  .nav-link-style {
+    color: #161214!important;
   }
   
 .card-colour {

@@ -16,7 +16,6 @@ nav .nav-wrapper {
 }
 
 .nav-link-style {
-  color: #F5F3F4!important;
     font-size: 2.0rem;
     font-family: 'Crimson text', sans-serif;
     font-weight: 500;
@@ -29,7 +28,7 @@ nav .nav-wrapper {
 }
 
 a:active {
-  background-color: #161214 !important;
+  background-color: #F07F83 !important;
 }
 
 h1 {
