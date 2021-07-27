@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% block title %}{% endblock %}</title>
+
+
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Text
+    :ital,wght@0,400;0,600;1,600&family=Open+Sans:wght@400;600&family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  <link rel="stylesheet" href="static/css/dark-mode.css" id="mode-link">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/materialize.css') }}">
+
+
+
+
+  <link rel="icon" type="image/ico" href="/static/images/favicon.ico">
+
+
+</head>
+
+
+<body>
+  <div class="navbar-fixed">
+    <nav class="navbar-colour">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="{{ url_for('index') }}" class="brand-logo">
+          <img class="logo-size logo-position" src="static/images/horror-house-logo.png"
+            alt="Horror House book reviews logo">
+        </a>
+
+        <ul class="right hide-on-med-and-down">
+
+          <li><a class="nav-link-style" href="{{ url_for('reviews') }}">Reviews</a></li>
+        </ul>
+
+        <ul id="nav-mobile" class="sidenav">
+
+          <li><a href="{{ url_for('reviews') }}">Reviews</a></li>
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+          <i class="material-icons mobile-icon">add_box</i></a>
+      </div>
+    </nav>
+  </div>  
+<div id="index-banner" class="parallax-container">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <br><br>
+      <span class="mode-button-position">
+        <i class="small material-icons btn-toggle">brightness_medium</i>
+      </span>
+             
+      <h1>{% block main_heading %}{% endblock %}</h1>
+
+
+      {% block basic_card %}
+      {% endblock %}
+
+      {% block homepage_button %}
+      {% endblock %}
+
+      <br><br>
+    </div>
+  </div>
+   
+  <div class="parallax"><img src="static/images/horror-background.jpg" alt="Unsplashed background img 1">
+  </div>
+  
+</div>
+{% block content %}    
+{% endblock %}
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <p>“I am all in a sea of wonders. I doubt; I fear; I think strange things,
+            which I dare not confess to my own soul.”
+            ― Bram Stoker, Dracula</p>
+        </div>
+
+        <div class="col l3 m6 social-links-position">
+          <ul class="footer-links">
+
+            <li>
+              <a href="https://www.facebook.com" aria-label="Facebook" target="_blank" rel="noopener">
+                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.instagram.com" aria-label="Instagram" target="_blank" rel="noopener">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.twitter.com/" aria-label="Twitter" target="_blank" rel="noopener">
+                <i class="fab fa-twitter" aria-hidden="true"></i>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
+
+        <div class="col l3 m6 contact-button-position">
+          <a id="form-btn" class="btn-large waves-effect waves-dark lighten-1 btn-styles"
+            aria-label="Open contact form">Contact Us</a>
+        </div>
+
+        <!--Hidden Contact Form-->
+
+        <div class="hide-form contact-modal" id="modal">
+
+          <div class="contact-pop">
+
+            <span id="close-form">&times;</span>
+
+            <form aria-label="Send us your comments, ideas, or feedback" id="contactForm">
+
+              <h1 class="mobile-heading form-heading">Tell us more!</h1>
+              <br>
+              <label for="name" class="form-font label-display mobile-label">Name</label>
+              <input type="text" id="name" name="from_name" class="label-width" aria-label="Name" required>
+              <br>
+              <br>
+              <label for="email" aria-label="Email Address" class="form-font label-display mobile-label">Email</label>
+              <input id="email" type="email" name="from_email" placeholder="example@email.com" class="label-width"
+                aria-label="Email Address" required>
+              <br>
+              <br>
+              <label for="enquiry" class="form-font label-display">Send us your comments, ideas, or feedback</label>
+              <br>
+              <textarea id="enquiry" name="enquiry" cols="45" rows="8" aria-label="Fill in comments in this text area"
+                required></textarea>
+              <br>
+              <br>
+              <div class="g-recaptcha" data-sitekey="6Leuc8QaAAAAAMDFGUGuXcyZTQf0DL8--7p9LQbJ"></div>
+              <br>
+              <input type="submit" value="Send" onsubmit="return sendMail(this);" class="btn btn-outline-light"
+                aria-label="Submit this form">
+            </form>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        Made by Christine GK Designs
+      </div>
+    </div>
+
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="static/js/materialize.js"></script>
+  <script src="static/js/init.js"></script>
+
+
+  <script src="static/js/contact-email.js"></script>
+  <script src="static/js/light-mode.js"></script>
+
+</body>
+
+</html>
