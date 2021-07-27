@@ -52,8 +52,8 @@ h3 {
 
 .card-margin {
   margin-left: 25% !important;
-  margin-top: 10%;
-  margin-bottom: 3%;
+  margin-top: 6%;
+  margin-bottom: 2%;
 }
 
 .btn-styles {
@@ -75,6 +75,22 @@ h3 {
   color: #161214;
   font-size: 26px;
 }
+
+/* Review Page */
+
+.review-btn{
+  font-size: 1.4rem !important;
+}
+
+.review-btn-position {
+  padding-top: 7%;
+}
+
+.review-container {
+  padding: 5%;
+}
+
+/* Footer */
 
 ul li {
   float:left;
