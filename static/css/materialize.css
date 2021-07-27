@@ -4397,7 +4397,6 @@ nav ul a {
   -webkit-transition: background-color .3s;
   transition: background-color .3s;
   font-size: 1rem;
-  color: #fff;
   display: block;
   padding: 0 15px;
   cursor: pointer;
@@ -4748,7 +4747,7 @@ small {
   transition: -webkit-box-shadow .25s;
   transition: box-shadow .25s;
   transition: box-shadow .25s, -webkit-box-shadow .25s;
-  border-radius: 2px;
+  border-radius: 20px;
 }
 
 .card .card-title {
