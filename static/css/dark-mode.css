@@ -1,0 +1,59 @@
+/* Dark Mode */
+
+.navbar-colour {
+    background-color: #E84A4D;
+  }
+  
+  .nav-link-style {
+    color: #F5F3F4!important;
+  } 
+  
+  a:active {
+    background-color: #161214 !important;
+  }
+
+  h2 {
+    color: #F5F3F4;
+    text-shadow: 1px 1px 2px black !important;
+  }
+
+  h3 {
+    color: #F5F3F4;
+    text-shadow: 1px 1px 2px black;
+  }
+  
+  p {
+    color: #F5F3F4;
+    text-shadow: 1px 1px 2px black;
+  }  
+  
+  .card-colour {
+    background-color: #3e4c59 !important;
+  }
+
+  .btn-toggle {
+    color: #F5F3F4;
+    text-shadow: 1px 1px 2px #E84A4D !important;
+  }
+
+  .btn-styles {
+    background-color: #E84A4D !important;
+    border: #F5F3F4 0.75px solid !important;
+    text-shadow: 1px 1px 2px black;
+  }
+
+  .icon-sec-background{
+  background-color: #3e4c59 !important;
+}
+
+.icon-styles {
+    color: #E84A4D;
+  }
+
+  .page-footer {
+    background-color: #E84A4D !important;
+  }
+  
+  ul li {
+    color: #F5F3F4;
+  }
