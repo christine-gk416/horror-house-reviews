@@ -32,7 +32,7 @@
     color: #660708 !important;
   }
 
-  h2 {
+  .card-title {
     color: #660708 !important;
     text-shadow: 1px 1px 1.5px gray;
   }
