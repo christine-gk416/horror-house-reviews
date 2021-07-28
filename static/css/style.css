@@ -1,3 +1,5 @@
+/* General Styles */
+
 html,
 body {
   width: 100%;
@@ -7,19 +9,8 @@ body {
   scroll-behavior: smooth;
 }
 
-.navbar-colour {
-  background-color: #E84A4D;
-}
-
 nav .nav-wrapper {
   width: 100%;
-}
-
-.nav-link-style {
-    font-size: 2.0rem;
-    font-family: 'Crimson text', sans-serif;
-    font-weight: 500;
-    text-shadow: 1px 1px 1px #660708;
 }
 
 .btn-toggle {
@@ -27,8 +18,22 @@ nav .nav-wrapper {
   position: fixed;
 }
 
+.mobile-icon {
+  color: #161214;
+  font-size: 26px;
+}
+
 a:active {
   background-color: #F07F83 !important;
+}
+
+/* Font Styles */
+
+.nav-link-style {
+    font-size: 2.0rem;
+    font-family: 'Crimson text', sans-serif;
+    font-weight: 500;
+    text-shadow: 1px 1px 1px #660708;
 }
 
 h1 {
@@ -50,10 +55,10 @@ h3 {
     color: #F5F3F4;
 }
 
-.card-margin {
-  margin-left: 25% !important;
-  margin-top: 6%;
-  margin-bottom: 2%;
+p {
+  line-height: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
 }
 
 .btn-styles {
@@ -63,17 +68,20 @@ h3 {
   font-size: 1.8rem  !important;
 }
 
+/* Home Page */
+
+.card-margin {
+  margin-left: 25% !important;
+  margin-top: 6%;
+  margin-bottom: 2%;
+}
+
 .icon-sec-background {
   max-width: 100% !important;
 }
 
 .icon-styles {
   color: #E84A4D;
-}
-
-.mobile-icon {
-  color: #161214;
-  font-size: 26px;
 }
 
 /* Review Page */
@@ -112,7 +120,7 @@ a i {
 }
 
 
-/*---Contact Form--*/
+  /* Contact Form */
 
 .hide-form {
   display: none;
@@ -164,6 +172,8 @@ a i {
   width: 35%;
 }
 
+/* Media Queries */
+
 @media only screen and (max-width : 800px) {
   h1 {
     font-size: 3.6rem !important;
@@ -186,24 +196,10 @@ a i {
 }
 }
 
-/* Custom Stylesheet */
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
+/* Materialze Custom Stylesheet */
+/*
  * Made By MaterializeCSS.com
  */
-
-nav ul a,
-nav .brand-logo {
-  color: #444;
-}
-
-p {
-  line-height: 2rem;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.4rem;
-}
 
 .parallax-container {
   min-height: 770px;
@@ -219,9 +215,10 @@ p {
   .parallax-container .section {
     position: absolute;
     top: 40%;
+    min-height: 1000px !important;
   }
   #index-banner .section {
-    top: 10%;
+    top: 5%;
   }
 }
 
@@ -241,4 +238,3 @@ p {
 footer.page-footer {
   margin: 0;
 }
-

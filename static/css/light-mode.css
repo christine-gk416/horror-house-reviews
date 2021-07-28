@@ -1,62 +1,61 @@
 /* Light Mode */
 
 .navbar-colour {
-    background-color: #F5F3F4 !important;
-  }
+  background-color: #F5F3F4 !important;
+}
 
-  a:active {
-    background-color: #161214 !important;
-  }
+a:active {
+  background-color: #161214 !important;
+}
 
-  .nav-link-style {
-    color: #161214!important;
-  }
-  
+.nav-link-style {
+  color: #161214!important;
+}
+
 .card-colour {
-    background-color: #d3d3d3!important;
-  }
+  background-color: #d3d3d3!important;
+}
 
-  .btn-toggle {
-    color: #7B8FA3;
-    text-shadow: 1px 1px 2px white!important;
-  }
+.btn-toggle {
+  color: #7B8FA3;
+  text-shadow: 1px 1px 2px white!important;
+}
 
-  .btn-styles {
-    background-color: #F07F83!important;
-    border: #161214 2px solid !important;
-    color: #161214 !important; 
-    text-shadow: 1px 1px 1px black;
-  }
+.btn-styles {
+  background-color: #F07F83!important;
+  border: #161214 2px solid !important;
+  color: #161214 !important; 
+  text-shadow: 1px 1px 1px black;
+}
 
-  .icon-sec-background{
-    background-color: #d3d3d3 !important;
-  }
+.review-container {
+  background-color: #E84A4D !important;
+}
 
-  .icon-styles {
-    color: #660708 !important;
-  }
+.icon-styles {
+  color: #660708 !important;
+}
 
-  .card-title {
-    color: #660708 !important;
-    text-shadow: 1px 1px 1.5px gray;
-  }
+.card-title {
+  color: #660708 !important;
+  text-shadow: 1px 1px 1.5px gray;
+}
 
-  h3 {
-    color: #660708 !important;
-    text-shadow: 1px 1px 1.5px gray;
-  }
+h3 {
+  color: #660708 !important;
+  text-shadow: 1px 1px 1.5px gray;
+}
 
-  p {
-    color: #161214;
-    text-shadow: 1px 1px 1px gray;
-  } 
+p {
+  color: #161214;
+  text-shadow: 1px 1px 1px gray;
+} 
 
-  p#light-mode-font {
-    color: #660708;
-  }
+p#light-mode-font {
+  color: #660708;
+}
 
-  .page-footer {
-    background-color:  #F07F83!important;
-  }
-  
-  
+.page-footer {
+  background-color:  #F07F83!important;
+}
+
