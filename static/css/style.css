@@ -61,6 +61,11 @@ p {
   font-size: 1.4rem;
 }
 
+a#login-link {
+  text-decoration: underline !important;
+  color: #F07F83 !important;
+}
+
 .btn-styles {
   
   font-family: 'Crimson Text';
@@ -97,6 +102,13 @@ p {
 .review-container {
   padding: 5%;
 }
+
+/* Login Page */
+
+.login-padding {
+  padding-top: 8%;
+}
+
 
 /* Footer */
 
