@@ -105,8 +105,12 @@ a#login-link {
 
 /* Login Page */
 
-.login-padding {
+.login-link-padding {
   padding-top: 8%;
+}
+
+.login-card-padding {
+  padding: 5%;
 }
 
 

@@ -55,7 +55,29 @@ p#light-mode-font {
   color: #660708;
 }
 
+.login-icon-light {
+  color: #660708;
+}
+
 .page-footer {
   background-color:  #F07F83!important;
+}
+
+  /* Materialize input styles for forms*/
+
+/* label color */
+.input-field label {
+  color: #161214 !important;
+}
+
+/* valid color */
+.input-field input[type=text].valid {
+  border-bottom: 1px solid #F07F83 !important;
+  box-shadow: 0 1px 0 0 #000;
+}
+
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: #F07F83 !important;
 }
 
