@@ -59,10 +59,10 @@
     <div class="container">
       <br><br>
       <span class="mode-button-position">
-        <i class="small material-icons btn-toggle">brightness_medium</i>
+        <i class="small btn-toggle material-icons">brightness_medium</i>
       </span>
              
-      <h1>{% block main_heading %}{% endblock %}</h1>
+      {% block main_heading %}{% endblock %}
 
 
       {% block parallax_content %}
@@ -88,7 +88,7 @@
             ― Bram Stoker, Dracula</p>
         </div>
 
-        <div class="col l3 m6 social-links-position">
+        <div class="social-links-position col l3 m6">
           <ul class="footer-links">
 
             <li>
@@ -114,7 +114,7 @@
 
 
         <div class="col l3 m6 contact-button-position">
-          <a id="form-btn" class="btn-large waves-effect waves-dark lighten-1 btn-styles"
+          <a id="form-btn" class="btn-large  btn-styles waves-effect waves-dark lighten-1"
             aria-label="Open contact form">Contact Us</a>
         </div>
 

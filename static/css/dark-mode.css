@@ -13,7 +13,7 @@
     text-shadow: 1px 1px 2px black;
   }
 
-  h3 {
+  h3.custom-font {
     color: #F5F3F4;
     text-shadow: 1px 1px 2px black;
   }
@@ -29,25 +29,25 @@
 
   .btn-toggle {
     color: #F5F3F4;
-    text-shadow: 1px 1px 2px #E84A4D !important;
+    text-shadow: 1px 1px 2px #E84A4D;
   }
 
-  .btn-styles {
-    background-color: #E84A4D !important;
-    border: #F5F3F4 0.75px solid !important;
+  .btn-large.btn-styles {
+    background-color: #E84A4D;
+    border: #F5F3F4 0.75px solid;
     text-shadow: 1px 1px 2px black;
   }
 
   .icon-sec-background{
-  background-color: #3e4c59 !important;
+  background-color: #3e4c59;
 }
 
 .icon-styles {
     color: #E84A4D;
   }
 
-  .page-footer {
-    background-color: #E84A4D !important;
+  footer.page-footer {
+    background-color: #E84A4D;
   }
   
   ul li {
@@ -57,17 +57,17 @@
   /* Materialize input styles for forms*/
 
 /* label color */
-.input-field label {
-  color: #F5F3F4 !important;
+form .input-field label {
+  color: #F5F3F4;
 }
 
 /* valid color */
-.input-field input[type=text].valid {
-  border-bottom: 1px solid #F07F83 !important;
+form .input-field input[type=text].valid {
+  border-bottom: 1px solid #F07F83;
   box-shadow: 0 1px 0 0 #000;
 }
 
 /* icon prefix focus color */
-.input-field .prefix.active {
-  color: #F07F83 !important;
+form .input-field .prefix.active {
+  color: #F07F83;
 }

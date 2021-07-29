@@ -3,7 +3,7 @@
 {% block title %} Sign Up | Horror House {% endblock %}
 
 {% block main_heading %}
-<h1 class="header center">Create your own account</h1>
+<h1 class="custom-font  header center">Create your own account</h1>
 {% endblock %}
 
 {% block parallax_content %}
@@ -12,42 +12,43 @@
     <div class="card large card-colour login-card-padding card-margin2">
       <div class="card-content">
 
-        <p class="center login-link-padding" id="light-mode-font">Don't have an account yet? Login 
-          <a id="login-link" href="/">here</a>.</p>
+        <p class="center login-link-padding" id="light-mode-font">Don't have an account yet? Login
+          <a id="login-link" href="/">here</a>.
+        </p>
         <form method="POST" action="{{ url_for('sign_up') }}">
           <div class="row">
-              <div class="input-field col s6">
-                  <i class="material-icons prefix login-icon-light">border_color</i>
-                <input id="first_name" type="text" class="validate">
-                <label for="first_name">First Name</label>
-              </div>
-              <div class="input-field col s6">
-                <input id="last_name" type="text" class="validate">
-                <label for="last_name">Last Name</label>
-              </div>
+            <div class="input-field col s12 l6">
+              <i class="material-icons prefix login-icon-light">border_color</i>
+              <input id="first_name" type="text" class="validate">
+              <label for="first_name">First Name</label>
+            </div>
+            <div class="input-field col s12 l6">
+              <input id="last_name" type="text" class="validate">
+              <label for="last_name">Last Name</label>
+            </div>
           </div>
-      
-        <div class="row">
-          <div class="input-field col s12">
-            <i class="material-icons prefix login-icon-light">account_box</i>
-            <input id="username" type="text" name="username" class="validate">
-            <label for="username">Username</label>
+
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix login-icon-light">account_box</i>
+              <input id="username" type="text" name="username" class="validate">
+              <label for="username">Username</label>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12">
-            <i class="material-icons prefix login-icon-light">enhanced_encryption</i>
-            <input id="password" type="password" name="password" class="validate">
-            <label for="password">Password</label>
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix login-icon-light">enhanced_encryption</i>
+              <input id="password" type="password" name="password" class="validate">
+              <label for="password">Password</label>
+            </div>
           </div>
-      </div>
-        <div class="center">
-            <button class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn" 
-            type="submit" name="action">Create account
+          <div class="center">
+            <button class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn" type="submit"
+              name="action">Create account
             </button>
-        </div>
-      </form>
-      
+          </div>
+        </form>
+
       </div>
     </div>
   </div>

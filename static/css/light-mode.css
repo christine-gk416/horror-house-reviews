@@ -14,22 +14,22 @@ nav ul a.nav-link-style {
 
 .btn-toggle {
   color: #7B8FA3;
-  text-shadow: 1px 1px 2px white!important;
+  text-shadow: 1px 1px 2px white;
 }
 
-.btn-styles {
-  background-color: #F07F83!important;
-  border: #161214 2px solid !important;
-  color: #161214 !important; 
+.btn-large.btn-styles {
+  background-color: #F07F83;
+  border: #161214 2px solid;
+  color: #161214; 
   text-shadow: 1px 1px 1px black;
 }
 
 .review-container {
-  background-color: #E84A4D !important;
+  background-color: #E84A4D;
 }
 
 .icon-styles {
-  color: #660708 !important;
+  color: #660708;
 }
 
 .home-card-title {
@@ -37,8 +37,8 @@ nav ul a.nav-link-style {
   text-shadow: 1px 1px 1.5px gray;
 }
 
-h3 {
-  color: #660708 !important;
+h3.custom-font {
+  color: #660708;
   text-shadow: 1px 1px 1.5px gray;
 }
 
@@ -55,25 +55,25 @@ p#light-mode-font {
   color: #660708;
 }
 
-.page-footer {
-  background-color:  #F07F83!important;
+footer.page-footer {
+  background-color:  #F07F83;
 }
 
   /* Materialize input styles for forms*/
 
 /* label color */
-.input-field label {
-  color: #161214 !important;
+form .input-field label {
+  color: #161214;
 }
 
 /* valid color */
-.input-field input[type=text].valid {
-  border-bottom: 1px solid #F07F83 !important;
+form .input-field input[type=text].valid {
+  border-bottom: 1px solid #F07F83;
   box-shadow: 0 1px 0 0 #000;
 }
 
 /* icon prefix focus color */
-.input-field .prefix.active {
-  color: #F07F83 !important;
+form .input-field .prefix.active {
+  color: #F07F83;
 }
 

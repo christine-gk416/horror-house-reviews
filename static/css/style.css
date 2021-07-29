@@ -53,7 +53,6 @@ h1 {
 h3.custom-font {
     font-size: 2rem;
     font-family: Arial;
-    color: #F5F3F4;
 }
 
 p {
@@ -86,10 +85,6 @@ a#login-link {
 
 .icon-sec-background {
   max-width: 100%;
-}
-
-.icon-styles {
-  color: #E84A4D;
 }
 
 /* Review Page */
@@ -199,25 +194,29 @@ a i {
 /* Media Queries */
 
 @media only screen and (max-width : 800px) {
-  h1 {
-    font-size: 3.6rem !important;
+  h1.custom-font {
+    font-size: 3.6rem;
   }
 }
 
 @media only screen and (max-width : 600px) {
-  h1 {
-    font-size: 2.8rem !important;
+  h1.custom-font {
+    font-size: 2.8rem;
   }
 
-  .card-margin {
-    margin-left: 0% !important;
-    margin-top: 5%;
-    margin-bottom: 2%;
+  .card.card-margin {
+    margin: 8% 8% 8% 8%;
 }
   
-.card-title {
-  font-size: 2.4rem !important;
+.home-card-title {
+  font-size: 2.4rem;
 }
+
+.card.login-card-padding {
+  margin: 15% 5% 5% 5%;
+  padding: 0% 5% 3% 0%;
+}
+
 }
 
 /* Materialze Custom Stylesheet */
@@ -239,7 +238,7 @@ a i {
   .parallax-container .section {
     position: absolute;
     top: 40%;
-    min-height: 1000px !important;
+    min-height: 1000px;
   }
   #index-banner .section {
     top: 5%;
