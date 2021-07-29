@@ -109,16 +109,16 @@ a#login-link {
 /* Login Page */
 
 .login-link-padding {
-  padding-top: 8%;
+  padding-bottom: 3%;
 }
 
-.login-card-padding {
-  padding: 5%;
+.card.login-card-padding {
+  margin: 3% 10% 10% 10%;
+  padding: 3% 10% 3% 10%;
 }
 
 /* Sign Up Page */
-.card-margin2 {
-  margin-left: 25% !important;
+.card.card-margin2 {
   margin-top: 2%;
 }
 

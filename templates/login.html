@@ -8,10 +8,13 @@
 
 {% block parallax_content %}
 <div class="row">
-    <form class="col s12 m12" method="POST" action="{{ url_for('login') }}">
-      <div class="card medium card-colour login-card-padding">
-        <div class="card-content">
-        
+  <div class="col s12 l12">
+    <div class="card medium card-colour login-card-padding">
+      <div class="card-content">
+        <p class="center login-link-padding" id="light-mode-font">Don't have an account yet? Sign up
+          <a id="login-link" href="/">here</a>.
+        </p>
+        <form method="POST" action="{{ url_for('login') }}">
           <div class="row">
             <div class="input-field col s12">
               <i class="material-icons prefix login-icon-light">account_box</i>
@@ -25,16 +28,16 @@
               <input id="password" type="password" name="password" class="validate">
               <label for="password">Password</label>
             </div>
-        </div>
-          <div class="center">
-              <button class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn" 
-              type="submit" name="action">Login
+          </div>  
+            <div class="center">
+              <button class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn" type="submit"
+                name="action">Login
               </button>
-          </div>
-        </div>
+            </div>
+        </form>
       </div>
-    </form>
-    <p class="center login-link-padding" id="light-mode-font">Don't have an account yet? Sign up 
-      <a id="login-link" href="/">here</a>.</p>
+    </div>
   </div>
+</div>
+
 {% endblock %}
