@@ -23,7 +23,7 @@ nav .nav-wrapper {
   font-size: 26px;
 }
 
-a:active {
+nav ul a.nav-link-style:active {
   background-color: #F07F83;
 }
 
@@ -43,14 +43,15 @@ h1 {
   text-shadow: 1px 1px 6px black;
 }
 
-.card-title {
-  font-family: Arial, Helvetica, sans-serif !important;
-  font-size: 2.8rem !important;
+.home-card-title {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 32px;
+  font-size: 2.8rem;
   padding-bottom: 3%;
 }
 
-h3 {
-    font-size: 2rem !important;
+h3.custom-font {
+    font-size: 2rem;
     font-family: Arial;
     color: #F5F3F4;
 }
@@ -62,27 +63,29 @@ p {
 }
 
 a#login-link {
-  text-decoration: underline !important;
-  color: #F07F83 !important;
+  text-decoration: underline;
+  color: #F07F83;
 }
 
-.btn-styles {
+.btn-large.btn-styles {
   
   font-family: 'Crimson Text';
-  text-transform: capitalize  !important;
-  font-size: 1.8rem  !important;
+  text-transform: capitalize;
+  font-size: 1.8rem;
 }
 
 /* Home Page */
 
-.card-margin {
-  margin-left: 25% !important;
-  margin-top: 6%;
-  margin-bottom: 2%;
+.card.card-colour {
+  border-radius: 15px;
+}
+
+.card.card-margin {
+  margin: 6% 18% 4% 18%;
 }
 
 .icon-sec-background {
-  max-width: 100% !important;
+  max-width: 100%;
 }
 
 .icon-styles {
@@ -91,8 +94,8 @@ a#login-link {
 
 /* Review Page */
 
-.review-btn{
-  font-size: 1.4rem !important;
+.btn-large.review-btn {
+  font-size: 1.4rem;
 }
 
 .review-btn-position {

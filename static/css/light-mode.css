@@ -1,19 +1,15 @@
 /* Light Mode */
 
 .navbar-colour {
-  background-color: #F5F3F4 !important;
+  background-color: #F5F3F4;
 }
 
-a:active {
-  background-color: #161214 !important;
+nav ul a.nav-link-style {
+   color: #161214;
 }
 
-.nav-link-style {
-  color: #161214!important;
-}
-
-.card-colour {
-  background-color: #d3d3d3!important;
+.card.card-colour {
+  background-color: #d3d3d3;
 }
 
 .btn-toggle {
@@ -36,8 +32,8 @@ a:active {
   color: #660708 !important;
 }
 
-.card-title {
-  color: #660708 !important;
+.home-card-title {
+  color: #660708;
   text-shadow: 1px 1px 1.5px gray;
 }
 

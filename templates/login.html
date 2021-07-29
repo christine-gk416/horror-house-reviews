@@ -8,7 +8,7 @@
 
 {% block parallax_content %}
 <div class="row">
-    <form class="col s12 m6 card-margin" method="POST" action="{{ url_for('login') }}">
+    <form class="col s12 m12" method="POST" action="{{ url_for('login') }}">
       <div class="card medium card-colour login-card-padding">
         <div class="card-content">
         
@@ -31,11 +31,10 @@
               type="submit" name="action">Login
               </button>
           </div>
-         
-          <p class="center login-link-padding" id="light-mode-font">Don't have an account yet? Sign up 
-              <a id="login-link" href="/">here</a>.</p>
         </div>
       </div>
     </form>
+    <p class="center login-link-padding" id="light-mode-font">Don't have an account yet? Sign up 
+      <a id="login-link" href="/">here</a>.</p>
   </div>
 {% endblock %}
