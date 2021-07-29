@@ -130,12 +130,12 @@ a i {
   color: #161214;
 }
 
-.social-links-position {
-  padding-left: 5% !important;
+div.social-links-position.col.l3.m6 {
+  padding-left: 5%;
 }
 
-.contact-button-position {
-  padding-top: 2% !important;
+div.col.l3.m6.contact-button-position {
+  padding-top: 2%;
 }
 
 
@@ -206,6 +206,11 @@ a i {
 
   .card.card-margin {
     margin: 8% 8% 8% 8%;
+}
+
+.card.login-card-padding {
+  margin: 0px;
+  padding: 0px;
 }
   
 .home-card-title {
