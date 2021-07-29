@@ -24,7 +24,7 @@ nav .nav-wrapper {
 }
 
 a:active {
-  background-color: #F07F83 !important;
+  background-color: #F07F83;
 }
 
 /* Font Styles */
@@ -113,6 +113,11 @@ a#login-link {
   padding: 5%;
 }
 
+/* Sign Up Page */
+.card-margin2 {
+  margin-left: 25% !important;
+  margin-top: 2%;
+}
 
 /* Footer */
 
