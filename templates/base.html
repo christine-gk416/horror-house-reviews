@@ -138,9 +138,10 @@
 
             <span id="close-form">&times;</span>
 
-            <form aria-label="Send us your comments, ideas, or feedback" id="contactForm">
+            <form aria-label="Send us your comments, ideas, or feedback" 
+              id="contactForm" class="form-padding">
 
-              <h1 class="mobile-heading form-heading">Tell us more!</h1>
+              <p class="mobile-heading form-heading">Tell us more!</p>
               <br>
               <label for="name" class="form-font label-display mobile-label">Name</label>
               <input type="text" id="name" name="from_name" class="label-width" aria-label="Name" required>
@@ -157,9 +158,8 @@
                 required></textarea>
               <br>
               <br>
-              <div class="g-recaptcha" data-sitekey="6Leuc8QaAAAAAMDFGUGuXcyZTQf0DL8--7p9LQbJ"></div>
-              <br>
-              <input type="submit" value="Send" onsubmit="return sendMail(this);" class="btn btn-outline-light"
+              <input type="submit" value="Send" onsubmit="return sendMail(this);" 
+                class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn"
                 aria-label="Submit this form">
             </form>
           </div>
@@ -187,6 +187,19 @@
 
   <script src="static/js/contact-email.js"></script>
   <script src="static/js/light-mode.js"></script>
+
+  <!--Sweet Alert-->
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+    <!--EmailJS-->
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script>(function () {
+        emailjs.init("user_a8QTjCWqE9AEZDgd6Xxqb");
+      })();
+    </script>
 
 </body>
 

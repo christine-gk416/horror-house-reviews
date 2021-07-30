@@ -141,6 +141,10 @@ div.col.l3.m6.contact-button-position {
 
   /* Contact Form */
 
+.form-padding {
+  padding: 5%;
+}
+
 .hide-form {
   display: none;
   position: fixed;
@@ -153,12 +157,21 @@ div.col.l3.m6.contact-button-position {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.form-font {
-  font-size: 16px;
-  font-family: "Poppins", sans-serif;
+.form-heading {
+  font-family: 'Cinzel', sans-serif;
   font-weight: 600;
+  color: #D3D3D3;
+  text-shadow: 1px 1px 6px black;
+  font-size: 2.8rem;
+}
+
+.form-font {
+  font-size: 1.4rem;
+  font-family: "Crimson text", sans-serif;
+  font-weight: 500;
   text-transform: none;
-  color: #ffca85;
+  color: #D3D3D3;
+  text-shadow: 1px 1px 2px black;
 }
 
 .label-display {
@@ -170,7 +183,7 @@ div.col.l3.m6.contact-button-position {
 }
 
 #close-form {
-  color: #e5e8f0;
+  color: #D3D3D3;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -178,7 +191,7 @@ div.col.l3.m6.contact-button-position {
 
 #close-form:hover,
 #close-form:focus {
-  color: #087e8b;
+  color: #3e4c59;
   text-decoration: none;
   cursor: pointer;
 }
@@ -186,10 +199,12 @@ div.col.l3.m6.contact-button-position {
 .contact-pop {
   margin: 6% auto;
   padding: 12px;
-  border: 1px solid #888;
-  background-color: #011638;
+  border: 1px solid #3e4c59;
+  background-color: #E84A4D;
   width: 35%;
 }
+
+/* Mobile Sidenav Styles */
 
 ul#nav-mobile.sidenav {
   background-color: #E84A4D;
@@ -209,6 +224,10 @@ ul#nav-mobile.sidenav {
 
   h1.custom-font {
     font-size: 3.6rem;
+  }
+
+  .contact-pop {
+    width: 60%;
   }
 }
 
@@ -233,6 +252,10 @@ ul#nav-mobile.sidenav {
 .card.login-card-padding {
   margin: 15% 5% 5% 5%;
   padding: 0% 5% 3% 0%;
+}
+
+.contact-pop {
+  width: 80%;
 }
 
 }
