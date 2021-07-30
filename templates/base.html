@@ -30,7 +30,8 @@
 
 
 <body>
-  <div class="navbar-fixed">
+
+  <div>
     <nav class="navbar-colour">
       <div class="nav-wrapper container">
         <a id="logo-container" href="{{ url_for('index') }}" class="brand-logo">
@@ -47,38 +48,49 @@
 
         <ul id="nav-mobile" class="sidenav">
 
-          <li><a href="{{ url_for('reviews') }}">Reviews</a></li>
+          <li><a class="mobile-nav-style" href="{{ url_for('reviews') }}">Reviews</a></li>
+          <li><a class="mobile-nav-style" href="{{ url_for('login') }}">Login</a></li>
+          <li><a class="mobile-nav-style" href="{{ url_for('sign_up') }}">Sign Up</a></li>
+          <br>
+          <li><a class="sidenav-close" href="#!">&times; Close</a></li>
         </ul>
+      
         <a href="#" data-target="nav-mobile" class="sidenav-trigger">
           <i class="material-icons mobile-icon">add_box</i></a>
+    
+
       </div>
+
     </nav>
-  </div>  
-<div id="index-banner" class="parallax-container">
-  <div class="section no-pad-bot">
-    <div class="container">
-      <br><br>
-      <span class="mode-button-position">
-        <i class="small btn-toggle material-icons">brightness_medium</i>
-      </span>
-             
-      {% block main_heading %}{% endblock %}
-
-
-      {% block parallax_content %}
-      
-      {% endblock %}
-
-      <br><br>
-    </div>
   </div>
-   
-  <div class="parallax"><img src="static/images/horror-background.jpg" alt="Unsplashed background img 1">
-  </div>
+
   
-</div>
-{% block content %}    
-{% endblock %}
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <span class="mode-button-position">
+          <i class="small btn-toggle material-icons">brightness_medium</i>
+        </span>
+
+        {% block main_heading %}{% endblock %}
+
+
+        {% block parallax_content %}
+
+        {% endblock %}
+
+        <br><br>
+      </div>
+    </div>
+
+    <div class="parallax"><img src="static/images/horror-background.jpg" alt="Unsplashed background img 1">
+    </div>
+
+  </div>
+  {% block content %}
+  {% endblock %}
   <footer class="page-footer">
     <div class="container">
       <div class="row">
@@ -169,8 +181,9 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="static/js/materialize.js"></script>
   <script src="static/js/init.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
+
+  <!-- Custom scripts -->
 
   <script src="static/js/contact-email.js"></script>
   <script src="static/js/light-mode.js"></script>
