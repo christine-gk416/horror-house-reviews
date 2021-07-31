@@ -130,6 +130,10 @@ a i {
   color: #161214;
 }
 
+a i:hover {
+  color: #660708
+}
+
 div.social-links-position.col.l3.m6 {
   padding-left: 5%;
 }
