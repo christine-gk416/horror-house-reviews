@@ -70,12 +70,15 @@
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <span class="mode-button-position">
-          <i class="small btn-toggle material-icons tooltipped" 
-          tabindex="0" role="tooltip" data-position="bottom" 
-          data-tooltip="Click to toggle dark/light mode">
-            brightness_medium</i>
-        </span>
+        
+          <div class="card btn-toggle">
+            <div class="card-content toggle-card">
+            <i class="small  material-icons tooltipped" tabindex="0" role="tooltip" data-position="bottom"
+              data-tooltip="Click to toggle dark/light mode">
+              brightness_medium</i>
+          </div>
+        </div>
+       
 
         {% block main_heading %}{% endblock %}
 
