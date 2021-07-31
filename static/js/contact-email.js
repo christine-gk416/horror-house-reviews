@@ -19,6 +19,15 @@ window.addEventListener("load", () => {
     modal.style.display = "block";
   };
 
+  //Open form if button is hightlighted by keyboard tabs by pressing Enter
+
+  formBtn.addEventListener("keyup", function (event) {
+    event.preventDefault();
+    if (event.key === "Enter") {
+      document.getElementById("form-btn").click();
+    }
+  });
+
   // Form and modal close when <span> element is clicked on
   closeForm.onclick = function () {
     modal.style.display = "none";
@@ -31,7 +40,9 @@ window.addEventListener("load", () => {
       modal.style.display = "none";
     }
   };
-//Default EmailJS
+
+
+  //Default EmailJS
 
   // Actions to take when the contact form is submitted
 
@@ -46,8 +57,8 @@ window.addEventListener("load", () => {
     emailjs.sendForm("gmail", "horror_house", this)
 
 
-    //Sweet Alert
-    
+      //Sweet Alert
+
       // Show Sweet Alert pop-up and post-submit message
 
       .then(function () {
