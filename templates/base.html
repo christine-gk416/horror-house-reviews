@@ -71,7 +71,10 @@
       <div class="container">
         <br><br>
         <span class="mode-button-position">
-          <i class="small btn-toggle material-icons">brightness_medium</i>
+          <i class="small btn-toggle material-icons tooltipped" 
+          tabindex="0" role="tooltip" data-position="bottom" 
+          data-tooltip="Click to toggle dark/light mode">
+            brightness_medium</i>
         </span>
 
         {% block main_heading %}{% endblock %}
@@ -105,19 +108,19 @@
 
             <li>
               <a href="https://www.facebook.com" aria-label="Facebook" target="_blank" rel="noopener">
-                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                <i class="fab fa-facebook-f" aria-hidden="true" tabindex="0"></i>
               </a>
             </li>
 
             <li>
               <a href="https://www.instagram.com" aria-label="Instagram" target="_blank" rel="noopener">
-                <i class="fab fa-instagram" aria-hidden="true"></i>
+                <i class="fab fa-instagram" aria-hidden="true" tabindex="0"></i>
               </a>
             </li>
 
             <li>
               <a href="https://www.twitter.com/" aria-label="Twitter" target="_blank" rel="noopener">
-                <i class="fab fa-twitter" aria-hidden="true"></i>
+                <i class="fab fa-twitter" aria-hidden="true" tabindex="0"></i>
               </a>
             </li>
 
@@ -127,7 +130,7 @@
 
         <div class="col l3 m6 contact-button-position">
           <a id="form-btn" class="btn-large  btn-styles waves-effect waves-dark lighten-1"
-            aria-label="Open contact form">Contact Us</a>
+            aria-label="Open contact form" tabindex="0" role="form">Contact Us</a>
         </div>
 
         <!--Hidden Contact Form-->
@@ -136,7 +139,7 @@
 
           <div class="contact-pop">
 
-            <span id="close-form">&times;</span>
+            <span id="close-form" tabindex="0" role="button">&times;</span>
 
             <form aria-label="Send us your comments, ideas, or feedback" 
               id="contactForm" class="form-padding">
