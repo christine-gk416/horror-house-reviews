@@ -18,6 +18,7 @@ nav .nav-wrapper {
   margin-left: 70%;
   z-index: 2;
   background-color: #E84A4D;
+  cursor: pointer;
 }
 
 div.card-content.toggle-card {
@@ -30,6 +31,11 @@ div.card-content.toggle-card {
 }
 
 nav ul a.nav-link-style:active {
+  background-color: #F07F83;
+}
+
+nav ul a.active {
+  text-decoration: underline;
   background-color: #F07F83;
 }
 
