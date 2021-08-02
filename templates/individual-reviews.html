@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% block title %} {{books.title}} | Horror House {% endblock %}
 
 {% block content %}
 
@@ -7,18 +8,24 @@
     <nav>
         <div class="nav-wrapper">
           <div class="col l12">
-            <a href="#!" class="breadcrumb">First</a>
-            <a href="#!" class="breadcrumb">Second</a>
+            <a href="{{ url_for('reviews') }}" class="breadcrumb">First</a>
+            <a href="{{ url_for('individual', books_id=books._id) }}" class="breadcrumb">Second</a>
           </div>
         </div>
       </nav>
-    <div class="col l12">
+    <div class="col l3">
       <img src={{books.image}}>
+    </div>
+    <div class="col l9">
         <div class="center">
             <h3>{{books.title}} by {{books.author}}</h3>
-            <p>Review</p>
+            <p>{{books.review}}</p>
+            <a href="{{books.affiliate}}" target="_blank"
+                class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn">
+                Buy here
+            </a>
         </div>
-
-    </div>
+    </div>    
+    
 </div>
 {% endblock %}
