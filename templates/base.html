@@ -16,8 +16,7 @@
     :ital,wght@0,400;0,600;1,600&family=Open+Sans:wght@400;600&family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
     integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-  <link rel="stylesheet" href="static/css/dark-mode.css" id="mode-link">
- 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dark-mode.css') }}" id="mode-link">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
@@ -186,19 +185,19 @@
 
 
   <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
 
     <!--Sweet Alert-->
 
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" type="text/javascript"></script>
 
 
   <!-- Custom scripts -->
 
-  <script src="{{ url_for('static', filename='js/light-mode.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/contact-email.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/materialize.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/init.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/light-mode.js') }}" type="text/javascript"></script>
+  <script src="{{ url_for('static', filename='js/contact-email.js') }}" type="text/javascript"></script>
+  <script src="{{ url_for('static', filename='js/materialize.js') }}" type="text/javascript"></script>
+  <script src="{{ url_for('static', filename='js/init.js') }}" type="text/javascript"></script>
 
 
   {% block splide_js %}
@@ -206,8 +205,8 @@
 
 
     <!--EmailJS-->
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-    <script>(function () {
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js" type="text/javascript"></script>
+    <script type="text/javascript">(function () {
         emailjs.init("user_a8QTjCWqE9AEZDgd6Xxqb");
       })();
     </script>
