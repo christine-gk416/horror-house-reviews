@@ -27,7 +27,7 @@
             </p>
             <br>
             <div class="center review-btn-position">
-              <a href="{{ url_for('individual') }}" id="download-button"
+              <a href="#" 
                 class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn">
                 Read more
               </a>
@@ -71,7 +71,7 @@
               by {{books.author}}
             </p>
             <div class="center review-btn-position">
-              <a href="/" id="download-button"
+              <a href="{{ url_for('individual', books_id=books._id) }}"
                 class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn">
                 Read more
               </a>

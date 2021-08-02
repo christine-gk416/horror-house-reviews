@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
     integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
   <link rel="stylesheet" href="static/css/dark-mode.css" id="mode-link">
+ 
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
@@ -35,7 +36,7 @@
     <nav class="navbar-colour">
       <div class="nav-wrapper container">
         <a id="logo-container" href="{{ url_for('index') }}" class="brand-logo">
-          <img class="logo-size logo-position" src="static/images/horror-house-logo.png"
+          <img class="logo-size logo-position" src="{{url_for('static', filename='images/horror-house-logo.png')}}"
             alt="Horror House book reviews logo">
         </a>
 
@@ -91,7 +92,8 @@
       </div>
     </div>
 
-    <div class="parallax"><img src="static/images/horror-background.jpg" alt="Unsplashed background img 1">
+    <div class="parallax"><img src="{{url_for('static', filename='images/horror-background.jpg')}}" 
+      alt="Background image of books, candle, potion, and skull">
     </div>
 
   </div>
@@ -185,25 +187,25 @@
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="static/js/materialize.js"></script>
-  <script src="static/js/init.js"></script>
+
+    <!--Sweet Alert-->
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 
   <!-- Custom scripts -->
 
-  <script src="static/js/contact-email.js"></script>
-  <script src="static/js/light-mode.js"></script>
+  <script src="{{ url_for('static', filename='js/light-mode.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/contact-email.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/materialize.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/init.js') }}"></script>
+
 
   {% block splide_js %}
   {% endblock %}
 
-  <!--Sweet Alert-->
-
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
 
     <!--EmailJS-->
-
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script>(function () {
         emailjs.init("user_a8QTjCWqE9AEZDgd6Xxqb");
