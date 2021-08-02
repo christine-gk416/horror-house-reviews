@@ -32,6 +32,11 @@ def reviews():
     return render_template("book-reviews.html", featured=featured, books=books)
 
 
+@app.route("/individual-reviews")
+def individual():
+    return render_template("individual-reviews.html")
+
+
 @app.route("/login")
 def login():
     return render_template("login.html")

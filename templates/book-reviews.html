@@ -27,7 +27,7 @@
             </p>
             <br>
             <div class="center review-btn-position">
-              <a href="/" id="download-button"
+              <a href="{{ url_for('individual') }}" id="download-button"
                 class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn">
                 Read more
               </a>
@@ -55,7 +55,7 @@
 <div class="icon-sec-background">
   <div class="review-container">
 
-    <h2>Read and create reviews</h2>
+    <h2 class="center">Read and create reviews</h2>
     <div class="row">
       {% for books in books %}
       <div class="col s12 m6 l6 xl3">

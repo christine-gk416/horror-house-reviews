@@ -46,6 +46,10 @@
     color: #E84A4D;
   }
 
+ .individual-review-background {
+    background-color: #3e4c59 !important;
+  }
+
   footer.page-footer {
     background-color: #E84A4D;
   }
