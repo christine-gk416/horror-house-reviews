@@ -3,7 +3,7 @@
 
 
 {% block main_heading %}
-        <h1 class="custom-font header center">Featured Titles</h1>
+<h1 class="custom-font header center">Featured Titles</h1>
 {% endblock %}
 
 
@@ -11,38 +11,38 @@
 
 
 <div class="splide">
-	<div class="splide__track">
-		<ul class="splide__list">
+  <div class="splide__track">
+    <ul class="splide__list">
       {% for featured in featured %}
-			<li class="splide__slide">
+      <li class="splide__slide">
         <div class="card large card-colour">
           <div class="card-image">
-            <img src="{{featured.image}}">
-            
+            <img src={{featured.image}}>
+
           </div>
           <div class="card-content center">
-            <p>{{featured.title}}
-                <br>
-                by {{featured.author}}
+            <p class="mobile-review-card">{{featured.title}}
+              <br>
+              by {{featured.author}}
             </p>
             <br>
             <div class="center review-btn-position">
-              <a href="/" id="download-button" 
-              class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn">
+              <a href="/" id="download-button"
+                class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn">
                 Read more
-                </a>
+              </a>
             </div>
           </div>
-          
+
         </div>
-  
+
       </li>
       {% endfor %}
-      
-		
-      
-		</ul>
-	</div>
+
+
+
+    </ul>
+  </div>
 </div>
 
 
@@ -55,105 +55,44 @@
 <div class="icon-sec-background">
   <div class="review-container">
 
-    
+
     <div class="row">
-      
-      <div class="col s12 m6 l3">
+      {% for books in books %}
+      <div class="col s12 m6 l6 xl3">
+
         <div class="card large card-colour z-depth-5">
+
           <div class="card-image">
-            <img src="static/images/doctor-sleep.png">
+            <img src={{books.image}}>
           </div>
           <div class="card-content center">
-            <p>Doctor Sleep
-                <br>
-                by Stephen King
+            <p>{{books.title}}
+              <br>
+              by {{books.author}}
             </p>
             <div class="center review-btn-position">
-              <a href="/" id="download-button" 
-              class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn">
+              <a href="/" id="download-button"
+                class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn">
                 Read more
-                </a>
+              </a>
             </div>
           </div>
-          
+
         </div>
       </div>
-
-
-      <div class="col s12 m6 l3">
-        <div class="card large card-colour z-depth-5">
-          <div class="card-image">
-            <img src="static/images/doctor-sleep.png">
-          </div>
-          <div class="card-content center">
-            <p>Doctor Sleep
-                <br>
-                by Stephen King
-            </p>
-            <div class="center review-btn-position">
-              <a href="/" id="download-button" 
-              class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn">
-                Read more
-                </a>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-
-
-      <div class="col s12 m6 l3">
-        <div class="card large card-colour z-depth-5">
-          <div class="card-image">
-            <img src="static/images/doctor-sleep.png">
-          </div>
-          <div class="card-content center">
-            <p>Doctor Sleep
-                <br>
-                by Stephen King
-            </p>
-            <div class="center review-btn-position">
-              <a href="/" id="download-button" 
-              class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn">
-                Read more
-                </a>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-
-
-      <div class="col s12 m6 l3">
-        <div class="card large card-colour z-depth-5">
-          <div class="card-image">
-            <img src="static/images/doctor-sleep.png">
-          </div>
-          <div class="card-content center">
-            <p>Doctor Sleep
-                <br>
-                by Stephen King
-            </p>
-            <div class="center review-btn-position">
-              <a href="/" id="download-button" 
-              class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn">
-                Read more
-                </a>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-
+      {% endfor %}
     </div>
 
   </div>
+
+
 </div>
+
 
 {% endblock %}
 
 
 {% block splide_js %}
-  <script src="static/js/splide.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/js/splide.min.js"></script>
+<script src="static/js/splide.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/js/splide.min.js"></script>
 {% endblock %}
