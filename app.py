@@ -27,7 +27,9 @@ def index():
 
 @app.route("/book-reviews")
 def reviews():
-    return render_template("book-reviews.html")
+    featured = mongo.db.featured_books.find()
+    books = mongo.db.books.find()
+    return render_template("book-reviews.html", featured=featured, books=books)
 
 
 @app.route("/login")

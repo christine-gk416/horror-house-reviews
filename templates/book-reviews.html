@@ -6,20 +6,24 @@
         <h1 class="custom-font header center">Featured Titles</h1>
 {% endblock %}
 
+
 {% block content %}
+
 
 <div class="splide">
 	<div class="splide__track">
 		<ul class="splide__list">
+      {% for featured in featured %}
 			<li class="splide__slide">
         <div class="card large card-colour">
           <div class="card-image">
-            <img src="static/images/doctor-sleep.png">
+            <img src="{{featured.image}}">
+            
           </div>
           <div class="card-content center">
-            <p>Doctor Sleep
+            <p>{{featured.title}}
                 <br>
-                by Stephen King
+                by {{featured.author}}
             </p>
             <br>
             <div class="center review-btn-position">
@@ -33,54 +37,20 @@
         </div>
   
       </li>
-			<li class="splide__slide"><div class="card large card-colour">
-        <div class="card-image">
-          <img src="static/images/bog-of-cats.jpeg">
-        </div>
-        <div class="card-content center">
-          <p>By the Bog of Cats
-            <br>
-            by Marina Carr 
-          </p>
-          <br>
-          <div class="center review-btn-position">
-            <a href="/" id="download-button" 
-            class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn">
-              Read more
-              </a>
-          </div>
-        </div>
-        
-      </div>
-</li>
-			<li class="splide__slide">
-        <div class="card large card-colour">
-          <div class="card-image">
-            <img src="static/images/let-right-one-in.jpeg">
-          </div>
-          <div class="card-content center">
-            <p class="mobile-review-card">Let the Right One In
-              <br>
-              by John Ajvide Lindqvist
-            </p>
-            <br>
-            <div class="center review-btn-position">
-              <a href="/" id="download-button" 
-              class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn">
-                Read more
-                </a>
-            </div>
-          </div>
-          
-        </div>
-
-      </li>
+      {% endfor %}
+      
+		
+      
 		</ul>
 	</div>
 </div>
+
+
+
 {% endblock %}
 
 {% block below_content %}
+
 
 <div class="icon-sec-background">
   <div class="review-container">
@@ -179,6 +149,7 @@
 
   </div>
 </div>
+
 {% endblock %}
 
 
