@@ -45,19 +45,25 @@
         <ul class="right hide-on-med-and-down">
 
           <li><a class="nav-link-style" href="{{ url_for('reviews') }}">Reviews</a></li>
+          {% if session.user %}
           <li><a class="nav-link-style" href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
           <li><a class="nav-link-style" href="{{ url_for('logout') }}">Logout</a></li>
+          {% else %}
           <li><a class="nav-link-style" href="{{ url_for('login') }}">Login</a></li>
           <li><a class="nav-link-style" href="{{ url_for('sign_up') }}">Sign Up</a></li>
+          {% endif %}
         </ul>
 
         <ul id="nav-mobile" class="sidenav">
 
           <li><a class="mobile-nav-style" href="{{ url_for('reviews') }}">Reviews</a></li>
+          {% if session.user %}
           <li><a class="mobile-nav-style" href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
           <li><a class="mobile-nav-style" href="{{ url_for('logout') }}">Logout</a></li>
+          {% else %}
           <li><a class="mobile-nav-style" href="{{ url_for('login') }}">Login</a></li>
           <li><a class="mobile-nav-style" href="{{ url_for('sign_up') }}">Sign Up</a></li>
+          {% endif %}
           <br>
           <li><a class="sidenav-close" href="#!">&times; Close</a></li>
         </ul>
