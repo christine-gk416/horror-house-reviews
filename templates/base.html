@@ -46,6 +46,7 @@
 
           <li><a class="nav-link-style" href="{{ url_for('reviews') }}">Reviews</a></li>
           <li><a class="nav-link-style" href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+          <li><a class="nav-link-style" href="{{ url_for('logout') }}">Logout</a></li>
           <li><a class="nav-link-style" href="{{ url_for('login') }}">Login</a></li>
           <li><a class="nav-link-style" href="{{ url_for('sign_up') }}">Sign Up</a></li>
         </ul>
@@ -54,6 +55,7 @@
 
           <li><a class="mobile-nav-style" href="{{ url_for('reviews') }}">Reviews</a></li>
           <li><a class="mobile-nav-style" href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+          <li><a class="mobile-nav-style" href="{{ url_for('logout') }}">Logout</a></li>
           <li><a class="mobile-nav-style" href="{{ url_for('login') }}">Login</a></li>
           <li><a class="mobile-nav-style" href="{{ url_for('sign_up') }}">Sign Up</a></li>
           <br>
