@@ -11,6 +11,11 @@ body {
 
 nav .nav-wrapper {
   width: 100%;
+  
+}
+
+nav .nav-wrapper#breadcrumb-bar {
+  background-color: #E84A4D;
 }
 
 .card.btn-toggle {
@@ -87,6 +92,12 @@ a#login-link {
   font-size: 1.8rem;
 }
 
+a.breadcrumb {
+  font-family: Poppins;
+  font-size: 1.4rem;
+  color: #D3D3D3;
+}
+
 /* Home Page */
 
 .card.card-colour {
@@ -129,6 +140,17 @@ a#login-link {
 /* Sign Up Page */
 .card.card-margin2 {
   margin-top: 2%;
+}
+
+/* Individual Reviews */
+.book-review-image{
+  padding: 5%;
+  height: auto;
+  width: 80%;
+}
+
+.review-content {
+  padding: 5%;
 }
 
 /* Footer */

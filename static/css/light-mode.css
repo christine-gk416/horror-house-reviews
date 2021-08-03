@@ -55,6 +55,10 @@ p#light-mode-font {
   color: #660708;
 }
 
+.individual-review-background {
+  background-color: #d3d3d3;
+}
+
 footer.page-footer {
   background-color:  #F07F83;
 }

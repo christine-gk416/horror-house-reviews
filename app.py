@@ -27,15 +27,23 @@ def index():
 
 @app.route("/book-reviews")
 def reviews():
-    featured = list(mongo.db.featured_books.find())
+    featured_books = list(mongo.db.featured_books.find())
     books = list(mongo.db.books.find())
-    return render_template("book-reviews.html", featured=featured, books=books)
+    return render_template("book-reviews.html", featured_books=featured_books, books=books)
 
 
 @app.route("/individual-reviews/<books_id>")
 def individual(books_id):
     books = mongo.db.books.find_one({"_id": ObjectId(books_id)})
     return render_template("individual-reviews.html", books=books)
+
+
+@app.route("/featured-reviews/<featured_books_id>")
+def featured_books(featured_books_id):
+    featured_books = mongo.db.featured_books.find_one
+    ({"_id": ObjectId(featured_books_id)})
+    return render_template("featured-reviews.html", 
+    featured_books=featured_books)
 
 
 @app.route("/login")
