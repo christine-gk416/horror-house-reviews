@@ -13,17 +13,17 @@
       <div class="card-content">
 
         <p class="center login-link-padding" id="light-mode-font">Don't have an account yet? Login
-          <a id="login-link" href="/">here</a>.
+          <a id="login-link" href="{{ url_for('login') }}">here</a>.
         </p>
         <form method="POST" action="{{ url_for('sign_up') }}">
           <div class="row">
             <div class="input-field col s12 l6">
               <i class="material-icons prefix login-icon-light">border_color</i>
-              <input id="first_name" type="text" name="first_name" class="validate" pattern=^[a-zA-Z] required>
+              <input id="first_name" type="text" name="first_name" class="validate" pattern="[a-zA-Z]+" required>
               <label for="first_name">First Name</label>
             </div>
             <div class="input-field col s12 l6">
-              <input id="last_name" type="text" name="last_name" class="validate" pattern=^[a-zA-Z] required>
+              <input id="last_name" type="text" name="last_name" class="validate" pattern="[a-zA-Z]+" required>
               <label for="last_name">Last Name</label>
             </div>
           </div>

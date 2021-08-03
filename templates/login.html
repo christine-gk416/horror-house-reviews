@@ -12,20 +12,22 @@
     <div class="card medium card-colour login-card-padding">
       <div class="card-content">
         <p class="center login-link-padding" id="light-mode-font">Don't have an account yet? Sign up
-          <a id="login-link" href="/">here</a>.
+          <a id="login-link" href="{{ url_for('sign_up') }}">here</a>.
         </p>
         <form method="POST" action="{{ url_for('login') }}">
           <div class="row">
             <div class="input-field col s12">
               <i class="material-icons prefix login-icon-light">account_box</i>
-              <input id="username" type="text" name="username" class="validate">
+              <input id="username" type="text" name="username" class="validate"
+              minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" required>
               <label for="username">Username</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
               <i class="material-icons prefix login-icon-light">enhanced_encryption</i>
-              <input id="password" type="password" name="password" class="validate">
+              <input id="password" type="password" name="password" class="validate"
+              minlength="5" maxlength="15" pattern="^(?=.{5,15})(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$&^]).*$" required>
               <label for="password">Password</label>
             </div>
           </div>  
