@@ -10,16 +10,19 @@
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Text
     :ital,wght@0,400;0,600;1,600&family=Open+Sans:wght@400;600&family=Poppins&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
-    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/dark-mode.css') }}" id="mode-link">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
+  
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/dark-mode.css') }}" id="mode-link">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 
 
@@ -42,6 +45,7 @@
         <ul class="right hide-on-med-and-down">
 
           <li><a class="nav-link-style" href="{{ url_for('reviews') }}">Reviews</a></li>
+          <li><a class="nav-link-style" href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
           <li><a class="nav-link-style" href="{{ url_for('login') }}">Login</a></li>
           <li><a class="nav-link-style" href="{{ url_for('sign_up') }}">Sign Up</a></li>
         </ul>
@@ -49,6 +53,7 @@
         <ul id="nav-mobile" class="sidenav">
 
           <li><a class="mobile-nav-style" href="{{ url_for('reviews') }}">Reviews</a></li>
+          <li><a class="mobile-nav-style" href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
           <li><a class="mobile-nav-style" href="{{ url_for('login') }}">Login</a></li>
           <li><a class="mobile-nav-style" href="{{ url_for('sign_up') }}">Sign Up</a></li>
           <br>
