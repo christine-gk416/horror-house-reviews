@@ -9,7 +9,7 @@
 {% block content %}
 <div class="row">
   <div class="col s12 l12">
-    <div class="card xlarge card-colour signup-card-padding">
+    <div class="card xlarge card-colour">
       <div class="card-content">
 
         <p class="center login-link-padding" id="light-mode-font">Don't have an account yet? Login
@@ -31,19 +31,21 @@
           <div class="row">
             <div class="input-field col s12">
               <i class="material-icons prefix login-icon-light">account_box</i>
-              <input id="username" type="text" name="username" class="validate"
-               minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" required> 
+              <input id="username" type="text" name="username" class="validate tooltipped"
+               minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$"
+               data-position="bottom" data-tooltip="Please create a username of letters &amp;
+                numbers that's 5-15 characters long" required> 
               <label for="username">Username</label>
-              <p>Please create a username of letters &amp; numbers that's 5-15 characters long</p>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
               <i class="material-icons prefix login-icon-light">enhanced_encryption</i>
-              <input id="password" type="password" name="password" class="validate" 
-              minlength="5" maxlength="15" pattern="^(?=.{5,15})(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$&^]).*$" required>
+              <input id="password" type="password" name="password" class="validate tooltipped" 
+              minlength="5" maxlength="15" pattern="^(?=.{5,15})(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$&^]).*$" 
+              data-position="bottom" data-tooltip="Password must contain one uppercase &amp; 
+              lowercase letter &amp; a number &amp; a special character: @#$&^"required>
               <label for="password">Password</label>
-              <p>Password must contain one uppercase &amp; lowercase letter &amp; a number &amp; a special character: @#$&^</p>
             </div>
           </div>
           <div class="center">
