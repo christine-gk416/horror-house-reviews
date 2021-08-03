@@ -58,6 +58,10 @@
     color: #F5F3F4;
   }
 
+  input {
+    color: white;
+  }
+
   /* Materialize input styles for forms*/
 
 /* label color */

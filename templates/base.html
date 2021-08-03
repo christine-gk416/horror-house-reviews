@@ -63,13 +63,25 @@
 
     </nav>
   </div>
-
   
 
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
+
+        <section>
+          <!-- flash messages -->
+          {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                  {% for message in messages %}
+                      <div class="row flashes">
+                          <h4 class="red lighten-3 center-align">{{ message }}</h4>
+                      </div>
+                  {% endfor %}
+              {% endif %}
+          {% endwith %}
+        </section>
         
           <div class="card btn-toggle">
             <div class="card-content toggle-card">
