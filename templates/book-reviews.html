@@ -13,21 +13,21 @@
 <div class="splide">
   <div class="splide__track">
     <ul class="splide__list">
-      {% for featured_books in featured_books %}
+      {% for featured in featured %}
       <li class="splide__slide">
         <div class="card large card-colour">
           <div class="card-image">
-            <img src={{featured_books.image}}>
+            <img src={{featured.image}}>
 
           </div>
           <div class="card-content center">
-            <p class="mobile-review-card">{{featured_books.title}}
+            <p class="mobile-review-card">{{featured.title}}
               <br>
-              by {{featured_books.author}}
+              by {{featured.author}}
             </p>
             <br>
             <div class="center review-btn-position">
-              <a href="{{ url_for('featured_books', featured_books_id=featured_books._id) }}" 
+              <a href="{{ url_for('featured', featured_books_id=featured._id) }}" 
                 class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn">
                 Read more
               </a>

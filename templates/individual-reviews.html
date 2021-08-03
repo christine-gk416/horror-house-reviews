@@ -8,13 +8,14 @@
     <nav>
         <div class="nav-wrapper" id="breadcrumb-bar">
           <div class="col l12">
-            <a href="{{ url_for('reviews') }}" class="breadcrumb">First</a>
-            <a href="{{ url_for('individual', books_id=books._id) }}" class="breadcrumb">Second</a>
+            <a href="{{ url_for('reviews') }}" class="breadcrumb">All Reviews</a>
+            <a href="{{ url_for('individual', books_id=books._id) }}" class="breadcrumb">{{books.title}}</a>
           </div>
         </div>
       </nav>
     <div class="col xl4">
       <img class="book-review-image" src={{books.image}}>
+      
     </div>
     <div class="col m10 l9 xl8">
         <div class="review-content">

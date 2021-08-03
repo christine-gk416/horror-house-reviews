@@ -1,28 +1,31 @@
 {% extends "base.html" %}
-{% block title %} {{featured_books.title}} | Horror House {% endblock %}
+{% block title %} {{featured.title}} | Horror House {% endblock %}
 
 {% block content %}
 
 
 <div class="row individual-review-background">
     <nav>
+      
         <div class="nav-wrapper" id="breadcrumb-bar">
           <div class="col l12">
-            <a href="{{ url_for('reviews') }}" class="breadcrumb">First</a>
-            <a href="{{ url_for('featured_books', featured_books_id=featured_books._id) }}" class="breadcrumb">Second</a>
+            <a href="{{ url_for('reviews') }}" class="breadcrumb">All Reviews</a>
+            <a href="{{ url_for('featured', featured_books_id=featured._id) }}" 
+            class="breadcrumb">{{featured.title}}</a>
           </div>
         </div>
       </nav>
+      
     <div class="col xl4">
-      <img class="book-review-image" src={{featured_books.image}}>
+      <img class="book-review-image" src={{featured.image}}>
     </div>
     <div class="col m10 l9 xl8">
         <div class="review-content">
-            <h3 class="custom-font center">{{featured_books.title}} by {{featured_books.author}}</h3>
+            <h3 class="custom-font center">{{featured.title}} by {{featured.author}}</h3>
             <br>
-            <p>{{featured_books.review}}</p>
+            <p>{{featured.review}}</p>
             <br>
-            <a href="{{featured_books.affiliate}}" target="_blank"
+            <a href="{{featured.affiliate}}" target="_blank"
                 class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn center">
                 Buy here
             </a>
