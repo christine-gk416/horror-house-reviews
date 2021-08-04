@@ -94,7 +94,9 @@ def sign_up():
 def profile(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    return render_template("profile.html", username=username)
+    books = list(mongo.db.books.find({'created_by': username}))
+
+    return render_template("profile.html", username=username, books=books)
 
 
 @app.route("/logout")
@@ -104,8 +106,31 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_review")
+@app.route("/add_review", methods=["GET", "POST"])
 def add():
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+
+    if request.method == "POST":
+        review = {
+            "title": request.form.get("title"),
+            "author": request.form.get("author"),
+            "affiliate": request.form.get("affiliate"),
+            "image": request.form.get("image"),
+            "review": request.form.get("review"),
+            "category_name": request.form.get("category_name"),
+            "rating": request.form.get("rating"),
+            "created_by": username,
+        }
+        mongo.db.books.insert_one(review)
+        flash("Review Successfully Added")
+        return redirect(url_for("add"))
+
+    def convert_rating(old_rating):
+        new_rating = old_rating + 5 - ((2 * old_rating) - 1)
+        
+        return new_rating
+
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_review.html", categories=categories)
 

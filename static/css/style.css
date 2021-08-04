@@ -239,6 +239,10 @@ padding-top: 25px;
 
 /* Footer */
 
+.page-footer {
+  padding: 20px;
+}
+
 ul li {
   float:left;
   display:inline;
@@ -259,7 +263,7 @@ div.social-links-position.col.l3.m6 {
 }
 
 div.col.l3.m6.contact-button-position {
-  padding-top: 2%;
+  padding-top: 1.5%;
 }
 
 
