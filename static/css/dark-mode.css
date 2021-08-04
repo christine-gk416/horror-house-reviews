@@ -8,6 +8,14 @@
     color: #F5F3F4;
   } 
 
+  nav ul a.nav-link-style:active {
+    background-color: #393C56;
+  }
+  
+  nav ul a.active {
+    background-color: #393C56;
+  }
+
   .home-card-title {
     color: #F5F3F4;
     text-shadow: 1px 1px 2px black;
@@ -42,7 +50,7 @@
   }
 
  .individual-review-background {
-    background-color: #3e4c59;
+    background-color: #393C56;
   }
 
   footer.page-footer {

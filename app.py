@@ -126,11 +126,6 @@ def add():
         flash("Review Successfully Added")
         return redirect(url_for("add"))
 
-    def convert_rating(old_rating):
-        new_rating = old_rating + 5 - ((2 * old_rating) - 1)
-        
-        return new_rating
-
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_review.html", categories=categories)
 

@@ -51,10 +51,10 @@ div.card-content.toggle-card {
 /* Font Styles */
 
 .nav-link-style {
-    font-size: 2.0rem;
+    font-size: 1.6rem;
     font-family: 'Crimson text', sans-serif;
     font-weight: 500;
-    text-shadow: 1px 1px 1px grey;
+    text-shadow: 1px 1px 1px black;
 }
 
 h1 {
@@ -83,6 +83,11 @@ h3.custom-font {
     font-family: Arial;
 }
 
+h4 {
+  font-size: 1.4rem;
+  color: black;
+}
+
 p {
   line-height: 2rem;
   font-family: Arial, Helvetica, sans-serif;
@@ -104,7 +109,11 @@ a#login-link {
 a.breadcrumb {
   font-family: Poppins;
   font-size: 1.4rem;
-  color: #D3D3D3;
+  color: white;
+}
+
+p.review-text {
+  font-size: 1.1rem;
 }
 
 /* Home Page */
@@ -160,6 +169,14 @@ a.breadcrumb {
 
 .review-content {
   padding: 5%;
+}
+
+.overflow-review {
+  width: 100%;
+  height: 700px;
+  overflow-y: scroll;
+  padding: 3%;
+  border-radius: 15px;
 }
 
 /* Profile */
