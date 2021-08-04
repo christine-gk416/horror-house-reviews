@@ -19,14 +19,14 @@ nav .nav-wrapper {
 }
 
 nav .nav-wrapper#breadcrumb-bar {
-  background-color: #E84A4D;
+  background-color: #81B29A;
 }
 
 .card.btn-toggle {
   position: fixed;
   margin-left: 70%;
   z-index: 2;
-  background-color: #E84A4D;
+  background-color: #81B29A;
   cursor: pointer;
 }
 
@@ -39,13 +39,11 @@ div.card-content.toggle-card {
   font-size: 26px;
 }
 
-nav ul a.nav-link-style:active {
-  background-color: #F07F83;
-}
 
-nav ul a.active {
-  text-decoration: underline;
-  background-color: #F07F83;
+.btn-large.btn-styles {
+  background-color: #7F678E;
+  border: #F5F3F4 0.75px solid;
+  text-shadow: 1px 1px 2px black;
 }
 
 
@@ -56,20 +54,20 @@ nav ul a.active {
     font-size: 2.0rem;
     font-family: 'Crimson text', sans-serif;
     font-weight: 500;
-    text-shadow: 1px 1px 1px #660708;
+    text-shadow: 1px 1px 1px grey;
 }
 
 h1 {
   font-family: 'Cinzel', sans-serif;
   font-weight: 600;
-  color: #D3D3D3;
+  color: #D9E8E0;
   text-shadow: 1px 1px 6px black;
 }
 
 h2 {
   font-family: 'Cinzel', sans-serif;
   font-weight: 400;
-  color: #D3D3D3;
+  color: #D9E8E0;
   text-shadow: 1px 1px 3px black;
 }
 
@@ -255,7 +253,7 @@ a i {
 }
 
 a i:hover {
-  color: #660708
+  color: #7F678E;
 }
 
 div.social-links-position.col.l3.m6 {
@@ -319,7 +317,7 @@ div.col.l3.m6.contact-button-position {
 
 #close-form:hover,
 #close-form:focus {
-  color: #3e4c59;
+  color: #81B29A;
   text-decoration: none;
   cursor: pointer;
 }
@@ -328,19 +326,19 @@ div.col.l3.m6.contact-button-position {
   margin: 6% auto;
   padding: 12px;
   border: 1px solid #3e4c59;
-  background-color: #E84A4D;
+  background-color: #393C56;
   width: 35%;
 }
 
 /* Mobile Sidenav Styles */
 
 ul#nav-mobile.sidenav {
-  background-color: #E84A4D;
+  background-color: #81B29A;
   padding-top: 25%;
 }
 
 .sidenav li a.mobile-nav-style {
-  color:#D3D3D3;
+  color: #fff;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 2.0rem;
 }

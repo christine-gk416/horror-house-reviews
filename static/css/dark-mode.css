@@ -1,7 +1,7 @@
 /* Dark Mode */
 
 .navbar-colour {
-    background-color: #E84A4D;
+    background-color: #81B29A;
   }
   
   nav ul a.nav-link-style{
@@ -24,26 +24,21 @@
   }  
   
   .card.card-colour {
-    background-color: #3e4c59;
+    background-color: #393C56;
   }
 
   .btn-toggle {
     color: #F5F3F4;
-    text-shadow: 1px 1px 2px #E84A4D;
+    text-shadow: 1px 1px 2px #7F678E;
   }
 
-  .btn-large.btn-styles {
-    background-color: #E84A4D;
-    border: #F5F3F4 0.75px solid;
-    text-shadow: 1px 1px 2px black;
-  }
 
   .icon-sec-background{
-  background-color: #3e4c59;
+  background-color: #393C56;
 }
 
 .icon-styles {
-    color: #E84A4D;
+    color: #E33B3D;
   }
 
  .individual-review-background {
@@ -51,7 +46,7 @@
   }
 
   footer.page-footer {
-    background-color: #E84A4D;
+    background-color: #81B29A;
   }
   
   ul li {

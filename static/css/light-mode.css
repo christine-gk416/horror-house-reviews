@@ -1,45 +1,50 @@
 /* Light Mode */
 
 .navbar-colour {
-  background-color: #F5F3F4;
+  background-color: #D9E8E0;
 }
 
 nav ul a.nav-link-style {
-   color: #161214;
+   color: #393C56;
+}
+
+nav ul a.nav-link-style:active {
+  background-color: #BBACC3;
+}
+
+nav ul a.active {
+  background-color: #BBACC3;
 }
 
 .card.card-colour {
-  background-color: #d3d3d3;
+  background-color: #D9E8E0;
 }
 
 .btn-toggle {
-  color: #7B8FA3;
+  color: #6A5676;
   text-shadow: 1px 1px 2px black;
 }
 
-.btn-large.btn-styles {
-  background-color: #F07F83;
-  border: #161214 2px solid;
-  color: #161214; 
-  text-shadow: 1px 1px 1px black;
-}
-
 .review-container {
-  background-color: #E84A4D;
+  background-color: #6A5676;
 }
 
 .icon-styles {
-  color: #660708;
+  color: #393C56;
+}
+
+.icon-sec-background {
+  background-color: #D9E8E0;
 }
 
 .home-card-title {
-  color: #660708;
-  text-shadow: 1px 1px 1.5px gray;
+  color: #393C56;
+  text-shadow: 1px 1px 1.x gray;
 }
 
 h3.custom-font {
-  color: #660708;
-  text-shadow: 1px 1px 1.5px gray;
+  color: #6A5676;
+  text-shadow: 1px 1px 1px gray;
 }
 
 p {
@@ -48,7 +53,7 @@ p {
 } 
 
 p#light-mode-font {
-  color: #660708;
+  color: #161214;
 }
 
 .login-icon-light {
@@ -56,11 +61,11 @@ p#light-mode-font {
 }
 
 .individual-review-background {
-  background-color: #d3d3d3;
+  background-color: #D9E8E0;
 }
 
 footer.page-footer {
-  background-color:  #F07F83;
+  background-color:  #81B29A;
 }
 
 .star-input  label {
