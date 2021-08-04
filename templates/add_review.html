@@ -10,93 +10,84 @@
 
 <div class="row">
     <div class="col s12 l12">
-        <!-- <div class="card xlarge card-colour">
-            <div class="card-content"> -->
-                <div class="overflow-form individual-review-background ">
-                <form method="POST" action="/">
-                    <div class="row">
-                        <div class="input-field col s6 l6">
-                            <input id="title" type="text" name="title" class="validate" pattern="[a-zA-Z]+" required>
-                            <label for="title">Title</label>
-                        </div>
-                        <div class="input-field col s6 l6">
-                            <input id="author" type="text" name="author" class="validate" pattern="[a-zA-Z]+" required>
-                            <label for="author">Author</label>
-                        </div>
+
+        <div class="overflow-form individual-review-background">
+            <form method="POST" action="">
+                <div class="row">
+                    <div class="input-field col s6 l6">
+                        <input id="title" type="text" name="title" class="validate" pattern="[a-zA-Z]+" required>
+                        <label for="title">Title</label>
+                    </div>
+                    <div class="input-field col s6 l6">
+                        <input id="author" type="text" name="author" class="validate" pattern="[a-zA-Z]+" required>
+                        <label for="author">Author</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s6 l6">
+                        <input id="affiliate" type="url" name="affiliate" class="validate tooltipped"
+                            data-position="bottom" data-tooltip="Please add an affiliate link from a bookseller"
+                            required>
+                        <label for="affiliate">Add bookseller link</label>
                     </div>
 
-                    <div class="row">
-                        <div class="input-field col s6 l6">
-                            <input id="affiliate" type="url" name="affiliate" class="validate tooltipped"
-                                data-position="bottom" data-tooltip="Please add an affiliate link from a bookseller"
-                                required>
-                            <label for="affiliate">Add link a bookseller</label>
-                        </div>
-
-                        <div class="input-field col s6 l6">
-                            <input id="image" type="url" name="image" class="validate tooltipped" data-position="bottom"
-                                data-tooltip="Add a .png or .jpg image sized at 500 pixels wide" required>
-                            <label for="image">Add a book cover image</label>
-                        </div>
+                    <div class="input-field col s6 l6">
+                        <input id="image" type="url" name="image" class="validate tooltipped" data-position="bottom"
+                            data-tooltip="Add a .png or .jpg image sized at 500 pixels wide" required>
+                        <label for="image">Add book image</label>
                     </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <textarea id="review" class="validate tooltipped materialize-textarea" data-length="120"
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="review" name="review" class="validate tooltipped materialize-textarea" data-length="120"
                             data-position="bottom" data-tooltip="Add a paragraph or two reviewing the book" required>
-                            </textarea>    
-                            <label for="review">Review</label>
-                        </div>
+                            </textarea>
+                        <label for="review">Review</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s5 l6">
+                        <select multiple>
+                        {% for category in categories %}
+                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% endfor %}
+                        </select>
+                        <label>Categories</label>
                     </div>
 
-                    <div class="row">
-                        <div class="input-field col s5 l6">
-                            <select multiple>
-                                <option value="1">Option 1</option>
-                                <option value="2">Option 2</option>
-                                <option value="3">Option 3</option>
-                            </select>
-                            <label>Select book categories</label>
-                        </div>
-                    
-                        <div class="col s7 l6">
-                            <br>
-                            <div class="rate-padding">
-                                <div class="rate center">
-                                    <label for="star5" title="5 stars">
-                                        <input name="rate" type="radio" id="star5" value="5" checked />
-                                        <span>5 stars</span>
-                                    </label>
-                                    <label for="star4" title="4 stars">
-                                        <input type="radio" id="star4" name="rate" value="4" />
-                                        <span>4 stars</span>
-                                    </label>
-                                    <label for="star3" title="3 stars">
-                                        <input type="radio" id="star3" name="rate" value="3" />
-                                        <span>3 stars</span>
-                                    </label>
-                                    <label for="star2" title="2 stars">
-                                        <input type="radio" id="star2" name="rate" value="2" />
-                                        <span>2 stars</span>
-                                    </label>
-                                    <label for="star1" title="1 stars">
-                                        <input type="radio" id="star1" name="rate" value="1" />
-                                        <span>1 star</span>
-                                    </label>
-                                </div>
-                            </div>
+                    <div class="col s7 l6">
+                        <br>
+                       
+                            <div class="star-input rate-padding">
+                            <input type="radio" name="rating" title="1 stars" id="st1" value="1" />
+                            <label for="st1"></label>
+                            <input type="radio" name="rating" title="2 stars" id="st2" value="2" />
+                            <label for="st2"></label>
+                            <input type="radio" name="rating" id="st3" title="3 stars"value="3" />
+                            <label for="st3"></label>
+                            <input type="radio" name="rating" id="st4" title="4 stars" value="4" />
+                            <label for="st4"></label>
+                            <input type="radio" name="rating" id="st5" title="5 stars" value="5" />
+                            <label for="st5"></label>
                         </div>
                     </div>
+                    
 
-                    <div class="center">
-                        <button class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn" type="submit"
-                            name="action">Create review
-                        </button>
-                    </div>
-                    
-                </form>
-            </div>
-            <!-- </div>
-        </div> -->
+
+                </div>
+
+                <div class="center">
+                    <button class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn" type="submit"
+                        name="action">Create review
+                    </button>
+                </div>
+
+            </form>
+        </div>
+
+
     </div>
 </div>
 

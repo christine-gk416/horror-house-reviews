@@ -63,6 +63,14 @@ footer.page-footer {
   background-color:  #F07F83;
 }
 
+.star-input  label {
+  color: black;
+}
+
+.star-input  label:before {
+  color: black;
+}
+
   /* Materialize input styles for forms*/
 
 /* label color */

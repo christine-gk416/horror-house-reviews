@@ -66,6 +66,14 @@
     color: white;
   }
 
+  .star-input  label {
+    color: #C8C8C8;
+  }
+
+  .star-input  label:before {
+    color: #C8C8C8;
+  }
+
   /* Materialize input styles for forms*/
 
 /* label color */
