@@ -55,7 +55,7 @@ def login():
         if check_password_hash(
             existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
-                flash("Welcome, {}".format(request.form.get("username")))
+                flash("Hello, {}".format(request.form.get("username")))
                 return redirect(url_for(
                     "profile", username=session["user"]))
         else:
@@ -118,7 +118,7 @@ def add():
             "affiliate": request.form.get("affiliate"),
             "image": request.form.get("image"),
             "review": request.form.get("review"),
-            "category_name": request.form.get("category_name"),
+            "category_name": request.form.getlist("category_name"),
             "rating": request.form.get("rating"),
             "created_by": username,
         }
@@ -132,6 +132,21 @@ def add():
 
 @app.route("/edit_review/<book_id>", methods=["GET", "POST"])
 def edit(book_id):
+
+    if request.method == "POST":
+        submit = {
+            "title": request.form.get("title"),
+            "author": request.form.get("author"),
+            "affiliate": request.form.get("affiliate"),
+            "image": request.form.get("image"),
+            "review": request.form.get("review"),
+            "category_name": request.form.getlist("category_name"),
+            "rating": request.form.get("rating"),
+            "created_by": session["user"],
+        }
+        mongo.db.books.update({"_id": ObjectId(book_id)}, submit)
+        flash("Review Successfully Updated")
+
     book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template(
