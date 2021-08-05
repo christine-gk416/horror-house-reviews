@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %} {{book.title}} | Horror House {% endblock %}
+{% block title %} {{ind_book.title}} | Horror House {% endblock %}
 
 {% block content %}
 
@@ -9,94 +9,93 @@
     <div class="nav-wrapper" id="breadcrumb-bar">
       <div class="col l12">
         <a href="{{ url_for('reviews') }}" class="breadcrumb">All Reviews</a>
-        <a href="{{ url_for('individual', book_id=book._id) }}" class="breadcrumb">{{book.title}}</a>
+        <a href="{{ url_for('individual', book_id=ind_book._id) }}" class="breadcrumb">{{ind_book.title}}</a>
       </div>
     </div>
   </nav>
   <div class="col xl4">
-    <img class="book-review-image" src={{book.image}}>
+    <img class="book-review-image" src={{ind_book.image}}>
 
-    {% block rating %}
-    {% endblock %}
-    {% if book.rating == "1" %}
-    <div class="star-input rate-padding">
+   
+    {% if ind_book.rating == "1" %}
+    <div class="star-input2  rate-padding">
         
     
-        <input type="checkbox" name="rating" id="st5" title="5 stars" value="5" />
-        <label for="st5"></label>
-        <input type="checkbox" name="rating" id="st4" title="4 stars" value="4" />
+        <input type="checkbox" name="rating" id="st5" title="5 stars" value="5" disabled/>
+        
+        <input type="checkbox" name="rating" id="st4" title="4 stars" value="4" disabled/>
         <label for="st4"></label>
-        <input type="checkbox" name="rating" id="st3" title="3 stars" value="3" />
+        <input type="checkbox" name="rating" id="st3" title="3 stars" value="3" disabled/>
         <label for="st3"></label>
-        <input type="checkbox" name="rating" title="2 stars" id="st2" value="2" />
+        <input type= "checkbox" name="rating" title="2 stars" id="st2" value="2" disabled/>
         <label for="st2"></label>
-        <input type="checkbox" name="rating" title="1 star" id="st1" value="1" checked />
+        <input type="checkbox" name="rating" title="1 star" id="st1" value="1" disabled checked />
         <label for="st1"></label>
     </div>
-    {% elif book.rating == "2" %}
-    <div class="star-input rate-padding">
-        <input type="checkbox" name="rating" id="st5" title="5 stars" value="5" />
+    {% elif ind_book.rating == "2" %}
+    <div class="star-input2 rate-padding">
+        <input type="checkbox" name="rating" id="st5"  title="5 stars" value="5" disabled/>
+        <label class="" for="st5"></label>
+        <input type="checkbox" name="rating" id="st4"  title="4 stars" value="4" disabled/>
+        <label class=""  for="st4"></label>
+        <input type="checkbox" name="rating" id="st3"  title="3 stars" value="3" disabled/>
+        <label class=""  for="st3"></label>
+        <input type="checkbox" name="rating" title="2 stars" id="st2" value="2" disabled checked/>
+        <label class="" for="st2"></label>
+        <input type="checkbox" name="rating" title="1 star" id="st1" value="1"  disabled checked />
+        <label class="" for="st1"></label>
+    </div>
+    {% elif ind_book.rating == "3" %}
+    <div class="star-input2  rate-padding">
+        <input type="checkbox" name="rating" id="st5" title="5 stars" value="5"  disabled/>
         <label for="st5"></label>
-        <input type="checkbox" name="rating" id="st4" title="4 stars" value="4" />
+        <input type="checkbox" name="rating" id="st4" title="4 stars" value="4" disabled/>
         <label for="st4"></label>
-        <input type="checkbox" name="rating" id="st3" title="3 stars" value="3" />
+        <input type="checkbox" name="rating" id="st3" title="3 stars" value="3" disabled checked/>
         <label for="st3"></label>
-        <input type="checkbox" name="rating" title="2 stars" id="st2" value="2" checked/>
+        <input type="checkbox" name="rating" title="2 stars" id="st2" value="2" disabled checked/>
         <label for="st2"></label>
-        <input type="checkbox" name="rating" title="1 star" id="st1" value="1" checked />
+        <input type="checkbox" name="rating" title="1 star" id="st1" value="1" disabled checked />
         <label for="st1"></label>
     </div>
-    {% elif book.rating == "3" %}
-    <div class="star-input rate-padding">
-        <input type="checkbox" name="rating" id="st5" title="5 stars" value="5" />
+    {% elif ind_book.rating == "4" %}
+    <div class="star-input2 rate-padding">
+        <input type="checkbox" class="" name="rating" id="st5" title="5 stars" value="5" disabled/>
         <label for="st5"></label>
-        <input type="checkbox" name="rating" id="st4" title="4 stars" value="4" />
+        <input type="checkbox" name="rating" id="st4" title="4 stars" value="4" checked disabled/>
         <label for="st4"></label>
-        <input type="checkbox" name="rating" id="st3" title="3 stars" value="3" checked/>
+        <input type="checkbox" name="rating" id="st3" title="3 stars" value="3" checked disabled/>
         <label for="st3"></label>
-        <input type="checkbox" name="rating" title="2 stars" id="st2" value="2" checked/>
+        <input type="checkbox" name="rating" title="2 stars" id="st2" value="2" checked disabled/>
         <label for="st2"></label>
-        <input type="checkbox" name="rating" title="1 star" id="st1" value="1" checked />
+        <input type="checkbox" name="rating" title="1 star" id="st1" value="1" checked disabled/>
         <label for="st1"></label>
     </div>
-    {% elif book.rating == "4" %}
-    <div class="star-input rate-padding">
-        <input type="checkbox" name="rating" id="st5" title="5 stars" value="5" />
+    {% elif ind_book.rating == "5" %}
+    <div class="star-input2  rate-padding">
+        <input type="checkbox" name="rating" id="st5" title="5 stars" value="5" checked disabled/>
         <label for="st5"></label>
-        <input type="checkbox" name="rating" id="st4" title="4 stars" value="4" checked/>
+        <input type="checkbox" name="rating" id="st4" title="4 stars" value="4" checked disabled/>
         <label for="st4"></label>
-        <input type="checkbox" name="rating" id="st3" title="3 stars" value="3" checked/>
+        <input type="checkbox" name="rating" id="st3" title="3 stars" value="3" checked disabled/>
         <label for="st3"></label>
-        <input type="checkbox" name="rating" title="2 stars" id="st2" value="2" checked/>
+        <input type="checkbox" name="rating" title="2 stars" id="st2" value="2" checked disabled/>
         <label for="st2"></label>
-        <input type="checkbox" name="rating" title="1 star" id="st1" value="1" checked />
-        <label for="st1"></label>
-    </div>
-    {% elif book.rating == "5" %}
-    <div class="star-input rate-padding">
-        <input type="checkbox" name="rating" id="st5" title="5 stars" value="5" checked/>
-        <label for="st5"></label>
-        <input type="checkbox" name="rating" id="st4" title="4 stars" value="4" checked/>
-        <label for="st4"></label>
-        <input type="checkbox" name="rating" id="st3" title="3 stars" value="3" checked/>
-        <label for="st3"></label>
-        <input type="checkbox" name="rating" title="2 stars" id="st2" value="2" checked/>
-        <label for="st2"></label>
-        <input type="checkbox" name="rating" title="1 star" id="st1" value="1" checked />
+        <input type="checkbox" name="rating" title="1 star" id="st1" value="1" checked disabled/>
         <label for="st1"></label>
     </div>
     
     {% else %}
     <div class="star-input rate-padding">
-        <input type="checkbox" name="rating" title="1 star" id="st1" value="1" />
+        <input type="checkbox" name="rating" title="1 star" id="st1" value="1" disabled/>
         <label for="st1"></label>
-        <input type="checkbox" name="rating" title="2 stars" id="st2" value="2" />
+        <input type="checkbox" name="rating" title="2 stars" id="st2" value="2" disabled/>
         <label for="st2"></label>
-        <input type="checkbox" name="rating" id="st3" title="3 stars" value="3" />
+        <input type="checkbox" name="rating" id="st3" title="3 stars" value="3" disabled/>
         <label for="st3"></label>
-        <input type="checkbox" name="rating" id="st4" title="4 stars" value="4" />
+        <input type="checkbox" name="rating" id="st4" title="4 stars" value="4" disabled/>
         <label for="st4"></label>
-        <input type="checkbox" name="rating" id="st5" title="5 stars" value="5" />
+        <input type="checkbox" name="rating" id="st5" title="5 stars" value="5" disabled/>
         <label for="st5"></label>
     </div>
     {% endif %}
@@ -105,11 +104,11 @@
   </div>
   <div class="col m10 l9 xl8">
     <div class="review-content">
-      <h3 class="custom-font center">{{book.title}} by {{book.author}}</h3>
+      <h3 class="custom-font center">{{ind_book.title}} by {{ind_book.author}}</h3>
       <br>
-      <p class="review-text">{{book.review}}</p>
+      <p class="review-text">{{ind_book.review}}</p>
       <br>
-      <a href="{{book.affiliate}}" target="_blank"
+      <a href="{{ind_book.affiliate}}" target="_blank"
         class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn center">
         Buy here
       </a>

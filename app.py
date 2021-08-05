@@ -35,8 +35,8 @@ def reviews():
 
 @app.route("/individual-reviews/<book_id>")
 def individual(book_id):
-    book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
-    return render_template("individual-reviews.html", book=book)
+    ind_book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
+    return render_template("individual-reviews.html", ind_book=ind_book)
 
 
 @app.route("/featured-reviews/<featured_books_id>")
@@ -145,12 +145,15 @@ def edit(book_id):
             "created_by": session["user"],
         }
         mongo.db.books.update({"_id": ObjectId(book_id)}, submit)
-        flash("Review Successfully Updated")
+        flash("Review successfully updated")
 
     book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
+
+    get_category = mongo.db.books.find({"category_name": [0]})
+    
     return render_template(
-        "edit_review.html", book=book, categories=categories)
+        "edit_review.html", book=book, categories=categories, get_category=get_category)
 
 
 if __name__ == "__main__":

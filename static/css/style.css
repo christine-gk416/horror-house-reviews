@@ -279,9 +279,37 @@ padding-top: 25px;
   color: #FFC107;
 }
 
+.star-input2 input {
+  border: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  opacity: 0;
+}
 
+.star-input2  label {
+  position: relative;
+  float: right;
+}
 
+.star-input2  label:before {
+  margin: 5px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f005";
+  display: inline-block;
+  font-size: 1.5em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
 
+.star-input2  input:checked ~ label:before {
+  color: #FFC107;
+}
 
 
 /* Footer */
