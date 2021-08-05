@@ -22,6 +22,10 @@ nav .nav-wrapper#breadcrumb-bar {
   background-color: #81B29A;
 }
 
+.tabs.breadcrumb-background {
+  background-color: #81B29A;;
+}
+
 .card.btn-toggle {
   position: fixed;
   margin-left: 70%;
@@ -57,17 +61,18 @@ div.card-content.toggle-card {
     text-shadow: 1px 1px 1px black;
 }
 
-h1 {
+h1.custom-font {
   font-family: 'Cinzel', sans-serif;
   font-weight: 600;
-  color: #D9E8E0;
+  font-size: 3.8rem;
+  color: #D3D3D3;
   text-shadow: 1px 1px 6px black;
 }
 
 h2 {
   font-family: 'Cinzel', sans-serif;
   font-weight: 400;
-  color: #D9E8E0;
+  color: #D3D3D3;
   text-shadow: 1px 1px 3px black;
 }
 
@@ -96,7 +101,8 @@ p {
 
 a#login-link {
   text-decoration: underline;
-  color: #F07F83;
+  color: #A895B2;
+  text-shadow: 1px 1px 1px black;
 }
 
 .btn-large.btn-styles {
@@ -110,6 +116,15 @@ a.breadcrumb {
   font-family: Poppins;
   font-size: 1.4rem;
   color: white;
+  text-shadow: 1px 1px 3px black;
+}
+
+.tabs .tab a {
+  font-family: Poppins !important;
+  color: white !important;
+  font-size: 1.4rem !important;
+  text-shadow: 1px 1px 3px black;
+  text-transform: capitalize !important;
 }
 
 p.review-text {
@@ -180,11 +195,28 @@ p.review-text {
 }
 
 /* Profile */
-.tabs .tab a {
-  color: #161214 !important;
-  font-family: Arial, Helvetica, sans-serif !important;
+
+.btn-small.review-btn {
+  font-size: 1.4rem;
+  text-transform: capitalize;
 }
 
+.edit-btn-position {
+  padding-top: 15%;
+}
+
+.btn-small {
+  border: #F5F3F4 0.75px solid;
+  text-shadow: 1px 1px 2px black;
+}
+
+.btn-small.btn-edit {
+  background-color: #4E7E68;
+}
+
+.btn-small.btn-delete {
+  background-color: #C74343;
+}
 
 
 /* Add Review */

@@ -10,7 +10,8 @@
 
 <div class="row">
     <div class="col s12">
-        <ul id="tabs-swipe-demo" class="tabs red lighten-1">
+      <div class="overflow-review">
+        <ul id="tabs-swipe-demo" class="tabs breadcrumb-background">
             <li class="tab col s3"><a class="active" href="#main-info">Main Info</a></li>
             <li class="tab col s3"><a href="#add-pic">Add Profile Pic</a></li>
             <li class="tab col s3"><a href="#update-info">Update info</a></li>
@@ -26,6 +27,7 @@
         </div>
         <div id="update-info" class="col s12 green">Test 3</div>
     </div>
+  </div>
 </div>
 
 
@@ -36,9 +38,12 @@
 {% block below_content %}
 
 
+<div class="icon-sec-background">
+  <div class="review-container">
 
-<h2>Reviews by {{username}}</h2>
-{% for book in books %}
+    <h2 class="center">Reviews by {{username}}</h2> 
+    <div class="row">
+      {% for book in books %}
       <div class="col s12 m6 l6 xl3">
 
         <div class="card large card-colour z-depth-5">
@@ -51,10 +56,16 @@
               <br>
               by {{book.author}}
             </p>
-            <div class="center review-btn-position">
-              <a href="{{ url_for('individual', books_id=book._id) }}"
-                class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn">
-                Read more
+            <div class="edit-btn-position left">
+              <a href="{{ url_for('edit', book_id=book._id) }}"
+                class="btn-small waves-effect waves-dark lighten-1 btn-edit review-btn">
+                Edit
+              </a>
+            </div>
+            <div class="edit-btn-position right">
+              <a href="/"
+                class="btn-small waves-effect waves-dark lighten-1 btn-delete review-btn">
+                Delete
               </a>
             </div>
           </div>
@@ -62,6 +73,12 @@
         </div>
       </div>
       {% endfor %}
+    </div>
+
+  </div>
+
+
+</div>
 
 
 {% endblock %}

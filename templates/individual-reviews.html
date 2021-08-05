@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %} {{books.title}} | Horror House {% endblock %}
+{% block title %} {{book.title}} | Horror House {% endblock %}
 
 {% block content %}
 
@@ -9,16 +9,16 @@
     <div class="nav-wrapper" id="breadcrumb-bar">
       <div class="col l12">
         <a href="{{ url_for('reviews') }}" class="breadcrumb">All Reviews</a>
-        <a href="{{ url_for('individual', books_id=books._id) }}" class="breadcrumb">{{books.title}}</a>
+        <a href="{{ url_for('individual', book_id=book._id) }}" class="breadcrumb">{{book.title}}</a>
       </div>
     </div>
   </nav>
   <div class="col xl4">
-    <img class="book-review-image" src={{books.image}}>
+    <img class="book-review-image" src={{book.image}}>
 
     {% block rating %}
     {% endblock %}
-    {% if books.rating == "1" %}
+    {% if book.rating == "1" %}
     <div class="star-input rate-padding">
         
     
@@ -33,7 +33,7 @@
         <input type="checkbox" name="rating" title="1 star" id="st1" value="1" checked />
         <label for="st1"></label>
     </div>
-    {% elif books.rating == "2" %}
+    {% elif book.rating == "2" %}
     <div class="star-input rate-padding">
         <input type="checkbox" name="rating" id="st5" title="5 stars" value="5" />
         <label for="st5"></label>
@@ -46,7 +46,7 @@
         <input type="checkbox" name="rating" title="1 star" id="st1" value="1" checked />
         <label for="st1"></label>
     </div>
-    {% elif books.rating == "3" %}
+    {% elif book.rating == "3" %}
     <div class="star-input rate-padding">
         <input type="checkbox" name="rating" id="st5" title="5 stars" value="5" />
         <label for="st5"></label>
@@ -59,7 +59,7 @@
         <input type="checkbox" name="rating" title="1 star" id="st1" value="1" checked />
         <label for="st1"></label>
     </div>
-    {% elif books.rating == "4" %}
+    {% elif book.rating == "4" %}
     <div class="star-input rate-padding">
         <input type="checkbox" name="rating" id="st5" title="5 stars" value="5" />
         <label for="st5"></label>
@@ -72,7 +72,7 @@
         <input type="checkbox" name="rating" title="1 star" id="st1" value="1" checked />
         <label for="st1"></label>
     </div>
-    {% elif books.rating == "5" %}
+    {% elif book.rating == "5" %}
     <div class="star-input rate-padding">
         <input type="checkbox" name="rating" id="st5" title="5 stars" value="5" checked/>
         <label for="st5"></label>
@@ -105,11 +105,11 @@
   </div>
   <div class="col m10 l9 xl8">
     <div class="review-content">
-      <h3 class="custom-font center">{{books.title}} by {{books.author}}</h3>
+      <h3 class="custom-font center">{{book.title}} by {{book.author}}</h3>
       <br>
-      <p class="review-text">{{books.review}}</p>
+      <p class="review-text">{{book.review}}</p>
       <br>
-      <a href="{{books.affiliate}}" target="_blank"
+      <a href="{{book.affiliate}}" target="_blank"
         class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn center">
         Buy here
       </a>

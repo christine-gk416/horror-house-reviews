@@ -57,21 +57,21 @@
 
     <h2 class="center">Read the latest reviews</h2>
     <div class="row">
-      {% for books in books %}
+      {% for book in books %}
       <div class="col s12 m6 l6 xl3">
 
         <div class="card large card-colour z-depth-5">
 
           <div class="card-image">
-            <img src={{books.image}}>
+            <img src={{book.image}}>
           </div>
           <div class="card-content center">
-            <p>{{books.title}}
+            <p>{{book.title}}
               <br>
-              by {{books.author}}
+              by {{book.author}}
             </p>
             <div class="center review-btn-position">
-              <a href="{{ url_for('individual', books_id=books._id) }}"
+              <a href="{{ url_for('individual', book_id=book._id) }}"
                 class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn">
                 Read more
               </a>

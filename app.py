@@ -28,15 +28,15 @@ def index():
 @app.route("/book-reviews")
 def reviews():
     featured = list(mongo.db.featured_books.find())
-    books = list(mongo.db.books.find())
+    book = list(mongo.db.books.find())
     return render_template(
-        "book-reviews.html", featured=featured, books=books)
+        "book-reviews.html", featured=featured, books=book)
 
 
-@app.route("/individual-reviews/<books_id>")
-def individual(books_id):
-    books = mongo.db.books.find_one({"_id": ObjectId(books_id)})
-    return render_template("individual-reviews.html", books=books)
+@app.route("/individual-reviews/<book_id>")
+def individual(book_id):
+    book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
+    return render_template("individual-reviews.html", book=book)
 
 
 @app.route("/featured-reviews/<featured_books_id>")
@@ -128,6 +128,14 @@ def add():
 
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_review.html", categories=categories)
+
+
+@app.route("/edit_review/<book_id>", methods=["GET", "POST"])
+def edit(book_id):
+    book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template(
+        "edit_review.html", book=book, categories=categories)
 
 
 if __name__ == "__main__":

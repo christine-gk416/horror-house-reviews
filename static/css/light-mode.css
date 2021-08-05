@@ -1,7 +1,7 @@
 /* Light Mode */
 
 .navbar-colour {
-  background-color: #D9E8E0;
+  background-color: #CCE0D6;
 }
 
 nav ul a.nav-link-style {
@@ -17,7 +17,7 @@ nav ul a.active {
 }
 
 .card.card-colour {
-  background-color: #D9E8E0;
+  background-color: #D8D0DC;
 }
 
 .btn-toggle {
@@ -34,7 +34,7 @@ nav ul a.active {
 }
 
 .icon-sec-background {
-  background-color: #D9E8E0;
+  background-color: #CCE0D6;
 }
 
 .home-card-title {
@@ -57,7 +57,7 @@ p#light-mode-font {
 }
 
 .login-icon-light {
-  color: #660708;
+  color: #DB9080;
 }
 
 .individual-review-background {
@@ -91,6 +91,6 @@ form .input-field input[type=text].valid {
 
 /* icon prefix focus color */
 form .input-field .prefix.active {
-  color: #F07F83;
+  color: #81B29A;
 }
 
