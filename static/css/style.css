@@ -225,6 +225,11 @@ p.review-text {
   color: #FFC107;
 }
 
+.rate-padding2 {
+  padding-right: 75px;
+  padding-top: 25px;
+} 
+
 /* Profile */
 
 .btn-large.btn-edit {
@@ -452,6 +457,18 @@ ul#nav-mobile.sidenav {
   .contact-pop {
     width: 60%;
   }
+
+  .card.btn-toggle {
+    margin-left: 87%;
+  }
+
+  .book-review-image {
+    width: 60%;
+  }
+
+  .rate-padding2 {
+    padding-right: 185px;
+  }
 }
 
 @media only screen and (max-width : 600px) {
@@ -483,6 +500,14 @@ ul#nav-mobile.sidenav {
 
 .rate-padding {
   padding: 0;
+}
+
+.card.btn-toggle {
+  margin-left: 85%;
+}
+
+a.breadcrumb {
+  font-size: 1.1rem;
 }
 
 }
