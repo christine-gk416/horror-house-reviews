@@ -23,3 +23,14 @@ $(document).ready(function() {
 });
 
 
+$(document).ready(function(){
+  var checkboxes = $('.required');
+  checkboxes.change(function(){
+      if($('.required:checked').length>0) {
+          checkboxes.removeAttr('required');
+      } else {
+          checkboxes.attr('required', 'required');
+      }
+  });
+});
+

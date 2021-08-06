@@ -39,17 +39,16 @@ nav ul a.active {
 
 .home-card-title {
   color: #393C56;
-  text-shadow: 1px 1px 1.x gray;
 }
 
 h3.custom-font {
   color: #6A5676;
-  text-shadow: 1px 1px 1px gray;
+ 
 }
 
 p {
   color: #161214;
-  text-shadow: 1px 1px 1px gray;
+  
 } 
 
 p#light-mode-font {
@@ -73,6 +72,10 @@ footer.page-footer {
 }
 
 .star-input  label:before {
+  color: black;
+}
+
+.star-input2  label {
   color: black;
 }
 

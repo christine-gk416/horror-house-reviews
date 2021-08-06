@@ -6,6 +6,7 @@
   
   nav ul a.nav-link-style{
     color: #F5F3F4;
+    text-shadow: 1px 1px 1px black;
   } 
 
   nav ul a.nav-link-style:active {

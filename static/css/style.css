@@ -58,7 +58,6 @@ div.card-content.toggle-card {
     font-size: 1.6rem;
     font-family: 'Crimson text', sans-serif;
     font-weight: 500;
-    text-shadow: 1px 1px 1px black;
 }
 
 h1.custom-font {
@@ -194,6 +193,38 @@ p.review-text {
   border-radius: 15px;
 }
 
+.star-input2 input {
+  border: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  opacity: 0;
+}
+
+.star-input2  label {
+  position: relative;
+  float: right;
+}
+
+.star-input2  label:before {
+  margin: 5px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f005";
+  display: inline-block;
+  font-size: 1.5em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.star-input2  input:checked ~ label:before {
+  color: #FFC107;
+}
+
 /* Profile */
 
 .btn-large.btn-edit {
@@ -274,37 +305,7 @@ padding-top: 25px;
   color: #FFC107;
 }
 
-.star-input2 input {
-  border: 0;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-  opacity: 0;
-}
 
-.star-input2  label {
-  position: relative;
-  float: right;
-}
-
-.star-input2  label:before {
-  margin: 5px;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f005";
-  display: inline-block;
-  font-size: 1.5em;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-}
-
-.star-input2  input:checked ~ label:before {
-  color: #FFC107;
-}
 
 /* Edit Review */
 

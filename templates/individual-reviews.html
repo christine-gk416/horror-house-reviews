@@ -16,8 +16,7 @@
   <div class="col xl4">
     <img class="book-review-image" src={{ind_book.image}}>
 
-   {% block rating %}
-   {% endblock %}
+  
     {% if ind_book.rating == "1" %}
     <div class="star-input2 rate-padding">
         
@@ -87,7 +86,7 @@
     </div>
     
     {% else %}
-    <div class="star-input rate-padding">
+    <div class="star-input2 rate-padding">
         <input type="checkbox" name="rating" title="1 star" id="st1" value="1" disabled/>
         <label for="st1"></label>
         <input type="checkbox" name="rating" title="2 stars" id="st2" value="2" disabled/>
@@ -110,10 +109,12 @@
       <br>
       <p class="review-text">{{ind_book.review}}</p>
       <br>
+      <div class="center">
       <a href="{{ind_book.affiliate}}" target="_blank"
-        class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn center">
+        class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn">
         Buy here
       </a>
+    </div>
     </div>
   </div>
 
