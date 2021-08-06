@@ -151,9 +151,16 @@ def edit(book_id):
     categories = mongo.db.categories.find().sort("category_name", 1)
 
     get_category = mongo.db.books.find({"category_name": [0]})
-    
+
     return render_template(
         "edit_review.html", book=book, categories=categories, get_category=get_category)
+
+
+@app.route("/delete_review/<book_id>")
+def delete_review(book_id):
+    mongo.db.books.remove({"_id": ObjectId(book_id)})
+    flash("Your review has been deleted")
+    return redirect(url_for("profile", username=session['user']))
 
 
 if __name__ == "__main__":

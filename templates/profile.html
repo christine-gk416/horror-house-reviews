@@ -63,10 +63,24 @@
               </a>
             </div>
             <div class="edit-btn-position right">
-              <a href="/"
-                class="btn-small waves-effect waves-dark lighten-1 btn-delete review-btn">
+              <a href="#delete-modal1"
+                class="btn-small waves-effect waves-dark lighten-1 btn-delete review-btn modal-trigger">
                 Delete
               </a>
+
+              <div id="delete-modal1" class="modal teal lighten-4">
+                <div class="modal-content">
+                    <h4 class="center">Are you sure you want to delete this review?</h4>
+                </div>
+                <div class="modal-footer teal lighten-4">
+                    <a href="{{ url_for('delete_review', book_id=book._id) }}"
+                        class="modal-close waves-effect waves-green btn-flat teal lighten-3">
+                        Agree</a>
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat red lighten-3">Disagree</a>
+                </div>
+              </div>
+
+
             </div>
           </div>
 

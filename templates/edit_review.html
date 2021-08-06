@@ -15,33 +15,36 @@
             <form method="POST" action="{{ url_for('edit', book_id=book._id) }}">
                 <div class="row">
                     <div class="input-field col s6 l6">
-                        <input id="title" type="text" value="{{ book.title }}" name="title" class="validate"  required>
+                        <input id="title" type="text" value="{{ book.title }}" name="title" class="validate" required>
                         <label for="title">Title</label>
                     </div>
                     <div class="input-field col s6 l6">
-                        <input id="author" type="text" value="{{ book.author }}" name="author" class="validate"  required>
+                        <input id="author" type="text" value="{{ book.author }}" name="author" class="validate"
+                            required>
                         <label for="author">Author</label>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="input-field col s6 l6">
-                        <input id="affiliate" type="url" value="{{ book.affiliate}}" name="affiliate" class="validate tooltipped"
-                            data-position="bottom" data-tooltip="Please add an affiliate link from a bookseller"
-                            required>
+                        <input id="affiliate" type="url" value="{{ book.affiliate}}" name="affiliate"
+                            class="validate tooltipped" data-position="bottom"
+                            data-tooltip="Please add an affiliate link from a bookseller" required>
                         <label for="affiliate">Add bookseller link</label>
                     </div>
 
                     <div class="input-field col s6 l6">
-                        <input id="image" type="url" value="{{ book.image }}" name="image" class="validate tooltipped" data-position="bottom"
-                            data-tooltip="Add a .png or .jpg image sized at 500 pixels wide" required>
+                        <input id="image" type="url" value="{{ book.image }}" name="image" class="validate tooltipped"
+                            data-position="bottom" data-tooltip="Add a .png or .jpg image sized at 500 pixels wide"
+                            required>
                         <label for="image">Add book image</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <textarea id="review" name="review" class="validate tooltipped materialize-textarea" minlength="120"
-                            data-position="bottom" data-tooltip="Add a paragraph or two reviewing the book" required>
+                        <textarea id="review" name="review" class="validate tooltipped materialize-textarea"
+                            minlength="120" data-position="bottom"
+                            data-tooltip="Add a paragraph or two reviewing the book" required>
                             {{- book.review -}}
                             </textarea>
                         <label for="review">Review</label>
@@ -51,13 +54,14 @@
                 <div class="row">
                     <div class="input-field col s5 l6">
                         <select name="category_name" multiple>
-                        {% for categories in categories %}
+                            {% for categories in categories %}
                             {% if categories.category_name == book.category_name %}
-                            <option value="{{ get_category.category_name }}" selected>{{ get_category.category_name }}</option>
+                            <option value="{{ get_category.category_name }}" selected>{{ get_category.category_name }}
+                            </option>
                             {% else %}
                             <option value="{{ categories.category_name }}">{{ categories.category_name }}</option>
                             {% endif %}
-                        {% endfor %}
+                            {% endfor %}
                         </select>
                         <label>Categories</label>
                     </div>
@@ -66,32 +70,52 @@
                         <br>
                         <!-- <label>Rate (Optional)</label> -->
                         <div class="star-input rate-padding">
-                            <input type="radio" name="rating" id="st5" title="5 stars" value="5"/>
+                            <input type="radio" name="rating" id="st5" title="5 stars" value="5" />
                             <label for="st5"></label>
                             <input type="radio" name="rating" id="st4" title="4 stars" value="4" />
                             <label for="st4"></label>
-                            <input type="radio" name="rating" id="st3" title="3 stars"value="3" />
+                            <input type="radio" name="rating" id="st3" title="3 stars" value="3" />
                             <label for="st3"></label>
                             <input type="radio" name="rating" title="2 stars" id="st2" value="2" />
                             <label for="st2"></label>
-                            <input type="radio" name="rating" title="1 star" id="st1" value="1" required/>
+                            <input type="radio" name="rating" title="1 star" id="st1" value="1" required />
                             <label for="st1"></label>
-                            
-                            
+
+
                         </div>
-                            
+
                     </div>
-                    
+
 
 
                 </div>
 
-                <div class="center">
-                    <button class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn" type="submit">Update review
+                <div>
+                    <button class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn left"
+                        type="submit">Update review
                     </button>
+
                 </div>
 
             </form>
+
+            <a class="btn-large waves-effect waves-dark lighten-1 btn-styles cancel-btn right modal-trigger"
+                href="#cancel-modal1">Cancel
+            </a>
+            <div id="cancel-modal1" class="modal teal lighten-4">
+                <div class="modal-content">
+                    <h4 class="center">Cancel updating this review</h4>
+                </div>
+                <div class="modal-footer teal lighten-4">
+                    <a href="{{ url_for('profile', username=session['user']) }}"
+                        class="modal-close waves-effect waves-green btn-flat teal lighten-3">
+                        Agree</a>
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat red lighten-3">Disagree</a>
+                </div>
+            </div>
+
+
+
         </div>
 
 

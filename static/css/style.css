@@ -311,6 +311,11 @@ padding-top: 25px;
   color: #FFC107;
 }
 
+/* Edit Review */
+
+.btn-large.cancel-btn {
+  background-color: #C74343;
+}
 
 /* Footer */
 
