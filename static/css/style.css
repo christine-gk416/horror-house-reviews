@@ -196,8 +196,8 @@ p.review-text {
 
 /* Profile */
 
-.btn-small.review-btn {
-  font-size: 1.4rem;
+.btn-large.btn-edit {
+  font-size: 1.6rem;
   text-transform: capitalize;
 }
 
@@ -205,19 +205,14 @@ p.review-text {
   padding-top: 15%;
 }
 
-.btn-small {
+.btn-large.btn-edit {
   border: #F5F3F4 0.75px solid;
   text-shadow: 1px 1px 2px black;
 }
 
-.btn-small.btn-edit {
+.btn-large.btn-edit {
   background-color: #4E7E68;
 }
-
-.btn-small.btn-delete {
-  background-color: #C74343;
-}
-
 
 /* Add Review */
 
@@ -316,6 +311,16 @@ padding-top: 25px;
 .btn-large.cancel-btn {
   background-color: #C74343;
 }
+
+.btn-large.btn-delete {
+  background-color: #C74343;
+}
+
+.btn-large.btn-delete {
+  border: #F5F3F4 0.75px solid;
+  text-shadow: 1px 1px 2px black;
+}
+
 
 /* Footer */
 

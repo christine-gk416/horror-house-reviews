@@ -94,9 +94,9 @@ def sign_up():
 def profile(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    books = list(mongo.db.books.find({'created_by': username}))
+    book = list(mongo.db.books.find({'created_by': username}))
 
-    return render_template("profile.html", username=username, books=books)
+    return render_template("profile.html", username=username, books=book)
 
 
 @app.route("/logout")
@@ -159,6 +159,7 @@ def edit(book_id):
 @app.route("/delete_review/<book_id>")
 def delete_review(book_id):
     mongo.db.books.remove({"_id": ObjectId(book_id)})
+
     flash("Your review has been deleted")
     return redirect(url_for("profile", username=session['user']))
 

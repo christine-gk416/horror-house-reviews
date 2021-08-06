@@ -16,7 +16,8 @@
   <div class="col xl4">
     <img class="book-review-image" src={{ind_book.image}}>
 
-   
+   {% block rating %}
+   {% endblock %}
     {% if ind_book.rating == "1" %}
     <div class="star-input2 rate-padding">
         
@@ -100,6 +101,7 @@
     </div>
     {% endif %}
 
+    <p class="center">Revied by {{ind_book.created_by}}</p>
 
   </div>
   <div class="col m10 l9 xl8">
