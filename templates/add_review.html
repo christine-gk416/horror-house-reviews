@@ -2,9 +2,7 @@
 
 {% block title %} Add Review | Horror House {% endblock %}
 
-{% block main_heading %}
-<h1 class="custom-font header center">Add a new review</h1>
-{% endblock %}
+{% block main_heading %} Add a new review {% endblock %}
 
 {% block content %}
 
@@ -81,40 +79,36 @@
 
                     </div>
 
-
-
                 </div>
                 <div class="row">
-                <div class="col l6 center">
-                    <button class="btn-large waves-effect waves-dark lighten-1 btn-styles"
-                        type="submit">
-                        Create review
-                    </button>
-                </div>
+                    <div class="col l6 center">
+                        <button class="btn-large waves-effect waves-dark lighten-1 btn-styles" type="submit">
+                            Create review
+                        </button>
+                    </div>
 
-                <div class="col l6 center">
-                    <a class="btn-large waves-effect waves-dark lighten-1 btn-styles blue-grey modal-trigger"
-                        href="#cancel-modal1">Cancel
-                    </a>
-                    <div id="cancel-modal1" class="modal teal lighten-4">
-                        <div class="modal-content">
-                            <h4 class="center">Cancel adding this review</h4>
-                        </div>
-                        <div class="modal-footer teal lighten-4">
-                            <a href="{{ url_for('reviews') }} " class="modal-close waves-effect waves-green btn-flat teal lighten-3">
-                                Agree</a>
-                            <a href="#!" class="modal-close waves-effect waves-green btn-flat red lighten-3">Disagree</a>
+                    <div class="col l6 center">
+                        <a class="btn-large waves-effect waves-dark lighten-1 btn-styles blue-grey modal-trigger"
+                            href="#cancel-modal1">Cancel
+                        </a>
+                        <div id="cancel-modal1" class="modal teal lighten-4">
+                            <div class="modal-content">
+                                <h4 class="center">Cancel adding this review</h4>
+                            </div>
+                            <div class="modal-footer teal lighten-4">
+                                <a href="{{ url_for('reviews') }} "
+                                    class="modal-close waves-effect waves-green btn-flat teal lighten-3">
+                                    Agree</a>
+                                <a href="#!"
+                                    class="modal-close waves-effect waves-green btn-flat red lighten-3">Disagree</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                </div>
 
             </form>
-           
-
 
         </div>
-
 
     </div>
 </div>

@@ -2,46 +2,40 @@
 
 {% block title %} {{username}}'s Profile | Horror House {% endblock %}
 
-{% block main_heading %}
-<h1 class="custom-font header center">{{username}}'s Profile</h1>
-{% endblock %}
+{% block main_heading %} {{username}}'s Profile {% endblock %}
+
 {% block content %}
 
-
 <div class="row">
-    <div class="col s12">
-      <div class="overflow-review">
-        <ul id="tabs-swipe-demo" class="tabs breadcrumb-background">
-            <li class="tab col s3"><a class="active" href="#main-info">Main Info</a></li>
-            <li class="tab col s3"><a href="#add-pic">Add Profile Pic</a></li>
-            <li class="tab col s3"><a href="#update-info">Update info</a></li>
-        </ul>
-        <div id="main-info" class="col s12 individual-review-background">
-            <div class="center">
-                <h3>Horror House reviewer {{username}}'s info</h3>
+  <div class="col s12">
+    <div class="overflow-review">
+      <ul id="tabs-swipe-demo" class="tabs breadcrumb-background">
+        <li class="tab col s3"><a class="active" href="#main-info">Main Info</a></li>
+        <li class="tab col s3"><a href="#add-pic">Add Profile Pic</a></li>
+        <li class="tab col s3"><a href="#update-info">Update info</a></li>
+      </ul>
+      <div id="main-info" class="col s12 individual-review-background">
+        <div class="center">
+          <h3>Horror House reviewer {{username}}'s info</h3>
 
-            </div>
         </div>
-        <div id="add-pic" class="col s12 red">
-            <h1>THIS IS A TEST!</h1>
-        </div>
-        <div id="update-info" class="col s12 green">Test 3</div>
+      </div>
+      <div id="add-pic" class="col s12 red">
+        <h1>THIS IS A TEST!</h1>
+      </div>
+      <div id="update-info" class="col s12 green">Test 3</div>
     </div>
   </div>
 </div>
 
-
 {% endblock %}
 
-
-
 {% block below_content %}
-
 
 <div class="icon-sec-background">
   <div class="review-container">
 
-    <h2 class="center">Reviews by {{username}}</h2> 
+    <h2 class="center">Reviews by {{username}}</h2>
     <div class="row">
       {% for book in books %}
       <div class="col s12 m6 l6 xl3">
@@ -63,8 +57,6 @@
               </a>
             </div>
 
-
-            
           </div>
         </div>
       </div>
@@ -75,6 +67,5 @@
 
 
 </div>
-
 
 {% endblock %}

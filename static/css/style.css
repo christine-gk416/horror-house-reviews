@@ -191,6 +191,7 @@ p.review-text {
   overflow-y: scroll;
   padding: 3%;
   border-radius: 15px;
+  scrollbar-width: thin;
 }
 
 .star-input2 input {
@@ -258,6 +259,7 @@ p.review-text {
   overflow-y: scroll;
   padding: 3%;
   border-radius: 15px;
+  scrollbar-width: thin;
 }
 
 .rate-padding {
