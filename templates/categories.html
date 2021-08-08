@@ -1,12 +1,13 @@
 {% extends "base.html" %}
+{% block title %} {{category.category_name}} | Horror House {% endblock %}
 
 {% block main_heading %} {{category.category_name}} {% endblock %}
 
 {% block content %}
 <div class="row">
-{% for book in books %}
+  {% for book in books %}
 
-<div class="col s12 m6 l6 xl3">
+  <div class="col s12 m6 l6 xl3">
 
     <div class="card large card-colour z-depth-5">
 
@@ -29,7 +30,7 @@
     </div>
   </div>
 
-{% endfor %}
+  {% endfor %}
 </div>
-  
+
 {% endblock %}

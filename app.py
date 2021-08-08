@@ -36,11 +36,9 @@ def reviews():
          featured=featured, books=book, categories=categories)
 
 
-
 @app.route("/individual-reviews/<book_id>")
 def individual(book_id):
     ind_book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
-
 
     return render_template("individual-reviews.html", ind_book=ind_book)
 

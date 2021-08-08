@@ -18,11 +18,15 @@
         <div class="center">
           <h3>Horror House reviewer {{username}}'s info</h3>
 
+          <img alt="Default profile pic">
+
         </div>
       </div>
+
       <div id="add-pic" class="col s12 red">
         <h1>THIS IS A TEST!</h1>
       </div>
+
       <div id="update-info" class="col s12 green">Test 3</div>
     </div>
   </div>
@@ -43,7 +47,7 @@
         <div class="card large card-colour z-depth-5">
 
           <div class="card-image">
-            <img src={{book.image}}>
+            <img src={{book.image}} alt="Book cover for {{book.title}}">
           </div>
           <div class="card-content center">
             <p>{{book.title}}

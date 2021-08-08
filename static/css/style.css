@@ -50,6 +50,17 @@ div.card-content.toggle-card {
   text-shadow: 1px 1px 2px black;
 }
 
+div.chip {
+  background-color: #81b29a;
+}
+
+div.chip a {
+  color: black;
+}
+
+div.chip a:hover {
+  color: #7F678E;
+}
 
 
 /* Font Styles */

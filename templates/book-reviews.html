@@ -14,7 +14,7 @@
       <li class="splide__slide">
         <div class="card large card-colour">
           <div class="card-image">
-            <img src={{featured.image}}>
+            <img src={{featured.image}} alt="Book title for {{featured.title}}">
 
           </div>
           <div class="card-content center">
@@ -53,10 +53,12 @@
     <h2 class="center">Read the latest reviews</h2>
 
     {% for category in categories %}
+   
     <div class="chip">
       <a href="{{ url_for('category', category_id=category._id) }}">{{category.category_name}}</a>
     
     </div>
+  
     {% endfor %}
 
     
@@ -69,7 +71,7 @@
         <div class="card large card-colour z-depth-5">
 
           <div class="card-image">
-            <img src={{book.image}}>
+            <img src={{book.image}} alt="Book title for {{book.title}}">
           </div>
           <div class="card-content center">
             <p>{{book.title}}
