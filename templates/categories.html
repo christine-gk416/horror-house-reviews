@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block main_heading %} {{category.category_name}} {% endblock %}
+
+{% block content %}
+<div class="row">
+{% for book in books %}
+
+<div class="col s12 m6 l6 xl3">
+
+    <div class="card large card-colour z-depth-5">
+
+      <div class="card-image">
+        <img src={{book.image}}>
+      </div>
+      <div class="card-content center">
+        <p>{{book.title}}
+          <br>
+          by {{book.author}}
+        </p>
+        <div class="center review-btn-position">
+          <a href="{{ url_for('individual', book_id=book._id) }}"
+            class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn">
+            Read more
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+{% endfor %}
+</div>
+  
+{% endblock %}

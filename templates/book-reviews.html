@@ -51,6 +51,17 @@
   <div class="review-container">
 
     <h2 class="center">Read the latest reviews</h2>
+
+    {% for category in categories %}
+    <div class="chip">
+      <a href="{{ url_for('category', category_id=category._id) }}">{{category.category_name}}</a>
+    
+    </div>
+    {% endfor %}
+
+    
+    
+
     <div class="row">
       {% for book in books %}
       <div class="col s12 m6 l6 xl3">

@@ -29,13 +29,19 @@ def index():
 def reviews():
     featured = list(mongo.db.featured_books.find())
     book = list(mongo.db.books.find())
+    categories = mongo.db.categories.find().sort("category_name", 1)
+
     return render_template(
-        "book-reviews.html", featured=featured, books=book)
+        "book-reviews.html",
+         featured=featured, books=book, categories=categories)
+
 
 
 @app.route("/individual-reviews/<book_id>")
 def individual(book_id):
     ind_book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
+
+
     return render_template("individual-reviews.html", ind_book=ind_book)
 
 
@@ -43,6 +49,7 @@ def individual(book_id):
 def featured(featured_books_id):
     featured = mongo.db.featured_books.find_one(
         {"_id": ObjectId(featured_books_id)})
+
     return render_template("featured-reviews.html", featured=featured)
 
 
@@ -94,9 +101,10 @@ def sign_up():
 def profile(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    book = list(mongo.db.books.find({'created_by': username}))
+    book = list(mongo.db.books.find({"created_by": username}))
 
-    return render_template("profile.html", username=username, books=book)
+    if session["user"]:
+        return render_template("profile.html", username=username, books=book)
 
 
 @app.route("/logout")
@@ -122,6 +130,7 @@ def add():
             "rating": request.form.get("rating"),
             "created_by": username,
         }
+
         mongo.db.books.insert_one(review)
         flash("Review Successfully Added")
         return redirect(url_for("add"))
@@ -150,10 +159,8 @@ def edit(book_id):
     book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
 
-    get_category = mongo.db.books.find({"category_name": [0]})
-
     return render_template(
-        "edit_review.html", book=book, categories=categories, get_category=get_category)
+        "edit_review.html", book=book, category=categories)
 
 
 @app.route("/delete_review/<book_id>")
@@ -162,6 +169,18 @@ def delete_review(book_id):
 
     flash("Your review has been deleted")
     return redirect(url_for("profile", username=session['user']))
+
+
+@app.route("/categories/<category_id>")
+def category(category_id):
+    category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
+    books = list(mongo.db.books.find(
+        {"category_name": {"$in": [category["category_name"]]}}
+    ))
+    print(books)
+
+    return render_template(
+        "categories.html", category=category, books=books)
 
 
 if __name__ == "__main__":
