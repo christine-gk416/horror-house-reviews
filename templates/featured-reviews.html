@@ -1,10 +1,10 @@
-{% extends "base.html" %}
+{% extends "general-templates/base.html"  %}
 {% block title %} {{featured.title}} | Horror House {% endblock %}
 
 {% block content %}
 
 
-<div class="row individual-review-background">
+<div class="row overflow-review individual-review-background">
   <nav>
 
     <div class="nav-wrapper" id="breadcrumb-bar">
@@ -17,6 +17,21 @@
 
   <div class="col m6 l5 xl4 center">
     <img class="book-review-image" src={{featured.image}}>
+    {% include "featured-rating-temp.html" %}
+
+    <div class="center">
+      <p>Reviewed by {{featured.created_by}}</p>
+
+      {% for category in featured.category_name %}
+
+      <div class="chip">
+        {{category}}
+      </div>
+
+      {% endfor %}
+
+    </div>
+
   </div>
   <div class="col m6 l7 xl8">
     <div class="review-content">

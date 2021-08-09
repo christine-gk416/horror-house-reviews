@@ -100,9 +100,11 @@ def profile(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
     book = list(mongo.db.books.find({"created_by": username}))
+    featured = list(mongo.db.featured_books.find({"created_by": username}))
 
     if session["user"]:
-        return render_template("profile.html", username=username, books=book)
+        return render_template("profile.html", username=username,
+        books=book, featured=featured)
 
 
 @app.route("/logout")
@@ -139,7 +141,8 @@ def add():
 
 @app.route("/add_featured", methods=["GET", "POST"])
 def add_featured():
-    is_superuser = mongo.db.users.find_one({"is_superuser": True})["username"]
+    is_superuser = mongo.db.users.find_one({"is_superuser": True,
+        "username": session["user"]})["username"]
 
     if request.method == "POST":
         review = {

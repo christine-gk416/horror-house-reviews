@@ -48,6 +48,9 @@ div.card-content.toggle-card {
   background-color: #7F678E;
   border: #F5F3F4 0.75px solid;
   text-shadow: 1px 1px 2px black;
+  font-family: 'Crimson Text';
+  text-transform: capitalize;
+  font-size: 1.8rem;
 }
 
 div.chip {
@@ -96,6 +99,7 @@ h2 {
 h3.custom-font {
     font-size: 2rem;
     font-family: Arial;
+    text-shadow: 1px 1px 3px black;
 }
 
 h4 {
@@ -113,13 +117,6 @@ a#login-link {
   text-decoration: underline;
   color: #A895B2;
   text-shadow: 1px 1px 1px black;
-}
-
-.btn-large.btn-styles {
-  
-  font-family: 'Crimson Text';
-  text-transform: capitalize;
-  font-size: 1.8rem;
 }
 
 a.breadcrumb {
@@ -266,6 +263,15 @@ p.review-text {
   height: auto;
   width: 25%;
   border-radius: 50%;
+}
+
+.btn-large.featured-btn {
+background-color: #81B29A;
+border: #F5F3F4 0.75px solid;
+  text-shadow: 1px 1px 2px black;
+  font-family: 'Crimson Text';
+  text-transform: capitalize;
+  font-size: 1.8rem;
 }
 
 /* Add Review */

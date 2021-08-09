@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "general-templates/base.html" %}
 
 {% block title %} Add Featured Review | Horror House {% endblock %}
 
@@ -27,7 +27,7 @@
                         <input id="affiliate" type="url" name="affiliate" class="validate tooltipped"
                             data-position="bottom" data-tooltip="Please add an affiliate link from a bookseller"
                             required>
-                        <label for="affiliate">Add bookseller link</label>
+                        <label for="affiliate">Add affiliate link</label>
                     </div>
 
                     <div class="input-field col s6 l6">
@@ -95,7 +95,7 @@
                                 <h4 class="center">Cancel adding this review</h4>
                             </div>
                             <div class="modal-footer teal lighten-4">
-                                <a href="{{ url_for('reviews') }} "
+                                <a href="{{ url_for('profile', username=session['user']) }} "
                                     class="modal-close waves-effect waves-green btn-flat teal lighten-3">
                                     Agree</a>
                                 <a href="#!"
