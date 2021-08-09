@@ -137,6 +137,31 @@ def add():
     return render_template("add_review.html", categories=categories)
 
 
+@app.route("/add_featured", methods=["GET", "POST"])
+def add_featured():
+    is_superuser = mongo.db.users.find_one({"is_superuser": True})["username"]
+
+    if request.method == "POST":
+        review = {
+            "title": request.form.get("title"),
+            "author": request.form.get("author"),
+            "affiliate": request.form.get("affiliate"),
+            "image": request.form.get("image"),
+            "review": request.form.get("review"),
+            "category_name": request.form.getlist("category_name"),
+            "rating": request.form.get("rating"),
+            "created_by": is_superuser,
+        }
+
+        mongo.db.featured_books.insert_one(review)
+        flash("Review Successfully Added")
+        return redirect(url_for("add_featured"))
+
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("add_featured.html", categories=categories)
+
+
+
 @app.route("/edit_review/<book_id>", methods=["GET", "POST"])
 def edit(book_id):
 
@@ -175,7 +200,6 @@ def category(category_id):
     books = list(mongo.db.books.find(
         {"category_name": {"$in": [category["category_name"]]}}
     ))
-    print(books)
 
     return render_template(
         "categories.html", category=category, books=books)

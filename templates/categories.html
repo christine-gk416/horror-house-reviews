@@ -5,6 +5,19 @@
 
 {% block content %}
 <div class="row">
+  <div class="col l12">
+    <nav>
+      <div class="nav-wrapper" id="breadcrumb-bar">
+        <div class="col l12">
+          <a href="{{ url_for('reviews') }}" class="breadcrumb">All Reviews</a>
+          <a href="{{ url_for('category', category_id=category._id) }}"
+            class="breadcrumb">{{category.category_name}}</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+<div class="row">
   {% for book in books %}
 
   <div class="col s12 m6 l6 xl3">
@@ -12,7 +25,7 @@
     <div class="card large card-colour z-depth-5">
 
       <div class="card-image">
-        <img src={{book.image}}>
+        <img src={{book.image}} alt="Book title for {{book.title}}">
       </div>
       <div class="card-content center">
         <p>{{book.title}}
@@ -29,6 +42,22 @@
 
     </div>
   </div>
+
+  {% else %}
+ 
+      <div class="col m12 l12 center">
+        <div class="card small card-colour login-card-padding">
+          <div class="card-content">
+            <p class="browse-bottom">There aren't any books in this category yet.</p>
+            
+            <div>
+              <a href="{{ url_for('reviews') }}" class="btn-large waves-effect waves-dark lighten-1 btn-styles">
+                Browse
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
 
   {% endfor %}
 </div>

@@ -11,23 +11,51 @@
     <div class="overflow-review">
       <ul id="tabs-swipe-demo" class="tabs breadcrumb-background">
         <li class="tab col s3"><a class="active" href="#main-info">Main Info</a></li>
-        <li class="tab col s3"><a href="#add-pic">Add Profile Pic</a></li>
         <li class="tab col s3"><a href="#update-info">Update info</a></li>
+        {% if session.user|lower == "admin"|lower %}
+        <li class="tab col s3"><a href="#add-featured">Featured</a></li>
+        {% elif session.user|lower == "cmk416"|lower %}
+        <li class="tab col s3"><a href="#add-featured">Featured</a></li>
+        {% endif %}
+        
       </ul>
-      <div id="main-info" class="col s12 individual-review-background">
+      <div id="main-info" class="col s12 review-container">
         <div class="center">
-          <h3>Horror House reviewer {{username}}'s info</h3>
+          <h3>Horror House reviewer {{username}}</h3>
 
-          <img alt="Default profile pic">
+          <img src="{{url_for('static', filename='images/pumpkin-avatar.png')}}" class="profile-image"
+            alt="Default profile pic">
 
         </div>
       </div>
 
-      <div id="add-pic" class="col s12 red">
-        <h1>THIS IS A TEST!</h1>
+      <div id="update-info" class="col s12 review-container">
+        <form method="POST" action="{{ url_for('profile', username=session['user']) }}">
+          <div class="row">
+            <div class="input-field col s6 l6">
+              <i class="material-icons">add</i>
+              <input id="image" type="url" name="profile-image" class="validate tooltipped" data-position="bottom"
+                data-tooltip="Add a .png or .jpg image sized at 500 pixels wide" required>
+              <label for="image">Add profile image</label>
+              <button class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn" type="submit"
+                name="action">Add
+              </button>
+            </div>
+          </div>
+        </form>
       </div>
 
-      <div id="update-info" class="col s12 green">Test 3</div>
+
+      <div id="add-featured" class="col s12 review-container center">
+        <h3>Managed featured reviews</h3>
+        <div>
+          <a href="{{ url_for('add_featured') }}" class="btn-large waves-effect waves-dark lighten-1 btn-styles">
+            Create review
+          </a>
+        </div>
+
+      </div>
+      
     </div>
   </div>
 </div>
@@ -36,12 +64,14 @@
 
 {% block below_content %}
 
-<div class="icon-sec-background">
+
   <div class="review-container">
 
     <h2 class="center">Reviews by {{username}}</h2>
     <div class="row">
+    
       {% for book in books %}
+      
       <div class="col s12 m6 l6 xl3">
 
         <div class="card large card-colour z-depth-5">
@@ -64,12 +94,25 @@
           </div>
         </div>
       </div>
+    
+
+  
+  {% else %}
+ 
+      <div class="col l12 center">
+        <p>You haven't created any reviews yet.</p>
+        <div>
+          <a href="{{ url_for('reviews') }}" class="btn-large waves-effect waves-dark lighten-1 btn-edit">
+            Browse
+          </a>
+        </div>
+      </div>
+     
+    
       {% endfor %}
     </div>
+    </div>
 
-  </div>
 
-
-</div>
 
 {% endblock %}

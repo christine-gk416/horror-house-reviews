@@ -262,6 +262,12 @@ p.review-text {
   background-color: #4E7E68;
 }
 
+.profile-image {
+  height: auto;
+  width: 25%;
+  border-radius: 50%;
+}
+
 /* Add Review */
 
 .overflow-form {
@@ -338,6 +344,12 @@ padding-top: 25px;
 .btn-large.btn-delete {
   border: #F5F3F4 0.75px solid;
   text-shadow: 1px 1px 2px black;
+}
+
+/* Categories */
+
+.browse-bottom {
+  padding-bottom: 10%;
 }
 
 
