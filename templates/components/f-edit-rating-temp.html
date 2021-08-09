@@ -1,0 +1,71 @@
+{% block content %}
+{% if featured.rating == "1" %}
+<input type="checkbox" name="rating" id="st5" title="5 stars" value="5" />
+<label for="st5"></label>
+<input type="checkbox" name="rating" id="st4" title="4 stars" value="4" />
+<label for="st4"></label>
+<input type="checkbox" name="rating" id="st3" title="3 stars" value="3" />
+<label for="st3"></label>
+<input type="checkbox" name="rating" title="2 stars" id="st2" value="2" />
+<label for="st2"></label>
+<input type="checkbox" name="rating" title="1 star" id="st1" value="1" checked />
+<label for="st1"></label>
+{% elif featured.rating == "2" %}
+<input type="checkbox" name="rating" id="st5" title="5 stars" value="5" />
+<label for="st5"></label>
+<input type="checkbox" name="rating" id="st4" title="4 stars" value="4" />
+<label for="st4"></label>
+<input type="checkbox" name="rating" id="st3" title="3 stars" value="3" />
+<label for="st3"></label>
+<input type="checkbox" name="rating" title="2 stars" id="st2" value="2" checked />
+<label for="st2"></label>
+<input type="checkbox" name="rating" title="1 star" id="st1" value="1" checked />
+<label for="st1"></label>
+{% elif featured.rating == "3" %}
+<input type="checkbox" name="rating" id="st5" title="5 stars" value="5" />
+<label for="st5"></label>
+<input type="checkbox" name="rating" id="st4" title="4 stars" value="4" />
+<label for="st4"></label>
+<input type="checkbox" name="rating" id="st3" title="3 stars" value="3" checked />
+<label for="st3"></label>
+<input type="checkbox" name="rating" title="2 stars" id="st2" value="2" checked />
+<label for="st2"></label>
+<input type="checkbox" name="rating" title="1 star" id="st1" value="1" checked />
+<label for="st1"></label>
+{% elif featured.rating == "4" %}
+<input type="checkbox" name="rating" id="st5" title="5 stars" value="5" />
+<label for="st5"></label>
+<input type="checkbox" name="rating" id="st4" title="4 stars" value="4" checked />
+<label for="st4"></label>
+<input type="checkbox" name="rating" id="st3" title="3 stars" value="3" checked />
+<label for="st3"></label>
+<input type="checkbox" name="rating" title="2 stars" id="st2" value="2" checked />
+<label for="st2"></label>
+<input type="checkbox" name="rating" title="1 star" id="st1" value="1" checked />
+<label for="st1"></label>
+{% elif featured.rating == "5" %}
+<input type="checkbox" name="rating" id="st5" title="5 stars" value="5" checked />
+<label for="st5"></label>
+<input type="checkbox" name="rating" id="st4" title="4 stars" value="4" checked />
+<label for="st4"></label>
+<input type="checkbox" name="rating" id="st3" title="3 stars" value="3" checked />
+<label for="st3"></label>
+<input type="checkbox" name="rating" title="2 stars" id="st2" value="2" checked />
+<label for="st2"></label>
+<input type="checkbox" name="rating" title="1 star" id="st1" value="1" checked />
+<label for="st1"></label>
+{% else %}
+
+<input type="checkbox" class="required" name="rating" id="st5" title="5 stars" value="5" required />
+<label for="st5"></label>
+<input type="checkbox" class="required" name="rating" id="st4" title="4 stars" value="4" required />
+<label for="st4"></label>
+<input type="checkbox" class="required" name="rating" id="st3" title="3 stars" value="3" required />
+<label for="st3"></label>
+<input type="checkbox" class="required" name="rating" title="2 stars" id="st2" value="2" required />
+<label for="st2"></label>
+<input type="checkbox" class="required" name="rating" title="1 star" id="st1" value="1" required />
+<label for="st1"></label>
+
+{% endif %}
+{% endblock %}

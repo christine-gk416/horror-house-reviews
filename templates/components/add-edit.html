@@ -1,0 +1,61 @@
+
+{% block content %}
+
+<div id="add-featured" class="col s12 review-container center">
+    <h3 class="custom-font">Manage Featured Reviews</h3>
+     <div>
+       
+       <a href="{{ url_for('add_featured') }}" class="btn-large waves-effect waves-dark lighten-1 btn-styles featured-btn">
+         Create review
+       </a>
+       <br>
+     </div>
+
+     
+     <div>
+     <div class="splide">
+       <div class="splide__track">
+        
+         <ul class="splide__list">
+            {% for featured in featured %}
+           <li class="splide__slide">
+            
+             <div class="card large card-colour">
+               <div class="card-image">
+                 
+                 <img src={{featured.image}} alt="Book title for {{featured.title}}">
+   
+               </div>
+               <div class="card-content center">
+                 <p class="mobile-review-card">{{featured.title}}
+                   <br>
+                   by {{featured.author}}
+                 </p>
+                 <br>
+                 <div class="edit-btn-position center">
+                    <a href="{{ url_for('edit_featured', featured_id=featured._id) }}"
+                      class="btn-large waves-effect waves-dark lighten-1 btn-edit">
+                      Edit/Delete
+                    </a>
+                  </div>
+                 
+               </div>
+   
+             </div>
+             
+           </li>
+           {% endfor %}
+         </ul>
+         
+       </div>
+     </div>
+   </div>
+     
+     
+   
+    
+     
+   
+   </div>
+
+{% endblock %}

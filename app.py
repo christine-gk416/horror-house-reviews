@@ -101,9 +101,9 @@ def profile(username):
         {"username": session["user"]})["username"]
     book = list(mongo.db.books.find({"created_by": username}))
     featured = list(mongo.db.featured_books.find({"created_by": username}))
-
+ 
     if session["user"]:
-        return render_template("profile.html", username=username,
+        return render_template("profile.html", username=username, 
         books=book, featured=featured)
 
 
@@ -189,9 +189,42 @@ def edit(book_id):
         "edit_review.html", book=book, category=categories)
 
 
+@app.route("/edit_featured/<featured_id>", methods=["GET", "POST"])
+def edit_featured(featured_id):
+
+    if request.method == "POST":
+        submit = {
+            "title": request.form.get("title"),
+            "author": request.form.get("author"),
+            "affiliate": request.form.get("affiliate"),
+            "image": request.form.get("image"),
+            "review": request.form.get("review"),
+            "category_name": request.form.getlist("category_name"),
+            "rating": request.form.get("rating"),
+            "created_by": session["user"],
+        }
+        mongo.db.books.update({"_id": ObjectId(featured_id)}, submit)
+        flash("Review successfully updated")
+
+    featured = mongo.db.featured_books.find_one({"_id": ObjectId(featured_id)})
+    categories = mongo.db.categories.find().sort("category_name", 1)
+
+    return render_template(
+        "edit_featured.html", categories=categories, featured=featured)
+
+
+
 @app.route("/delete_review/<book_id>")
 def delete_review(book_id):
     mongo.db.books.remove({"_id": ObjectId(book_id)})
+
+    flash("Your review has been deleted")
+    return redirect(url_for("profile", username=session['user']))
+
+
+@app.route("/delete_featured/<featured_id>")
+def delete_featured(featured_id):
+    mongo.db.featured_books.remove({"_id": ObjectId(featured_id)})
 
     flash("Your review has been deleted")
     return redirect(url_for("profile", username=session['user']))

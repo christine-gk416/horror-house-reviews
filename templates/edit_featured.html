@@ -1,8 +1,8 @@
 {% extends "general-templates/base.html" %}
 
-{% block title %} Edit Review | Horror House {% endblock %}
+{% block title %} Edit Featured | Horror House {% endblock %}
 
-{% block main_heading %} Edit your review {% endblock %}
+{% block main_heading %} Edit your featured review {% endblock %}
 
 {% block content %}
 
@@ -12,15 +12,15 @@
         <div class="overflow-form individual-review-background">
 
 
-            <form method="POST" action="{{ url_for('edit', book_id=book._id) }}">
+            <form method="POST" action="{{ url_for('edit_featured', featured_id=featured._id) }}">
 
                 <div class="row">
                     <div class="input-field col s6 l6">
-                        <input id="title" type="text" value="{{ book.title }}" name="title" class="validate" required>
+                        <input id="title" type="text" value="{{featured.title }}" name="title" class="validate" required>
                         <label for="title">Title</label>
                     </div>
                     <div class="input-field col s6 l6">
-                        <input id="author" type="text" value="{{ book.author }}" name="author" class="validate"
+                        <input id="author" type="text" value="{{ featured.author }}" name="author" class="validate"
                             required>
                         <label for="author">Author</label>
                     </div>
@@ -28,14 +28,14 @@
 
                 <div class="row">
                     <div class="input-field col s6 l6">
-                        <input id="affiliate" type="url" value="{{ book.affiliate}}" name="affiliate"
+                        <input id="affiliate" type="url" value="{{ featured.affiliate}}" name="affiliate"
                             class="validate tooltipped" data-position="bottom"
                             data-tooltip="Please add an affiliate link from a bookseller" required>
                         <label for="affiliate">Add bookseller link</label>
                     </div>
 
                     <div class="input-field col s6 l6">
-                        <input id="image" type="url" value="{{ book.image }}" name="image" class="validate tooltipped"
+                        <input id="image" type="url" value="{{ featured.image }}" name="image" class="validate tooltipped"
                             data-position="bottom" data-tooltip="Add a .png or .jpg image sized at 500 pixels wide"
                             required>
                         <label for="image">Add book image</label>
@@ -46,7 +46,7 @@
                         <textarea id="review" name="review" class="validate tooltipped materialize-textarea"
                             minlength="120" data-position="bottom"
                             data-tooltip="Add a paragraph or two reviewing the book" required>
-                                        {{- book.review -}}
+                                        {{- featured.review -}}
                                         </textarea>
                         <label for="review">Review</label>
                     </div>
@@ -58,7 +58,7 @@
                         <select name="category_name" multiple>
                             
                             {% for category in categories %}
-                            {% if category.category_name == book.category_name %}
+                            {% if category.category_name == featured.category_name %}
                             <option value="{{category.category_name }}" selected>{{category.category_name }}
                             </option>
                             {% else %}
@@ -77,7 +77,7 @@
                         <br>
                         <!-- <label>Rate (Optional)</label> -->
                         <div class="star-input rate-padding required">
-                            {% include "components/edit-rating-temp.html" %}
+                            {% include "components/f-edit-rating-temp.html" %}
                     
                         </div>
                     
@@ -123,7 +123,7 @@
                                 <h4 class="center">Are you sure you want to delete this review?</h4>
                             </div>
                             <div class="modal-footer teal lighten-4">
-                                <a href="{{ url_for('delete_review', book_id=book._id) }}"
+                                <a href="{{ url_for('delete_featured', featured_id=featured._id) }}"
                                     class="modal-close waves-effect waves-green btn-flat teal lighten-3">
                                     Agree</a>
                                 <a href="#!"
