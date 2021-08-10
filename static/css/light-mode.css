@@ -5,7 +5,7 @@
 }
 
 nav ul a.nav-link-style {
-   color: #393C56;
+  color: #393C56;
 }
 
 nav ul a.nav-link-style:active {
@@ -43,7 +43,7 @@ nav ul a.active {
 
 h3.custom-font {
   color: #6A5676;
- 
+
 }
 
 h3.manage-featured {
@@ -52,8 +52,8 @@ h3.manage-featured {
 
 p {
   color: #161214;
-  
-} 
+
+}
 
 p#light-mode-font {
   color: #161214;
@@ -68,22 +68,22 @@ p#light-mode-font {
 }
 
 footer.page-footer {
-  background-color:  #81B29A;
+  background-color: #81B29A;
 }
 
-.star-input  label {
+.star-input label {
   color: black;
 }
 
-.star-input  label:before {
+.star-input label:before {
   color: black;
 }
 
-.star-input2  label {
+.star-input2 label {
   color: black;
 }
 
-  /* Materialize input styles for forms*/
+/* Materialize input styles for forms*/
 
 /* label color */
 form .input-field label {
@@ -100,4 +100,3 @@ form .input-field input[type=text].valid {
 form .input-field .prefix.active {
   color: #81B29A;
 }
-

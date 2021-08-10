@@ -1,88 +1,88 @@
 /* Dark Mode */
 
 .navbar-colour {
-    background-color: #81B29A;
-  }
-  
-  nav ul a.nav-link-style{
-    color: #F5F3F4;
-    text-shadow: 1px 1px 1px black;
-  } 
+  background-color: #81B29A;
+}
 
-  nav ul a.nav-link-style:active {
-    background-color: #393C56;
-  }
-  
-  nav ul a.active {
-    background-color: #393C56;
-  }
+nav ul a.nav-link-style {
+  color: #F5F3F4;
+  text-shadow: 1px 1px 1px black;
+}
 
-  .home-card-title {
-    color: #F5F3F4;
-    text-shadow: 1px 1px 2px black;
-  }
+nav ul a.nav-link-style:active {
+  background-color: #393C56;
+}
 
-  h3.custom-font {
-    color: #F5F3F4;
-    text-shadow: 1px 1px 2px black;
-  }
-  
-  p {
-    color: #F5F3F4;
-    text-shadow: 1px 1px 2px black;
-  }  
-  
-  .card.card-colour {
-    background-color: #393C56;
-  }
+nav ul a.active {
+  background-color: #393C56;
+}
 
-  .btn-toggle {
-    color: #F5F3F4;
-    text-shadow: 1px 1px 2px #7F678E;
-  }
+.home-card-title {
+  color: #F5F3F4;
+  text-shadow: 1px 1px 2px black;
+}
+
+h3.custom-font {
+  color: #F5F3F4;
+  text-shadow: 1px 1px 2px black;
+}
+
+p {
+  color: #F5F3F4;
+  text-shadow: 1px 1px 2px black;
+}
+
+.card.card-colour {
+  background-color: #393C56;
+}
+
+.btn-toggle {
+  color: #F5F3F4;
+  text-shadow: 1px 1px 2px #7F678E;
+}
 
 
-  .icon-sec-background{
+.icon-sec-background {
   background-color: #393C56;
 }
 
 .icon-styles {
-    color: #E33B3D;
-  }
+  color: #E33B3D;
+}
 
- .individual-review-background {
-    background-color: #393C56;
-  }
+.individual-review-background {
+  background-color: #393C56;
+}
 
-  .review-container {
-    background-color: #393C56;
-  }
+.review-container {
+  background-color: #393C56;
+}
 
-  footer.page-footer {
-    background-color: #81B29A;
-  }
-  
-  ul li {
-    color: #F5F3F4;
-  }
+footer.page-footer {
+  background-color: #81B29A;
+}
 
-  input {
-    color: white;
-  }
+ul li {
+  color: #F5F3F4;
+}
 
-  textarea {
-    color: white;
-  }
+input {
+  color: white;
+}
 
-  .star-input  label {
-    color: #C8C8C8;
-  }
+textarea {
+  color: white;
+}
 
-  .star-input  label:before {
-    color: #C8C8C8;
-  }
+.star-input label {
+  color: #C8C8C8;
+}
 
-  /* Materialize input styles for forms*/
+.star-input label:before {
+  color: #C8C8C8;
+}
+
+/* Materialize input styles for forms*/
 
 /* label color */
 form .input-field label {

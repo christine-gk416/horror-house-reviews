@@ -15,7 +15,7 @@ body {
 
 nav .nav-wrapper {
   width: 100%;
-  
+
 }
 
 nav .nav-wrapper#breadcrumb-bar {
@@ -23,7 +23,8 @@ nav .nav-wrapper#breadcrumb-bar {
 }
 
 .tabs.breadcrumb-background {
-  background-color: #81B29A;;
+  background-color: #81B29A;
+  ;
 }
 
 .card.btn-toggle {
@@ -71,9 +72,9 @@ div.chip a:hover {
 /* Font Styles */
 
 .nav-link-style {
-    font-size: 1.6rem;
-    font-family: 'Crimson text', sans-serif;
-    font-weight: 500;
+  font-size: 1.6rem;
+  font-family: 'Crimson text', sans-serif;
+  font-weight: 500;
 }
 
 h1.custom-font {
@@ -104,8 +105,8 @@ h2 {
 }
 
 h3.custom-font {
-    font-size: 2rem;
-    font-family: Arial;
+  font-size: 2rem;
+  font-family: Arial;
 }
 
 h4 {
@@ -193,7 +194,7 @@ h2.review-heading {
 }
 
 /* Individual Reviews */
-.book-review-image{
+.book-review-image {
   padding: 5%;
   height: auto;
   width: 80%;
@@ -209,7 +210,6 @@ h2.review-heading {
   overflow-y: scroll;
   padding: 3%;
   border-radius: 15px;
-  scrollbar-width: thin;
 }
 
 .star-input2 input {
@@ -223,12 +223,12 @@ h2.review-heading {
   opacity: 0;
 }
 
-.star-input2  label {
+.star-input2 label {
   position: relative;
   float: right;
 }
 
-.star-input2  label:before {
+.star-input2 label:before {
   margin: 5px;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -240,14 +240,14 @@ h2.review-heading {
   user-select: none;
 }
 
-.star-input2  input:checked ~ label:before {
+.star-input2 input:checked~label:before {
   color: #FFC107;
 }
 
 .rate-padding2 {
   padding-right: 75px;
   padding-top: 25px;
-} 
+}
 
 /* Profile */
 
@@ -276,8 +276,8 @@ h2.review-heading {
 }
 
 .btn-large.featured-btn {
-background-color: #81B29A;
-border: #F5F3F4 0.75px solid;
+  background-color: #81B29A;
+  border: #F5F3F4 0.75px solid;
   text-shadow: 1px 1px 2px black;
   font-family: 'Crimson Text';
   text-transform: capitalize;
@@ -304,15 +304,14 @@ border: #F5F3F4 0.75px solid;
   overflow-y: scroll;
   padding: 3%;
   border-radius: 15px;
-  scrollbar-width: thin;
 }
 
 .rate-padding {
   padding-right: 85px;
-padding-top: 25px;
-} 
+  padding-top: 25px;
+}
 
-.dropdown-content li span{
+.dropdown-content li span {
   color: black;
 }
 
@@ -328,12 +327,12 @@ padding-top: 25px;
   opacity: 0;
 }
 
-.star-input  label {
+.star-input label {
   position: relative;
   float: right;
 }
 
-.star-input  label:before {
+.star-input label:before {
   margin: 5px;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -345,15 +344,15 @@ padding-top: 25px;
   user-select: none;
 }
 
-.star-input  input:checked ~ label:before {
+.star-input input:checked~label:before {
   color: #FFC107;
 }
 
-.star-input  label:hover ~ label:before {
+.star-input label:hover~label:before {
   color: #ffdb70;
 }
 
-.star-input  label:hover:before {
+.star-input label:hover:before {
   color: #FFC107;
 }
 
@@ -386,8 +385,8 @@ padding-top: 25px;
 }
 
 ul li {
-  float:left;
-  display:inline;
+  float: left;
+  display: inline;
   padding-left: 10px;
   font-size: 2.0rem;
 }
@@ -409,7 +408,7 @@ div.col.l3.m6.contact-button-position {
 }
 
 
-  /* Contact Form */
+/* Contact Form */
 
 .form-padding {
   padding: 5%;
@@ -490,13 +489,13 @@ ul#nav-mobile.sidenav {
 /* Media Queries */
 
 @media only screen and (max-width : 1100px) {
-.mobile-review-card {
-  font-size: 1.2rem;
-}
+  .mobile-review-card {
+    font-size: 1.2rem;
+  }
 
-.parallax-container {
-  min-height: 825px !important;
-}
+  .parallax-container {
+    min-height: 825px !important;
+  }
 
 }
 
@@ -541,7 +540,7 @@ ul#nav-mobile.sidenav {
 @media only screen and (max-width : 740px) {
   .rate-padding2 {
     padding-right: 195px;
-}
+  }
 }
 
 @media only screen and (max-width : 600px) {
@@ -551,58 +550,58 @@ ul#nav-mobile.sidenav {
 
   .card.card-margin {
     margin: 8% 8% 8% 8%;
-}
+  }
 
-  
-.home-card-title {
-  font-size: 2.4rem;
-}
 
-.card.login-card-padding {
-  margin: 15% 5% 5% 5%;
-  padding: 5% 5% 5% 0%;
-}
+  .home-card-title {
+    font-size: 2.4rem;
+  }
 
-.contact-pop {
-  width: 80%;
-}
+  .card.login-card-padding {
+    margin: 15% 5% 5% 5%;
+    padding: 5% 5% 5% 0%;
+  }
 
-.rate-padding {
-  padding: 0;
-}
+  .contact-pop {
+    width: 80%;
+  }
 
-.card.btn-toggle {
-  margin-left: 85%;
-}
+  .rate-padding {
+    padding: 0;
+  }
 
-a.breadcrumb {
-  font-size: 13px;
-}
+  .card.btn-toggle {
+    margin-left: 85%;
+  }
 
-.tabs .tab a {
-  font-size: 1.1rem !important;
-}
+  a.breadcrumb {
+    font-size: 13px;
+  }
 
-.profile-image {
-  width: 60%;
-}
+  .tabs .tab a {
+    font-size: 1.1rem !important;
+  }
 
-.btn-large.add-edit-btn {
-  font-size: 1.2rem;
-}
+  .profile-image {
+    width: 60%;
+  }
 
-.add-button-padding {
-  padding-top: 6%;
-}
+  .btn-large.add-edit-btn {
+    font-size: 1.2rem;
+  }
 
-.edit-button-padding {
-  padding-top: 6%;
-  padding-right: 3%;
-}
+  .add-button-padding {
+    padding-top: 6%;
+  }
 
-.rate-padding2 {
-  padding-right: 80px;
-}
+  .edit-button-padding {
+    padding-top: 6%;
+    padding-right: 3%;
+  }
+
+  .rate-padding2 {
+    padding-right: 80px;
+  }
 
 }
 
@@ -615,11 +614,12 @@ a.breadcrumb {
   min-height: 770px;
   line-height: 0;
   height: auto;
-  color: rgba(255,255,255,.9);
+  color: rgba(255, 255, 255, .9);
 }
-  .parallax-container .section {
-    width: 100%;
-  }
+
+.parallax-container .section {
+  width: 100%;
+}
 
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
@@ -627,6 +627,7 @@ a.breadcrumb {
     top: 40%;
     min-height: 1000px;
   }
+
   #index-banner .section {
     top: 5%;
   }
@@ -641,6 +642,7 @@ a.breadcrumb {
 .icon-block {
   padding: 0 15px;
 }
+
 .icon-block .material-icons {
   font-size: inherit;
 }
