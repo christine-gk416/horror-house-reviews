@@ -83,6 +83,10 @@ footer.page-footer {
   color: black;
 }
 
+h2.four-four {
+  color: #161214;
+}
+
 /* Materialize input styles for forms*/
 
 /* label color */
@@ -90,9 +94,6 @@ form .input-field label {
   color: #161214;
 }
 
-form .input-field label .new-password {
-  color: white !important;
-}
 
 /* valid color */
 form .input-field input[type=text].valid {

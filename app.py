@@ -4,9 +4,9 @@ from flask import (
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
-from werkzeug.security import generate_password_hash, check_password_hash
 
 
 app = Flask(__name__)
@@ -58,7 +58,7 @@ def login():
             {"username": request.form.get("username").lower()})
 
         if check_password_hash(existing_user["password"],
-            request.form.get("password")):
+                               request.form.get("password")):
             session["user"] = request.form.get("username").lower()
             flash("Hello, {}".format(request.form.get("username")))
             return redirect(url_for(
@@ -103,19 +103,21 @@ def profile(username):
     featured = list(mongo.db.featured_books.find({"created_by": username}))
 
     if session["user"]:
-        return render_template("profile.html", username=username, 
-        books=book, featured=featured)
+        return render_template("profile.html", username=username,
+                               books=book, featured=featured)
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
     book = list(mongo.db.books.find({"created_by": username}))
 
     if session["user"] == "cmk416":
         featured = list(mongo.db.featured_books.find({"created_by": username}))
+
     if session["user"] == "admin":
         featured = list(mongo.db.featured_books.find({"created_by": username}))
+
     if session["user"]:
         return render_template("profile.html", username=username,
-            book=book, featured=featured)
+                               book=book, featured=featured)
 
 
 @app.route("/change_password", methods=["GET", "POST"])
@@ -128,10 +130,12 @@ def change_password():
         new_password = request.form.get("new_password")
 
         if current_user:
-            if check_password_hash(current_user["password"], request.form.get("password")):
+            if check_password_hash(current_user["password"],
+                                   request.form.get("password")):
                 update = {"_id": current_user["_id"]}
                 updated_password = {"$set":
-                {"password": generate_password_hash(new_password)}}
+                                    {"password": generate_password_hash
+                                     (new_password)}}
                 users.update_one(update, updated_password)
                 flash("Password successfully updated")
                 return redirect(url_for(
@@ -185,7 +189,8 @@ def add():
 @ app.route("/add_featured", methods=["GET", "POST"])
 def add_featured():
     is_superuser = mongo.db.users.find_one({"is_superuser": True,
-        "username": session["user"]})["username"]
+                                            "username":
+                                                session["user"]})["username"]
 
     if request.method == "POST":
         review = {
@@ -280,6 +285,18 @@ def category(category_id):
 
     return render_template(
         "categories.html", category=category, books=books)
+
+
+@ app.route("/404.html")
+def not_found():
+
+    return render_template("404.html")
+
+
+@ app.route("/500.html")
+def server_error():
+
+    return render_template("500.html")
 
 
 if __name__ == "__main__":
