@@ -92,7 +92,7 @@
           {% if messages %}
           {% for message in messages %}
           <div class="row flashes">
-            <h1 class="purple lighten-4 center-align flash-font">{{ message }}</h1>
+            <h2 class="purple lighten-4 center-align flash-font">{{ message }}</h2>
           </div>
           {% endfor %}
           {% endif %}
@@ -225,7 +225,7 @@
 
   <!--EmailJS-->
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-  <script type="text/javascript">(function () {
+  <script>(function () {
       emailjs.init("user_a8QTjCWqE9AEZDgd6Xxqb");
     })();
   </script>
