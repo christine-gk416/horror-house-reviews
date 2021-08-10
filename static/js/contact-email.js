@@ -69,7 +69,7 @@ window.addEventListener("load", () => {
         // Show a console error if form doesn't submit properly
 
       }, function (error) {
-        swal("Oops", "Something went wrong!", "error")
+        swal("Oops", "Something went wrong!", "error");
         console.log("FAILED...", error);
       });
 

@@ -90,6 +90,10 @@ form .input-field label {
   color: #161214;
 }
 
+form .input-field label .new-password {
+  color: white !important;
+}
+
 /* valid color */
 form .input-field input[type=text].valid {
   border-bottom: 1px solid #F07F83;

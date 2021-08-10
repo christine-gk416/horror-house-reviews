@@ -18,55 +18,55 @@
   </div>
 </div>
 <div class="row">
-  
-        <div class="splide">
-          <div class="splide__track">
-            <ul class="splide__list">
-              {% for book in books %}
-              <li class="splide__slide">
-                <div class="card large card-colour">
-                  <div class="card-image">
-                    <img src={{book.image}} alt="Book title for {{book.title}}">
-        
-                  </div>
-                  <div class="card-content center">
-                    <p class="mobile-review-card">{{book.title}}
-                      <br>
-                      by {{book.author}}
-                    </p>
-                    <br>
-                    <div class="center review-btn-position">
-                      <a href="{{ url_for('individual', book_id=book._id) }}"
-                        class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn">
-                        Read more
-                      </a>
-                    </div>
-                  </div>
-        
-                </div>
-        
-              </li>
-              
-              {% endfor %}
-        
-            </ul>
-          </div>
-        </div>
 
-        <div class="col m12 l12 center">
-          <div class="card small card-colour login-card-padding">
-            <div class="card-content">
-              <p class="browse-bottom">There aren't any books in this category yet.</p>
-              
-              <div>
-                <a href="{{ url_for('reviews') }}" class="btn-large waves-effect waves-dark lighten-1 btn-styles">
-                  Browse
+  <div class="splide">
+    <div class="splide__track">
+      <ul class="splide__list">
+        {% for book in books %}
+        <li class="splide__slide">
+          <div class="card large card-colour">
+            <div class="card-image">
+              <img src={{book.image}} alt="Book title for {{book.title}}">
+
+            </div>
+            <div class="card-content center">
+              <p class="mobile-review-card">{{book.title}}
+                <br>
+                by {{book.author}}
+              </p>
+              <br>
+              <div class="center review-btn-position">
+                <a href="{{ url_for('individual', book_id=book._id) }}"
+                  class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn">
+                  Read more
                 </a>
               </div>
             </div>
+
           </div>
+
+        </li>
+
+        {% endfor %}
+
+      </ul>
+    </div>
+  </div>
+
+  <div class="col m12 l12 center">
+    <div class="card small card-colour login-card-padding">
+      <div class="card-content">
+        <p class="browse-bottom">There aren't any books in this category yet.</p>
+
+        <div>
+          <a href="{{ url_for('reviews') }}" class="btn-large waves-effect waves-dark lighten-1 btn-styles">
+            Browse
+          </a>
         </div>
-      
+      </div>
+    </div>
+  </div>
+
 </div>
 
 {% endblock %}

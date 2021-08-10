@@ -3,7 +3,6 @@
 {% block title %} {{username}}'s Profile | Horror House {% endblock %}
 
 
-
 {% block content %}
 
 <div class="row">
@@ -17,11 +16,11 @@
         {% elif session.user|lower == "cmk416"|lower %}
         <li class="tab col s3"><a href="#add-featured">Featured</a></li>
         {% endif %}
-        
+
       </ul>
       <div id="main-info" class="col s12 review-container">
         <div class="center main-info-padding">
-          <h3 class="custom-font">Horror House reviewer {{username}}</h3>
+          <h3 class="manage-featured">Horror House reviewer {{username}}</h3>
 
           <img src="{{url_for('static', filename='images/pumpkin-avatar.png')}}" class="profile-image"
             alt="Default profile pic">
@@ -31,36 +30,36 @@
 
 
       <div id="update-info" class="col s12 review-container center">
-        
+
         <h3 class="custom-font manage-featured">Update your password</h3>
         <form method="POST" action="{{ url_for('change_password') }}" class="update-form-padding">
           <div class="row">
             <div class="input-field col s12">
               <i class="material-icons prefix login-icon-light">account_box</i>
-              <input id="username" type="text" name="username" class="validate"
-              minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" required>
-              <label for="username">Username</label>
+              <input id="username" type="text" name="username" class="validate" minlength="5" maxlength="15"
+                pattern="^[a-zA-Z0-9]{5,15}$" required>
+              <label for="username" >Username</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
               <i class="material-icons prefix login-icon-light">enhanced_encryption</i>
-              <input id="password" type="password" name="password" class="validate"
-              minlength="5" maxlength="15" pattern="^(?=.{5,15})(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$&^]).*$" required>
+              <input id="password" type="password" name="password" class="validate" minlength="5" maxlength="15"
+                pattern="^(?=.{5,15})(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$&^]).*$" required>
               <label for="password">Current Password</label>
             </div>
-          </div>  
-  
+          </div>
+
           <div class="row">
             <div class="input-field col s12">
               <i class="material-icons prefix login-icon-light">enhanced_encryption</i>
-              <input id="new_password" type="password" name="new_password" class="validate"
-              minlength="5" maxlength="15" pattern="^(?=.{5,15})(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$&^]).*$" required>
+              <input id="new_password" type="password" name="new_password" class="validate" minlength="5" maxlength="15"
+                pattern="^(?=.{5,15})(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$&^]).*$" required>
               <label for="new_password">New Password</label>
             </div>
-          </div>  
+          </div>
           <div class="center">
-            <button class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn" type="submit"
+            <button class="btn-large waves-effect waves-dark lighten-1 btn-styles featured-btn" type="submit"
               name="action">Update
             </button>
           </div>
@@ -74,8 +73,8 @@
       {% if session.user|lower == "cmk416"|lower %}
       {% include "components/add-edit.html" %}
       {% endif %}
-      
-      
+
+
     </div>
   </div>
 </div>
@@ -85,53 +84,51 @@
 {% block below_content %}
 
 
-  <div class="review-container">
+<div class="review-container">
 
-    <h2 class="center">Reviews by {{username}}</h2>
-    <div class="row">
-    
-      {% for book in books %}
-      
-      <div class="col s12 m6 l6 xl3">
+  <h2 class="center">Reviews by {{username}}</h2>
+  <div class="row">
 
-        <div class="card large card-colour z-depth-5">
+    {% for book in books %}
 
-          <div class="card-image">
-            <img src={{book.image}} alt="Book cover for {{book.title}}">
+    <div class="col s12 m6 l6 xl3">
+
+      <div class="card large card-colour z-depth-5">
+
+        <div class="card-image">
+          <img src={{book.image}} alt="Book cover for {{book.title}}">
+        </div>
+        <div class="card-content center">
+          <p>{{book.title}}
+            <br>
+            by {{book.author}}
+          </p>
+          <div class="edit-btn-position center">
+            <a href="{{ url_for('edit', book_id=book._id) }}"
+              class="btn-large waves-effect waves-dark lighten-1 btn-edit">
+              Edit/Delete
+            </a>
           </div>
-          <div class="card-content center">
-            <p>{{book.title}}
-              <br>
-              by {{book.author}}
-            </p>
-            <div class="edit-btn-position center">
-              <a href="{{ url_for('edit', book_id=book._id) }}"
-                class="btn-large waves-effect waves-dark lighten-1 btn-edit">
-                Edit/Delete
-              </a>
-            </div>
 
-          </div>
         </div>
       </div>
-    
+    </div>
 
-  
-  {% else %}
- 
-      <div class="col l12 center">
-        <p>You haven't created any reviews yet.</p>
-        <div>
-          <a href="{{ url_for('reviews') }}" class="btn-large waves-effect waves-dark lighten-1 btn-edit">
-            Browse
-          </a>
-        </div>
+    {% else %}
+
+    <div class="col l12 center">
+      <p>You haven't created any reviews yet.</p>
+      <div>
+        <a href="{{ url_for('reviews') }}" class="btn-large waves-effect waves-dark lighten-1 btn-edit">
+          Browse
+        </a>
       </div>
-     
-    
-      {% endfor %}
     </div>
-    </div>
+
+
+    {% endfor %}
+  </div>
+</div>
 
 {% endblock %}
 

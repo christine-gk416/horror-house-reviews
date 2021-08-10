@@ -16,8 +16,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,600&family=Open+Sans:wght@400;600&family=Poppins&display=swap"
-   rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,600&family=Open+Sans:wght@400;600&family=Poppins&display=swap"
+    rel="stylesheet">
 
 
   <link rel="stylesheet" href="{{ url_for('static', filename='css/dark-mode.css') }}" id="mode-link">
@@ -27,7 +28,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 
 
-  <link rel="icon" type="image/ico" href="/static/images/favicon.ico">
+  <link rel="icon" type="image/ico" href="{{url_for('static', filename='images/favicon.ico')}}">
 
 
 </head>
@@ -67,13 +68,12 @@
           <li><a class="mobile-nav-style" href="{{ url_for('login') }}">Login</a></li>
           <li><a class="mobile-nav-style" href="{{ url_for('sign_up') }}">Sign Up</a></li>
           {% endif %}
-        
+
           <li><a class="sidenav-close" href="#!">&times; Close</a></li>
         </ul>
 
         <a href="#" data-target="nav-mobile" class="sidenav-trigger">
           <i class="material-icons mobile-icon">add_box</i></a>
-
 
       </div>
 
@@ -131,23 +131,23 @@
   <footer class="page-footer">
     <div class="container">
       <div class="row">
-  
-  
+
+
         <div class="col l3 m6 xl6 contact-button-position">
-          <a id="form-btn" class="btn-large  btn-styles waves-effect waves-dark lighten-1" aria-label="Open contact form"
-            tabindex="0" role="form">Contact Us</a>
+          <a id="form-btn" class="btn-large  btn-styles waves-effect waves-dark lighten-1"
+            aria-label="Open contact form" tabindex="0" role="form">Contact Us</a>
         </div>
-  
+
         <!--Hidden Contact Form-->
-  
+
         <div class="hide-form contact-modal" id="modal">
-  
+
           <div class="contact-pop">
-  
+
             <span id="close-form" tabindex="0" role="button">&times;</span>
-  
+
             <form aria-label="Send us your comments, ideas, or feedback" id="contactForm" class="form-padding">
-  
+
               <p class="mobile-heading form-heading">Tell us more!</p>
               <br>
               <label for="name" class="form-font label-display mobile-label">Name</label>
@@ -170,35 +170,34 @@
             </form>
           </div>
         </div>
-  
+
         <div class="social-links-position col l3 m6">
           <ul class="footer-links">
-  
+
             <li>
               <a href="https://www.facebook.com" aria-label="Facebook" target="_blank" rel="noopener">
                 <i class="fab fa-facebook-f" aria-hidden="true"></i>
               </a>
             </li>
-  
+
             <li>
               <a href="https://www.instagram.com" aria-label="Instagram" target="_blank" rel="noopener">
                 <i class="fab fa-instagram" aria-hidden="true"></i>
               </a>
             </li>
-  
+
             <li>
               <a href="https://www.twitter.com/" aria-label="Twitter" target="_blank" rel="noopener">
                 <i class="fab fa-twitter" aria-hidden="true"></i>
               </a>
             </li>
-  
+
           </ul>
         </div>
       </div>
     </div>
-  
-  
-  
+
+
   </footer>
 
 
@@ -218,14 +217,13 @@
   <script src="{{ url_for('static', filename='js/contact-email.js') }}"></script>
   <script src="{{ url_for('static', filename='js/init.js') }}"></script>
 
-
   {% block splide_js %}
   {% endblock %}
 
-
   <!--EmailJS-->
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-  <script>(function () {
+  <script>
+    (function () {
       emailjs.init("user_a8QTjCWqE9AEZDgd6Xxqb");
     })();
   </script>

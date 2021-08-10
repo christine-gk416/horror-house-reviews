@@ -24,7 +24,7 @@
             </p>
             <br>
             <div class="center review-btn-position">
-              <a href="{{ url_for('featured', featured_books_id=featured._id) }}" 
+              <a href="{{ url_for('featured', featured_books_id=featured._id) }}"
                 class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn">
                 Read more
               </a>
@@ -47,54 +47,48 @@
 {% block below_content %}
 
 
+<div class="review-container">
 
-  <div class="review-container">
+  <h2 class="center review-heading">Read the latest reviews</h2>
 
-    <h2 class="center review-heading">Read the latest reviews</h2>
+  {% for category in categories %}
 
-    {% for category in categories %}
-   
-    <div class="chip">
-      <a href="{{ url_for('category', category_id=category._id) }}">{{category.category_name}}</a>
-    
-    </div>
-  
-    {% endfor %}
-
-    
-    
-
-    <div class="row">
-      {% for book in books %}
-      <div class="col s12 m6 l6 xl3">
-
-        <div class="card large card-colour z-depth-5">
-
-          <div class="card-image">
-            <img src={{book.image}} alt="Book title for {{book.title}}">
-          </div>
-          <div class="card-content center">
-            <p>{{book.title}}
-              <br>
-              by {{book.author}}
-            </p>
-            <div class="center review-btn-position">
-              <a href="{{ url_for('individual', book_id=book._id) }}"
-                class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn">
-                Read more
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-      {% endfor %}
-    </div>
+  <div class="chip">
+    <a href="{{ url_for('category', category_id=category._id) }}">{{category.category_name}}</a>
 
   </div>
 
+  {% endfor %}
 
 
+  <div class="row">
+    {% for book in books %}
+    <div class="col s12 m6 l6 xl3">
+
+      <div class="card large card-colour z-depth-5">
+
+        <div class="card-image">
+          <img src={{book.image}} alt="Book title for {{book.title}}">
+        </div>
+        <div class="card-content center">
+          <p>{{book.title}}
+            <br>
+            by {{book.author}}
+          </p>
+          <div class="center review-btn-position">
+            <a href="{{ url_for('individual', book_id=book._id) }}"
+              class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn">
+              Read more
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+</div>
 
 
 {% endblock %}
@@ -103,4 +97,4 @@
 {% block splide_js %}
 <script src="{{ url_for('static', filename='js/splide.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/js/splide.min.js"></script>
-{% endblock %} 
+{% endblock %}

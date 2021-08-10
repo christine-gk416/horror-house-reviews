@@ -16,7 +16,8 @@
 
                 <div class="row">
                     <div class="input-field col s6 l6">
-                        <input id="title" type="text" value="{{featured.title }}" name="title" class="validate" required>
+                        <input id="title" type="text" value="{{featured.title }}" name="title" class="validate"
+                            required>
                         <label for="title">Title</label>
                     </div>
                     <div class="input-field col s6 l6">
@@ -35,9 +36,9 @@
                     </div>
 
                     <div class="input-field col s6 l6">
-                        <input id="image" type="url" value="{{ featured.image }}" name="image" class="validate tooltipped"
-                            data-position="bottom" data-tooltip="Add a .png or .jpg image sized at 500 pixels wide"
-                            required>
+                        <input id="image" type="url" value="{{ featured.image }}" name="image"
+                            class="validate tooltipped" data-position="bottom"
+                            data-tooltip="Add a .png or .jpg image sized at 500 pixels wide" required>
                         <label for="image">Add book image</label>
                     </div>
                 </div>
@@ -54,9 +55,9 @@
 
                 <div class="row">
                     <div class="input-field col s5 l6">
-                        
+
                         <select name="category_name" multiple>
-                            
+
                             {% for category in categories %}
                             {% if category.category_name == featured.category_name %}
                             <option value="{{category.category_name }}" selected>{{category.category_name }}
@@ -65,12 +66,11 @@
                             <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                             {% endif %}
                             {% endfor %}
-                            
+
                         </select>
-                       
+
                         <label>Categories</label>
-                
-                        
+
                     </div>
 
                     <div class="col s7 l6">
@@ -78,9 +78,9 @@
                         <!-- <label>Rate (Optional)</label> -->
                         <div class="star-input rate-padding required">
                             {% include "components/f-edit-rating-temp.html" %}
-                    
+
                         </div>
-                    
+
                     </div>
 
 

@@ -17,19 +17,19 @@
     <img class="book-review-image" src={{ind_book.image}} alt="Book cover for {{ind_book.title}}">
 
     {% include "components/rating-template.html" %}
-    
+
     <div class="center">
       <p>Reviewed by {{ind_book.created_by}}</p>
-      
-     {% for category in ind_book.category_name  %}
-     
-     <div class="chip">
-      {{category}}
+
+      {% for category in ind_book.category_name  %}
+
+      <div class="chip">
+        {{category}}
       </div>
-      
+
       {% endfor %}
-      
-      
+
+
     </div>
 
   </div>

@@ -54,9 +54,9 @@
 
                 <div class="row">
                     <div class="input-field col s5 l6">
-                        
+
                         <select name="category_name" multiple>
-                            
+
                             {% for category in categories %}
                             {% if category.category_name == book.category_name %}
                             <option value="{{category.category_name }}" selected>{{category.category_name }}
@@ -65,12 +65,12 @@
                             <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                             {% endif %}
                             {% endfor %}
-                            
+
                         </select>
-                       
+
                         <label>Categories</label>
-                
-                        
+
+
                     </div>
 
                     <div class="col s7 l6">
@@ -78,11 +78,10 @@
                         <!-- <label>Rate (Optional)</label> -->
                         <div class="star-input rate-padding required">
                             {% include "components/edit-rating-temp.html" %}
-                    
-                        </div>
-                    
-                    </div>
 
+                        </div>
+
+                    </div>
 
                 </div>
 
@@ -93,7 +92,6 @@
                         </button>
 
                     </div>
-
 
                     <div class="col l4 center">
                         <a class="btn-large add-edit-btn waves-effect waves-dark lighten-1 btn-styles modal-trigger blue-grey center"
