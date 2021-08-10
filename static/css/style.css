@@ -167,6 +167,10 @@ p.review-text {
   padding: 5%;
 }
 
+h2.review-heading {
+  padding-bottom: 5%;
+}
+
 /* Login Page */
 
 .login-link-padding {
@@ -275,6 +279,17 @@ border: #F5F3F4 0.75px solid;
   font-size: 1.8rem;
 }
 
+.update-form-padding {
+  padding: 5%;
+}
+
+.main-info-padding {
+  padding: 5%;
+}
+
+.manage-featured-padding {
+  padding: 3%;
+}
 
 /* Add Review */
 
@@ -477,8 +492,6 @@ ul#nav-mobile.sidenav {
 }
 
 
-
-
 @media only screen and (max-width : 800px) {
 
   h1.custom-font {
@@ -500,6 +513,10 @@ ul#nav-mobile.sidenav {
   .rate-padding2 {
     padding-right: 185px;
   }
+
+  .profile-image {
+    width: 40%;
+  }
 }
 
 @media only screen and (max-width : 600px) {
@@ -511,10 +528,6 @@ ul#nav-mobile.sidenav {
     margin: 8% 8% 8% 8%;
 }
 
-.card.login-card-padding {
-  margin: 0px;
-  padding: 0px;
-}
   
 .home-card-title {
   font-size: 2.4rem;
@@ -522,7 +535,7 @@ ul#nav-mobile.sidenav {
 
 .card.login-card-padding {
   margin: 15% 5% 5% 5%;
-  padding: 0% 5% 3% 0%;
+  padding: 5% 5% 5% 0%;
 }
 
 .contact-pop {
@@ -539,6 +552,14 @@ ul#nav-mobile.sidenav {
 
 a.breadcrumb {
   font-size: 1.1rem;
+}
+
+.tabs .tab a {
+  font-size: 1.1rem !important;
+}
+
+.profile-image {
+  width: 60%;
 }
 
 }

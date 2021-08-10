@@ -5,7 +5,7 @@
 
 {% block content %}
 <div class="row">
-  <div class="col l12">
+  <div class="col s12 m12 l12">
     <nav>
       <div class="nav-wrapper" id="breadcrumb-bar">
         <div class="col l12">
@@ -18,48 +18,60 @@
   </div>
 </div>
 <div class="row">
-  {% for book in books %}
-
-  <div class="col s12 m6 l6 xl3">
-
-    <div class="card large card-colour z-depth-5">
-
-      <div class="card-image">
-        <img src={{book.image}} alt="Book title for {{book.title}}">
-      </div>
-      <div class="card-content center">
-        <p>{{book.title}}
-          <br>
-          by {{book.author}}
-        </p>
-        <div class="center review-btn-position">
-          <a href="{{ url_for('individual', book_id=book._id) }}"
-            class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn">
-            Read more
-          </a>
+  
+        <div class="splide">
+          <div class="splide__track">
+            <ul class="splide__list">
+              {% for book in books %}
+              <li class="splide__slide">
+                <div class="card large card-colour">
+                  <div class="card-image">
+                    <img src={{book.image}} alt="Book title for {{book.title}}">
+        
+                  </div>
+                  <div class="card-content center">
+                    <p class="mobile-review-card">{{book.title}}
+                      <br>
+                      by {{book.author}}
+                    </p>
+                    <br>
+                    <div class="center review-btn-position">
+                      <a href="{{ url_for('individual', book_id=book._id) }}"
+                        class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn">
+                        Read more
+                      </a>
+                    </div>
+                  </div>
+        
+                </div>
+        
+              </li>
+              
+              {% endfor %}
+        
+            </ul>
+          </div>
         </div>
-      </div>
 
-    </div>
-  </div>
-
-  {% else %}
- 
-      <div class="col m12 l12 center">
-        <div class="card small card-colour login-card-padding">
-          <div class="card-content">
-            <p class="browse-bottom">There aren't any books in this category yet.</p>
-            
-            <div>
-              <a href="{{ url_for('reviews') }}" class="btn-large waves-effect waves-dark lighten-1 btn-styles">
-                Browse
-              </a>
+        <div class="col m12 l12 center">
+          <div class="card small card-colour login-card-padding">
+            <div class="card-content">
+              <p class="browse-bottom">There aren't any books in this category yet.</p>
+              
+              <div>
+                <a href="{{ url_for('reviews') }}" class="btn-large waves-effect waves-dark lighten-1 btn-styles">
+                  Browse
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-  {% endfor %}
+      
 </div>
 
+{% endblock %}
+
+{% block splide_js %}
+<script src="{{ url_for('static', filename='js/splide.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/js/splide.min.js"></script>
 {% endblock %}
