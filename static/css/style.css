@@ -84,6 +84,11 @@ h1.custom-font {
   text-shadow: 1px 1px 6px black;
 }
 
+h1.flash-font {
+  font-size: 1.4rem;
+  color: black;
+}
+
 h2 {
   font-family: 'Cinzel', sans-serif;
   font-weight: 400;
