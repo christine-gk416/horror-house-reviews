@@ -32,8 +32,8 @@ def reviews():
     categories = mongo.db.categories.find().sort("category_name", 1)
 
     return render_template(
-        "book-reviews.html",
-         featured=featured, books=book, categories=categories)
+        "book-reviews.html", featured=featured, books=book,
+        categories=categories)
 
 
 @app.route("/individual-reviews/<book_id>")
@@ -57,12 +57,12 @@ def login():
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
-        if check_password_hash(
-            existing_user["password"], request.form.get("password")):
-                session["user"] = request.form.get("username").lower()
-                flash("Hello, {}".format(request.form.get("username")))
-                return redirect(url_for(
-                    "profile", username=session["user"]))
+        if check_password_hash(existing_user["password"],
+            request.form.get("password")):
+            session["user"] = request.form.get("username").lower()
+            flash("Hello, {}".format(request.form.get("username")))
+            return redirect(url_for(
+                "profile", username=session["user"]))
         else:
             flash("Incorrect Username and/or Password")
             return redirect(url_for("login"))
@@ -95,26 +95,69 @@ def sign_up():
     return render_template("sign-up.html")
 
 
-@app.route("/profile/<username>", methods=["GET", "POST"])
+@app.route("/profile/<username>")
 def profile(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
     book = list(mongo.db.books.find({"created_by": username}))
     featured = list(mongo.db.featured_books.find({"created_by": username}))
- 
+
     if session["user"]:
         return render_template("profile.html", username=username, 
         books=book, featured=featured)
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+    book = list(mongo.db.books.find({"created_by": username}))
+
+    if session["user"] == "cmk416":
+        featured = list(mongo.db.featured_books.find({"created_by": username}))
+    if session["user"] == "admin":
+        featured = list(mongo.db.featured_books.find({"created_by": username}))
+    if session["user"]:
+        return render_template("profile.html", username=username,
+            book=book, featured=featured)
 
 
-@app.route("/logout")
+@app.route("/change_password", methods=["GET", "POST"])
+def change_password():
+    users = mongo.db["users"]
+    current_user = users.find_one(
+        {"username": request.form.get("username")})
+
+    if request.method == "POST":
+        new_password = request.form.get("new_password")
+
+        if current_user:
+            if check_password_hash(current_user["password"], request.form.get("password")):
+                update = {"_id": current_user["_id"]}
+                updated_password = {"$set":
+                {"password": generate_password_hash(new_password)}}
+                users.update_one(update, updated_password)
+                flash("Password successfully updated")
+                return redirect(url_for(
+                    "profile", username=session["user"]))
+
+            else:
+
+                flash("Incorrect username or password")
+                return redirect(url_for("profile", username=session['user']))
+
+        else:
+
+            flash("Incorrect username or password")
+            return redirect(url_for("profile", username=session['user']))
+
+    return render_template("profile.html")
+
+
+@ app.route("/logout")
 def logout():
     flash("You have been logged out")
     session.clear()
     return redirect(url_for("login"))
 
 
-@app.route("/add_review", methods=["GET", "POST"])
+@ app.route("/add_review", methods=["GET", "POST"])
 def add():
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
@@ -139,7 +182,7 @@ def add():
     return render_template("add_review.html", categories=categories)
 
 
-@app.route("/add_featured", methods=["GET", "POST"])
+@ app.route("/add_featured", methods=["GET", "POST"])
 def add_featured():
     is_superuser = mongo.db.users.find_one({"is_superuser": True,
         "username": session["user"]})["username"]
@@ -164,8 +207,7 @@ def add_featured():
     return render_template("add_featured.html", categories=categories)
 
 
-
-@app.route("/edit_review/<book_id>", methods=["GET", "POST"])
+@ app.route("/edit_review/<book_id>", methods=["GET", "POST"])
 def edit(book_id):
 
     if request.method == "POST":
@@ -189,7 +231,7 @@ def edit(book_id):
         "edit_review.html", book=book, category=categories)
 
 
-@app.route("/edit_featured/<featured_id>", methods=["GET", "POST"])
+@ app.route("/edit_featured/<featured_id>", methods=["GET", "POST"])
 def edit_featured(featured_id):
 
     if request.method == "POST":
@@ -213,8 +255,7 @@ def edit_featured(featured_id):
         "edit_featured.html", categories=categories, featured=featured)
 
 
-
-@app.route("/delete_review/<book_id>")
+@ app.route("/delete_review/<book_id>")
 def delete_review(book_id):
     mongo.db.books.remove({"_id": ObjectId(book_id)})
 
@@ -222,7 +263,7 @@ def delete_review(book_id):
     return redirect(url_for("profile", username=session['user']))
 
 
-@app.route("/delete_featured/<featured_id>")
+@ app.route("/delete_featured/<featured_id>")
 def delete_featured(featured_id):
     mongo.db.featured_books.remove({"_id": ObjectId(featured_id)})
 
@@ -230,7 +271,7 @@ def delete_featured(featured_id):
     return redirect(url_for("profile", username=session['user']))
 
 
-@app.route("/categories/<category_id>")
+@ app.route("/categories/<category_id>")
 def category(category_id):
     category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
     books = list(mongo.db.books.find(

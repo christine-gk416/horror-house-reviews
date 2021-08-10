@@ -30,17 +30,36 @@
       </div>
 
       <div id="update-info" class="col s12 review-container">
-        <form method="POST" action="{{ url_for('profile', username=session['user']) }}">
+        <form method="POST" action="{{ url_for('change_password') }}">
           <div class="row">
-            <div class="input-field col s6 l6">
-              <i class="material-icons">add</i>
-              <input id="image" type="url" name="profile-image" class="validate tooltipped" data-position="bottom"
-                data-tooltip="Add a .png or .jpg image sized at 500 pixels wide" required>
-              <label for="image">Add profile image</label>
-              <button class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn" type="submit"
-                name="action">Add
-              </button>
+            <div class="input-field col s12">
+              <i class="material-icons prefix login-icon-light">account_box</i>
+              <input id="username" type="text" name="username" class="validate"
+              minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" required>
+              <label for="username">Username</label>
             </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix login-icon-light">enhanced_encryption</i>
+              <input id="password" type="password" name="password" class="validate"
+              minlength="5" maxlength="15" pattern="^(?=.{5,15})(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$&^]).*$" required>
+              <label for="password">Current Password</label>
+            </div>
+          </div>  
+  
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix login-icon-light">enhanced_encryption</i>
+              <input id="new_password" type="password" name="new_password" class="validate"
+              minlength="5" maxlength="15" pattern="^(?=.{5,15})(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$&^]).*$" required>
+              <label for="new_password">New Password</label>
+            </div>
+          </div>  
+          <div class="center">
+            <button class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn" type="submit"
+              name="action">Update
+            </button>
           </div>
         </form>
       </div>

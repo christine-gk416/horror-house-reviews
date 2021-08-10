@@ -30,7 +30,7 @@ nav ul a.active {
 }
 
 .icon-styles {
-  color: #393C56;
+  color: #F07F83;
 }
 
 .icon-sec-background {
@@ -44,6 +44,10 @@ nav ul a.active {
 h3.custom-font {
   color: #6A5676;
  
+}
+
+h3.manage-featured {
+  color: #F5F3F4;
 }
 
 p {

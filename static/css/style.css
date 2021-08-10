@@ -44,6 +44,7 @@ div.card-content.toggle-card {
 }
 
 
+
 .btn-large.btn-styles {
   background-color: #7F678E;
   border: #F5F3F4 0.75px solid;
@@ -59,6 +60,7 @@ div.chip {
 
 div.chip a {
   color: black;
+  font-size: 1.1rem;
 }
 
 div.chip a:hover {
@@ -99,7 +101,6 @@ h2 {
 h3.custom-font {
     font-size: 2rem;
     font-family: Arial;
-    text-shadow: 1px 1px 3px black;
 }
 
 h4 {
@@ -274,6 +275,7 @@ border: #F5F3F4 0.75px solid;
   font-size: 1.8rem;
 }
 
+
 /* Add Review */
 
 .overflow-form {
@@ -339,17 +341,15 @@ padding-top: 25px;
 
 /* Edit Review */
 
-.btn-large.cancel-btn {
-  background-color: #C74343;
-}
 
 .btn-large.btn-delete {
   background-color: #C74343;
-}
-
-.btn-large.btn-delete {
   border: #F5F3F4 0.75px solid;
   text-shadow: 1px 1px 2px black;
+}
+
+.btn-large.add-edit-btn {
+  font-size: 1.4rem;
 }
 
 /* Categories */
