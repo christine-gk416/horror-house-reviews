@@ -489,13 +489,23 @@ ul#nav-mobile.sidenav {
   font-size: 1.2rem;
 }
 
+.parallax-container {
+  min-height: 825px !important;
+}
+
+}
+
+@media only screen and (max-width : 850px) {
+  .rate-padding2 {
+    padding-right: 243px;
+  }
 }
 
 
 @media only screen and (max-width : 800px) {
 
   h1.custom-font {
-    font-size: 3.6rem;
+    font-size: 3.0rem;
   }
 
   .contact-pop {
@@ -511,12 +521,22 @@ ul#nav-mobile.sidenav {
   }
 
   .rate-padding2 {
-    padding-right: 185px;
+    padding-right: 215px;
   }
 
   .profile-image {
     width: 40%;
   }
+
+  .parallax-container {
+    min-height: 825px !important;
+  }
+}
+
+@media only screen and (max-width : 740px) {
+  .rate-padding2 {
+    padding-right: 195px;
+}
 }
 
 @media only screen and (max-width : 600px) {
@@ -551,7 +571,7 @@ ul#nav-mobile.sidenav {
 }
 
 a.breadcrumb {
-  font-size: 1.1rem;
+  font-size: 13px;
 }
 
 .tabs .tab a {
@@ -560,6 +580,23 @@ a.breadcrumb {
 
 .profile-image {
   width: 60%;
+}
+
+.btn-large.add-edit-btn {
+  font-size: 1.2rem;
+}
+
+.add-button-padding {
+  padding-top: 6%;
+}
+
+.edit-button-padding {
+  padding-top: 6%;
+  padding-right: 3%;
+}
+
+.rate-padding2 {
+  padding-right: 80px;
 }
 
 }
