@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{% block title %}{% endblock %}</title>
 
+  <!-- SEO meta text -->
   <meta property='og:title' content='Horror House Book Reviews'/>
   <meta property='og:image' content='https://i.postimg.cc/5yPsHXXQ/meta-image.png'/>
   <meta property='og:description' content='Horror House reviews is a place for fans of horror fiction. 
@@ -42,6 +43,7 @@
 
 <body>
 
+    <!-- Main Navigation -->
   <div>
     <nav class="navbar-colour">
       <div class="nav-wrapper container">
@@ -63,6 +65,7 @@
           {% endif %}
         </ul>
 
+        <!--Mobile Naviation -->
         <ul id="nav-mobile" class="sidenav">
 
           <li><a class="mobile-nav-style" href="{{ url_for('reviews') }}">Reviews</a></li>
@@ -92,8 +95,8 @@
       <div class="container">
         <br><br>
 
+        <!-- Flash messages -->
         <section>
-          <!-- flash messages -->
           {% with messages = get_flashed_messages() %}
           {% if messages %}
           {% for message in messages %}
@@ -105,6 +108,7 @@
           {% endwith %}
         </section>
 
+        <!-- Light/Dark Mode Toggle -->
         <div class="card btn-toggle">
           <div class="card-content toggle-card">
             <i class="small  material-icons tooltipped" tabindex="0" role="tooltip" data-position="bottom"
@@ -113,7 +117,7 @@
           </div>
         </div>
 
-
+        <!-- Heading text -->
         <h1 class="custom-font header center">{% block main_heading %}{% endblock %}</h1>
 
 
@@ -125,6 +129,7 @@
       </div>
     </div>
 
+      <!-- Parallax image-->
     <div class="parallax"><img src="{{url_for('static', filename='images/horror-background.jpg')}}"
         alt="Background image of books, candle, potion, and skull">
     </div>
@@ -133,18 +138,18 @@
   {% block below_content %}
   {% endblock %}
 
-
+    <!-- Footer -->
   <footer class="page-footer">
     <div class="container">
       <div class="row">
 
-
+        <!--Contact form button-->
         <div class="col l3 m6 xl6 contact-button-position">
           <a id="form-btn" class="btn-large  btn-styles waves-effect waves-dark lighten-1"
             aria-label="Open contact form" tabindex="0" role="form">Contact Us</a>
         </div>
 
-        <!--Hidden Contact Form-->
+        <!--Hidden contact form-->
 
         <div class="hide-form contact-modal" id="modal">
 
@@ -177,6 +182,7 @@
           </div>
         </div>
 
+        <!--Social links-->
         <div class="social-links-position col l3 m6">
           <ul class="footer-links">
 

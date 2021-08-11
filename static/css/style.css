@@ -509,7 +509,6 @@ ul#nav-mobile.sidenav {
   }
 }
 
-
 @media only screen and (max-width : 800px) {
 
   h1.custom-font {
@@ -547,6 +546,7 @@ ul#nav-mobile.sidenav {
   }
 }
 
+
 @media only screen and (max-width : 600px) {
   h1.custom-font {
     font-size: 2.4rem;
@@ -555,7 +555,6 @@ ul#nav-mobile.sidenav {
   .card.card-margin {
     margin: 8% 8% 8% 8%;
   }
-
 
   .home-card-title {
     font-size: 2.4rem;
@@ -602,7 +601,6 @@ ul#nav-mobile.sidenav {
     padding-top: 6%;
     padding-right: 3%;
   }
-
   .rate-padding2 {
     padding-right: 80px;
   }
