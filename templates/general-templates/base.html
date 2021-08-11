@@ -100,7 +100,7 @@
         <br><br>
 
         <!-- Flash messages -->
-        <section>
+        <div>
           {% with messages = get_flashed_messages() %}
           {% if messages %}
           {% for message in messages %}
@@ -110,7 +110,7 @@
           {% endfor %}
           {% endif %}
           {% endwith %}
-        </section>
+        </div>
 
         <!-- Light/Dark Mode Toggle -->
         <div class="card btn-toggle">

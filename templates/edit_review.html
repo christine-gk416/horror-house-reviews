@@ -58,7 +58,7 @@
                         <select name="category_name" multiple>
                             
                             {% for category in categories %}
-                            {% if category.category_name == book.category_name %}
+                            {% if category.category_name is in book.category_name %}
                             <option value="{{category.category_name}}" selected>{{category.category_name}}
                             </option>
                             {% else %}

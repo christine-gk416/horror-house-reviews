@@ -1,4 +1,5 @@
 import os
+import re
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
@@ -15,7 +16,9 @@ app = Flask(__name__)
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
-
+app.config.update(dict(
+  PREFERRED_URL_SCHEME = 'https'
+))
 
 mongo = PyMongo(app)
 
@@ -167,20 +170,25 @@ def add():
         {"username": session["user"]})["username"]
 
     if request.method == "POST":
-        review = {
-            "title": request.form.get("title"),
-            "author": request.form.get("author"),
-            "affiliate": request.form.get("affiliate"),
-            "image": request.form.get("image"),
-            "review": request.form.get("review"),
-            "category_name": request.form.getlist("category_name"),
-            "rating": request.form.get("rating"),
-            "created_by": username,
-        }
 
-        mongo.db.books.insert_one(review)
-        flash("Review Successfully Added")
-        return redirect(url_for("add"))
+        matched_imgurl = re.match("(?:http\:|https\:)?\/\/.*\.(?:png|jpg)", request.form.get("image"))
+        if not bool(matched_imgurl):
+            flash("Please input valid image url")
+        else:
+            review = {
+                "title": request.form.get("title"),
+                "author": request.form.get("author"),
+                "affiliate": request.form.get("affiliate"),
+                "image": request.form.get("image"),
+                "review": request.form.get("review"),
+                "category_name": request.form.getlist("category_name"),
+                "rating": request.form.get("rating"),
+                "created_by": username,
+            }
+
+            mongo.db.books.insert_one(review)
+            flash("Review Successfully Added")
+            return redirect(url_for("add"))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_review.html", categories=categories)
