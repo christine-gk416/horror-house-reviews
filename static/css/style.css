@@ -68,6 +68,11 @@ div.chip a:hover {
   color: #7F678E;
 }
 
+.logo-size {
+  height: auto;
+  width: auto;
+}
+
 
 /* Font Styles */
 
