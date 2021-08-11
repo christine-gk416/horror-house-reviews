@@ -10,7 +10,7 @@ $(document).ready(function(){
     $('.modal').modal({
         dismissable: true,
     });
-  }); // end of document ready
+  }); 
 
 
 $(document).ready(function() {
