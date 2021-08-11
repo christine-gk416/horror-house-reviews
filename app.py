@@ -287,16 +287,16 @@ def category(category_id):
         "categories.html", category=category, books=books)
 
 
-@ app.route("/404.html")
-def not_found():
+@ app.errorhandler(404)
+def not_found_error(error):
 
-    return render_template("404.html")
+    return render_template("404.html", error=error), 404
 
 
-@ app.route("/500.html")
-def server_error():
+@ app.errorhandler(500)
+def server_error(error):
 
-    return render_template("500.html")
+    return render_template("500.html", error=error), 500
 
 
 if __name__ == "__main__":
