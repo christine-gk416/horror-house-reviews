@@ -231,7 +231,7 @@ h2.review-heading {
   height: 1px;
   overflow: hidden;
   position: absolute !important;
-  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
   clip: rect(1px, 1px, 1px, 1px);
   opacity: 0;
 }
@@ -333,7 +333,7 @@ h2.review-heading {
   height: 1px;
   overflow: hidden;
   position: absolute !important;
-  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
   clip: rect(1px, 1px, 1px, 1px);
   opacity: 0;
 }

@@ -16,9 +16,6 @@ app = Flask(__name__)
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
-app.config.update(dict(
-  PREFERRED_URL_SCHEME = 'https'
-))
 
 mongo = PyMongo(app)
 
@@ -157,21 +154,23 @@ def change_password():
     return render_template("profile.html")
 
 
-@ app.route("/logout")
+@app.route("/logout")
 def logout():
     flash("You have been logged out")
     session.clear()
     return redirect(url_for("login"))
 
 
-@ app.route("/add_review", methods=["GET", "POST"])
+@app.route("/add_review", methods=["GET", "POST"])
 def add():
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
     if request.method == "POST":
 
-        matched_imgurl = re.match("(?:http\:|https\:)?\/\/.*\.(?:png|jpg)", request.form.get("image"))
+        matched_imgurl = re.match
+        ("(?:http\:|https\:)?\/\/.*\.(?:png|jpg)",
+            request.form.get("image"))
         if not bool(matched_imgurl):
             flash("Please input valid image url")
         else:
@@ -194,7 +193,7 @@ def add():
     return render_template("add_review.html", categories=categories)
 
 
-@ app.route("/add_featured", methods=["GET", "POST"])
+@app.route("/add_featured", methods=["GET", "POST"])
 def add_featured():
     is_superuser = mongo.db.users.find_one({"is_superuser": True,
                                             "username":
@@ -220,7 +219,7 @@ def add_featured():
     return render_template("add_featured.html", categories=categories)
 
 
-@ app.route("/edit_review/<book_id>", methods=["GET", "POST"])
+@app.route("/edit_review/<book_id>", methods=["GET", "POST"])
 def edit(book_id):
 
     if request.method == "POST":
@@ -244,7 +243,7 @@ def edit(book_id):
         "edit_review.html", book=book, categories=categories)
 
 
-@ app.route("/edit_featured/<featured_id>", methods=["GET", "POST"])
+@app.route("/edit_featured/<featured_id>", methods=["GET", "POST"])
 def edit_featured(featured_id):
 
     if request.method == "POST":
@@ -268,7 +267,7 @@ def edit_featured(featured_id):
         "edit_featured.html", categories=categories, featured=featured)
 
 
-@ app.route("/delete_review/<book_id>")
+@app.route("/delete_review/<book_id>")
 def delete_review(book_id):
     mongo.db.books.remove({"_id": ObjectId(book_id)})
 
@@ -276,7 +275,7 @@ def delete_review(book_id):
     return redirect(url_for("profile", username=session['user']))
 
 
-@ app.route("/delete_featured/<featured_id>")
+@app.route("/delete_featured/<featured_id>")
 def delete_featured(featured_id):
     mongo.db.featured_books.remove({"_id": ObjectId(featured_id)})
 
@@ -284,7 +283,7 @@ def delete_featured(featured_id):
     return redirect(url_for("profile", username=session['user']))
 
 
-@ app.route("/categories/<category_id>")
+@app.route("/categories/<category_id>")
 def category(category_id):
     category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
     books = list(mongo.db.books.find(
@@ -295,13 +294,13 @@ def category(category_id):
         "categories.html", category=category, books=books)
 
 
-@ app.errorhandler(404)
+@app.errorhandler(404)
 def not_found_error(error):
 
     return render_template("404.html", error=error), 404
 
 
-@ app.errorhandler(500)
+@app.errorhandler(500)
 def server_error(error):
 
     return render_template("500.html", error=error), 500
