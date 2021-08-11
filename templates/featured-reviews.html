@@ -16,7 +16,7 @@
   </nav>
 
   <div class="col m12 l5 xl4 center">
-    <img class="book-review-image" src={{featured.image}}>
+    <img class="book-review-image" src={{featured.image}} alt="Book cover for {{featured.title}}">
     {% include "components/featured-rating-temp.html" %}
 
     <div class="center">
@@ -40,7 +40,7 @@
       <p>{{featured.review}}</p>
       <br>
       <div class="center">
-        <a href="{{featured.affiliate}}" target="_blank"
+        <a href="{{featured.affiliate}}" target="_blank" rel="noopener"
           class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn center">
           Buy here
         </a>
