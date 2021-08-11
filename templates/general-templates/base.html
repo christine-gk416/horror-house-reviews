@@ -31,13 +31,12 @@
     href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,600&family=Open+Sans:wght@400;600&family=Poppins&display=swap"
     rel="stylesheet">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="preload">
+  <link rel="stylesheet preload" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 
 
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/dark-mode.css') }}" id="mode-link"
-  rel="preload">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" rel="preload">
+  <link rel="stylesheet preload" href="{{ url_for('static', filename='css/dark-mode.css') }}" id="mode-link">
+  <link rel="stylesheet preload" href="{{ url_for('static', filename='css/style.css') }}">
 
 
   <link rel="icon" type="image/ico" href="{{url_for('static', filename='images/favicon.ico')}}">
