@@ -8,9 +8,12 @@ $(document).ready(function(){
     $('.tabs').tabs();
     $('select').formSelect();
     $('.modal').modal({
-        dismissable: true,
+        dismissable: true, 
     });
-  }); 
+    $('.parallax').parallax();   
+
+  });
+
 
 
 $(document).ready(function() {
