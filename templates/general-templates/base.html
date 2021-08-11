@@ -16,10 +16,10 @@
 
 
   <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" media="all">
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
-    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous" media="all">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,11 +28,11 @@
     rel="stylesheet">
 
 
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/dark-mode.css') }}" id="mode-link">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/dark-mode.css') }}" id="mode-link" media="all">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" media="all">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"media="all">
 
 
   <link rel="icon" type="image/ico" href="{{url_for('static', filename='images/favicon.ico')}}">
@@ -215,26 +215,29 @@
 
   <!--  Scripts-->
 
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous" async></script>
 
   <!--Sweet Alert-->
 
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" async></script>
 
 
   <!-- Custom scripts -->
 
-  <script src="{{ url_for('static', filename='js/materialize.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/light-mode.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/contact-email.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/init.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/materialize.js') }}" async></script>
+  <script src="{{ url_for('static', filename='js/light-mode.js') }}" async></script>
+  <script src="{{ url_for('static', filename='js/contact-email.js') }}" async></script>
+  <script src="{{ url_for('static', filename='js/init.js') }}" async></script>
 
   {% block splide_js %}
   {% endblock %}
 
   <!--EmailJS-->
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-  <script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js" async></script>
+  <script async>
     (function () {
       emailjs.init("user_a8QTjCWqE9AEZDgd6Xxqb");
     })();
