@@ -8,7 +8,7 @@
 
 ## Live Site
 
-***
+
 
   
 
@@ -22,7 +22,7 @@ View live deployed site [HERE](https://horror-house-reviews.herokuapp.com/)
 
 From [Am I Responsive?](http://ami.responsivedesign.is/)
 
-***
+
 
 ## About this project
 
@@ -52,9 +52,6 @@ Members can also edit and update their reviews directly from their personal prof
 
 +  [Credits](#credits)
 
-  
-
-***
 
   
 
@@ -80,7 +77,7 @@ Members can also edit and update their reviews directly from their personal prof
 
 + Allow superusers to create and edit featured reviews with affiliate links for Amazon.
 
-  
+*** 
 
 ### Research:
 
@@ -128,7 +125,7 @@ The functionality and design of the site are also inspired by current sites that
 
 #### Basic user
 
-  
+  <br  />
 
 1. As a user, I want to be able to read reviews by other horror fans.
 
@@ -156,6 +153,8 @@ The functionality and design of the site are also inspired by current sites that
 
 #### Superuser
 
+<br  />
+
 1. As a superuser, I want the option to add and edit featured review to only appear on my profile or the profile of another superuser.
 
 2. As a superuser, I want to add affiliate links from Amazon so that I can make money from my reviews.
@@ -163,11 +162,10 @@ The functionality and design of the site are also inspired by current sites that
 3. As a superuser, I want to limit all form links on a site to only allow links with image extensions in the field to add a book image.
 
   
-  
+***  
 
 ### Scope
-
-  
+<br  />
 
 + Create an accessible site that's easy to navigate and intuitive for all users, especially neurodivergent users.
 
@@ -177,11 +175,11 @@ The functionality and design of the site are also inspired by current sites that
 
 + Allow superusers to add, edit, and delete featured reviews from their profile.
 
-  
+*** 
 
 ### Structure
 
-  
+  <br  />
 
 This website allows users to access different parts of the site depending on if they're logged in/have an account. Users are also limited to parts of the site based on their permission status.
 
@@ -193,22 +191,23 @@ This website allows users to access different parts of the site depending on if 
 
 + Superusers: can create and edit featured reviews from a tab on their user profile.
 
-  
+***  
 
 ### Wireframes
-
+<br  />
   
+***
 
 ### Database structure
-
+<br  />
   
-
+***
 ### Surface/Design Choices
-
+<br  />
   
 
 #### Colours
-
+<br  />
   
 
 Horror House reviews was designed to put accessibility first. I'm interested in building and maintaining sites that have robust accessibility features. As a neurodiverse person with ADHD, I wanted to add dark mode as a feature on the site.
@@ -257,10 +256,10 @@ To build light mode styles, I used the dark mode colours as accents and applied 
 
 ![Light Mode](static/images/horrorhouse-lightmode.png)
 
-  
+***  
 
 ### Fonts
-
+<br  />
   
 
 The h1 and h2 headings are Cinzel, which I used to evoke a spooky feel for the horror theme of the site.
@@ -281,30 +280,30 @@ Poppins is used to complement Arial's style for some smaller text areas.
 
 The site fonts are set at larger sizes (1.2REM or higher) for ease of reading on all screen sizes.
 
-  
+***  
 
 ### Images
 
-  
+ <br  /> 
 
-Logo
-
+**Logo**
+<br  />
   
 
 The site logo includes the brand name and a haunted house icon to fit with the site's design and horror theme.
 
   
 
-Background image
-
+**Background image**
+<br  />
   
 
 To create consistency across all pages, I used the same parallax background image. I chose this image because of the spooky items: a bottle of potion, a skull, and a stack of books.
 
   
 
-Book images
-
+**Book images**
+<br  />
   
 
 Each book has a book cover image that was sourced from Amazon.co.uk. This is so that users can more easily recognise and pick a book for which to read a review.
@@ -312,8 +311,10 @@ Each book has a book cover image that was sourced from Amazon.co.uk. This is so 
   
 
 ## Features
+<br  />
 
 ### Features available to all users
+<br  />
 
 + Light/Dark Mode Toggle
 
@@ -355,6 +356,7 @@ Each book has a book cover image that was sourced from Amazon.co.uk. This is so 
 + Flash message with specific alerts related to the users' form validation.
 
 #### Home Page
+<br  />
 
 + The information card over the parallax image is a Materialize card. 
 
@@ -363,6 +365,8 @@ Each book has a book cover image that was sourced from Amazon.co.uk. This is so 
 + The icon section from the Materialize Parallax template was kept in place as an about section so users can get a clear idea of how to use the site. 
 
 #### Reviews Page
+
+<br  />
 
 - Splide slider to display featured reviews. This was based on similar sliders that are used on other book review sites to display books with affiliate links/with a higher priority to the site admins.
 
@@ -374,6 +378,8 @@ Each book has a book cover image that was sourced from Amazon.co.uk. This is so 
 
 #### Categories Page
 
+<br  />
+
 - Filters books by the categories added to each review. 
 
 - Materialize breadcrumb bar to easily navigate back to main reviews page.
@@ -381,6 +387,8 @@ Each book has a book cover image that was sourced from Amazon.co.uk. This is so 
 - Splide slider to display all books in the page's category.
 
 #### Featured/Individual Reviews
+
+<br  />
 
 - These pages use Python and Jinja to pull book review content added by users from MongoDB. Content is organized by Materialize grid system.
 
@@ -392,6 +400,8 @@ Each book has a book cover image that was sourced from Amazon.co.uk. This is so 
 
 #### Login/Sign Up
 
+<br  />
+
 - Built with Materialize cards and form elements. 
 
 - Uses Regex to limit the format of the password, name, and username.
@@ -400,9 +410,14 @@ Each book has a book cover image that was sourced from Amazon.co.uk. This is so 
 
 - Validate class to validate all form fields.
 
+***
+
 ### Features available to registered users
+<br  />
 
 #### Profile Page
+
+<br  />
 
 - Materialize tabs to allow users to choose different profile options.
 
@@ -415,6 +430,8 @@ Each book has a book cover image that was sourced from Amazon.co.uk. This is so 
 - Button that opens a page to edit/delete each review.
 
 #### Add Review
+
+<br  />
 
 - Materialize form with Regex to limit characters available per field. 
 
@@ -432,6 +449,8 @@ Each book has a book cover image that was sourced from Amazon.co.uk. This is so 
 
 #### Edit/Delete Reviews
 
+<br  />
+
 - Materialize form with Regex to limit characters available per field. 
 
 - Regex to limit image text link to image file types.
@@ -448,9 +467,15 @@ Each book has a book cover image that was sourced from Amazon.co.uk. This is so 
 
 - Button to Cancel editing the review with Materialize modal warning.
 
+***
+
 ### Features available to superusers
 
+<br  />
+
 #### Profile Page
+
+<br  />
 
 - Manage Featured tab in Materialize tabs should only appear for two superusers.
 
@@ -464,7 +489,11 @@ Each book has a book cover image that was sourced from Amazon.co.uk. This is so 
 
 #### Add/Edit/Delete Featured Reviews
 
+<br  />
+
 - Uses same features as individual reviews, but can only be accessed by superusers from their profile.
+
+***
 
 ### Future Features
 
@@ -476,13 +505,23 @@ Each book has a book cover image that was sourced from Amazon.co.uk. This is so 
 
 + Set category chips on each individual/feature reviewed page to link to a category page so users can check out similar books.
 
+<br  />
+
 ## Technologies Used
+
+<br  />
 
 ### Languages
 
+<br  />
+
 + HTML5, CSS3, JavaScript, Python
 
+***
+
 ### Planning site
+
+<br  />
 
 + [Balsamiq](https://balsamiq.com/) was used to create Wireframes.
 + [QuickDBD](https://www.quickdatabasediagrams.com/) was used to model database structure.
@@ -490,7 +529,11 @@ Each book has a book cover image that was sourced from Amazon.co.uk. This is so 
 + [Gimp](https://www.gimp.org/) was used to edit image dimensions and crop images.
 + [TinyJPG](https://tinypng.com/) used to minify image file sizes.
 
+***
+
 ### Libraries
+
+<br  />
 
 + [Materialize CSS and JavaScript](https://materializecss.com/getting-started.html) is used for the frontend framework to build the site's base template. Materialize JS and CSS tools were applied to speed up development. Most icons on the site are Materialize icons. I used the [Parallax template](https://materializecss.com/templates/parallax-template/preview.html)
 
@@ -512,13 +555,21 @@ Each book has a book cover image that was sourced from Amazon.co.uk. This is so 
 
 + [Jinja](https://jinja.palletsprojects.com/en/3.0.x/) template language is used with Flask to create custom templates and easily pull content from MongoDB using Python.
 
+***
+
 ### JavaScript tools 
+
+<br  />
 
 + [EmailJS](https://www.emailjs.com/) is used to accept contact form enquires. 
 
 + [Sweet Alert](https://sweetalert.js.org/) is used to notify the user that the form has been submitted or that there's a submission error.
 
+***
+
 ### Deployment 
+
+<br  />
 
 + [Git](https://git-scm.com/) is used to track changes made to the repository and for version control.
 + [GitHub](https://github.com/) is used to store the project and to share the project.
