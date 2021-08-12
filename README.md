@@ -55,7 +55,7 @@ Members can also edit and update their reviews directly from their personal prof
 
 ### Project Goals:
 
-<br  />
+<br>
 
   
 
@@ -71,7 +71,7 @@ Members can also edit and update their reviews directly from their personal prof
 
 ### Research:
 
-<br  />
+<br>
 
   
 
@@ -110,13 +110,13 @@ The functionality and design of the site are also inspired by current sites that
 
 ### User Stories:
 
-<br  />
+<br>
 
   
 
 #### Basic user
 
-  <br  />
+  <br>
 
 1. As a user, I want to be able to read reviews by other horror fans.
 
@@ -138,13 +138,13 @@ The functionality and design of the site are also inspired by current sites that
 
   
 
-<br  />
+<br>
 
   
 
 #### Superuser
 
-<br  />
+<br>
 
 1. As a superuser, I want the option to add and edit featured review to only appear on my profile or the profile of another superuser.
 
@@ -157,7 +157,7 @@ The functionality and design of the site are also inspired by current sites that
 <a  name="scope"></a>
 
 ### Scope
-<br  />
+<br>
 
 + Create an accessible site that's easy to navigate and intuitive for all users, especially neurodivergent users.
 
@@ -171,7 +171,7 @@ The functionality and design of the site are also inspired by current sites that
 <a  name="structure"></a>
 ### Structure
 
-  <br  />
+  <br>
 
 This website allows users to access different parts of the site depending on if they're logged in/have an account. Users are also limited to parts of the site based on their permission status.
 
@@ -186,23 +186,23 @@ This website allows users to access different parts of the site depending on if 
 ***  
 <a  name="wireframes"></a>
 ### Wireframes
-<br  />
+<br>
   
 ***
 
 <a  name="database-structure"></a>
 ### Database structure
-<br  />
+<br>
   
 ***
 
 <a  name="design"></a>
 ### Surface/Design Choices
-<br  />
+<br>
   
 
 #### Colours
-<br  />
+<br>
   
 
 Horror House reviews was designed to put accessibility first. I'm interested in building and maintaining sites that have robust accessibility features. As a neurodiverse person with ADHD, I wanted to add dark mode as a feature on the site.
@@ -254,7 +254,7 @@ To build light mode styles, I used the dark mode colours as accents and applied 
 ***  
 
 ### Fonts
-<br  />
+<br>
   
 
 The h1 and h2 headings are Cinzel, which I used to evoke a spooky feel for the horror theme of the site.
@@ -279,10 +279,10 @@ The site fonts are set at larger sizes (1.2REM or higher) for ease of reading on
 
 ### Images
 
- <br  /> 
+ <br> 
 
 **Logo**
-<br  />
+<br>
   
 
 The site logo includes the brand name and a haunted house icon to fit with the site's design and horror theme.
@@ -290,7 +290,7 @@ The site logo includes the brand name and a haunted house icon to fit with the s
   
 
 **Background image**
-<br  />
+<br>
   
 
 To create consistency across all pages, I used the same parallax background image. I chose this image because of the spooky items: a bottle of potion, a skull, and a stack of books.
@@ -298,7 +298,7 @@ To create consistency across all pages, I used the same parallax background imag
   
 
 **Book images**
-<br  />
+<br>
   
 
 Each book has a book cover image that was sourced from Amazon.co.uk. This is so that users can more easily recognise and pick a book for which to read a review.
@@ -306,10 +306,10 @@ Each book has a book cover image that was sourced from Amazon.co.uk. This is so 
   
 
 ## Features
-<br  />
+<br>
 
 ### Features available to all users
-<br  />
+<br>
 
 + Light/Dark Mode Toggle
 
@@ -351,7 +351,7 @@ Each book has a book cover image that was sourced from Amazon.co.uk. This is so 
 + Flash message with specific alerts related to the users' form validation.
 
 #### Home Page
-<br  />
+<br>
 
 + The information card over the parallax image is a Materialize card. 
 
@@ -361,7 +361,7 @@ Each book has a book cover image that was sourced from Amazon.co.uk. This is so 
 
 #### Reviews Page
 
-<br  />
+<br>
 
 - Splide slider to display featured reviews. This was based on similar sliders that are used on other book review sites to display books with affiliate links/with a higher priority to the site admins.
 
@@ -373,7 +373,7 @@ Each book has a book cover image that was sourced from Amazon.co.uk. This is so 
 
 #### Categories Page
 
-<br  />
+<br>
 
 - Filters books by the categories added to each review. 
 
@@ -383,7 +383,7 @@ Each book has a book cover image that was sourced from Amazon.co.uk. This is so 
 
 #### Featured/Individual Reviews
 
-<br  />
+<br>
 
 - These pages use Python and Jinja to pull book review content added by users from MongoDB. Content is organized by Materialize grid system.
 
@@ -395,7 +395,7 @@ Each book has a book cover image that was sourced from Amazon.co.uk. This is so 
 
 #### Login/Sign Up
 
-<br  />
+<br>
 
 - Built with Materialize cards and form elements. 
 
@@ -408,11 +408,11 @@ Each book has a book cover image that was sourced from Amazon.co.uk. This is so 
 ***
 
 ### Features available to registered users
-<br  />
+<br>
 
 #### Profile Page
 
-<br  />
+<br>
 
 - Materialize tabs to allow users to choose different profile options.
 
@@ -426,7 +426,7 @@ Each book has a book cover image that was sourced from Amazon.co.uk. This is so 
 
 #### Add Review
 
-<br  />
+<br>
 
 - Materialize form with Regex to limit characters available per field. 
 
@@ -444,7 +444,7 @@ Each book has a book cover image that was sourced from Amazon.co.uk. This is so 
 
 #### Edit/Delete Reviews
 
-<br  />
+<br>
 
 - Materialize form with Regex to limit characters available per field. 
 
@@ -466,11 +466,11 @@ Each book has a book cover image that was sourced from Amazon.co.uk. This is so 
 
 ### Features available to superusers
 
-<br  />
+<br>
 
 #### Profile Page
 
-<br  />
+<br>
 
 - Manage Featured tab in Materialize tabs should only appear for two superusers.
 
@@ -484,7 +484,7 @@ Each book has a book cover image that was sourced from Amazon.co.uk. This is so 
 
 #### Add/Edit/Delete Featured Reviews
 
-<br  />
+<br>
 
 - Uses same features as individual reviews, but can only be accessed by superusers from their profile.
 
@@ -500,15 +500,15 @@ Each book has a book cover image that was sourced from Amazon.co.uk. This is so 
 
 + Set category chips on each individual/feature reviewed page to link to a category page so users can check out similar books.
 
-<br  />
+<br>
 
 ## Technologies Used
 
-<br  />
+<br>
 
 ### Languages
 
-<br  />
+<br>
 
 + HTML5, CSS3, JavaScript, Python
 
@@ -516,19 +516,20 @@ Each book has a book cover image that was sourced from Amazon.co.uk. This is so 
 
 ### Planning site
 
-<br  />
+<br>
 
 + [Balsamiq](https://balsamiq.com/) was used to create Wireframes.
 + [QuickDBD](https://www.quickdatabasediagrams.com/) was used to model database structure.
 + [Trello](https://trello.com/) was used to plan user stories and scope out features.
 + [Gimp](https://www.gimp.org/) was used to edit image dimensions and crop images.
 + [TinyJPG](https://tinypng.com/) used to minify image file sizes.
++ [Responsive Design Checker](https://responsivedesignchecker.com/) used to check the site design and responsiveness on different devices.
 
 ***
 
 ### Libraries
 
-<br  />
+<br>
 
 + [Materialize CSS and JavaScript](https://materializecss.com/getting-started.html) is used for the frontend framework to build the site's base template. Materialize JS and CSS tools were applied to speed up development. Most icons on the site are Materialize icons. I used the [Parallax template](https://materializecss.com/templates/parallax-template/preview.html)
 
@@ -554,7 +555,7 @@ Each book has a book cover image that was sourced from Amazon.co.uk. This is so 
 
 ### JavaScript tools 
 
-<br  />
+<br>
 
 + [EmailJS](https://www.emailjs.com/) is used to accept contact form enquires. 
 
@@ -564,10 +565,153 @@ Each book has a book cover image that was sourced from Amazon.co.uk. This is so 
 
 ### Deployment 
 
-<br  />
+<br>
 
 + [Git](https://git-scm.com/) is used to track changes made to the repository and for version control.
 + [GitHub](https://github.com/) is used to store the project and to share the project.
 + [GitPod](https://www.gitpod.io/) is used with the CI base template as an IDE to develop, commit, and push files to GitHub.
 + [MongoDB](https://www.mongodb.com/) is the noSQL database used to store, manipulate, and retrieve data.
 + [Heroku](https://www.heroku.com/) is used to connect with my GitHub repository, manage the project, and deploy the live application.
+
+*** 
+<br/>
+
+## Testing
+
+Read testing file here
+
+***
+
+## Deployment
+<br/>
+
+### Required technology
+<br>
+
+-   **Python3**: write the code and run the application
+-   **PIP**: install packages
+-   **Git**: version control
+-   **GitPod:** IDE used to create this project.
+-   **MongoDB**:  as the database to create content, add new content, and manage data
+-   **Heroku**: to deploy the project and manage the app
+
+***
+
+### Project Creation
+<br>
+-   Use the CI [Gitpod Full Template](https://github.com/Code-Institute-Org/gitpod-full-template).
+-   From the template on GitHub click **Use this template** and enter a short and memorable name for the new repository. Select **Create repository from template**.
+-   From this repository, click on green **Gitpod** button to open your new workspace.
+
+***
+
+### Deployment to Heroku
+<br>
+To deploy this project on the Heroku cloud platform:
+
+#### Set up the workspace for Heroku
+
+-   In your IDE terminal (GitPod in this case), create a requirements.txt file. This file contains all applications and dependencies required to run the app. Type this into the terminal to create the file:
+
+        pip3 freeze --local . requirements.txt
+
+-   Next, so that Heroku knows which Python file runs the app, create a Procfile (with a capital P) by typing this command into the terminal:
+
+        echo web: python app.py > Procfile
+
+
+
+#### Create the application in Heroku
+
+-   Go to the [Heroku](https://www.heroku.com/home) website and login or create an account.
+-   From your Heroku account dashboard click the **New** button and select **Create New App**
+-   Create a memorable name for your new app and select the region closest to your location (Europe).
+
+
+#### Connect your app to the GitHub repository:
+
+-   Inside the dashboard for your new app, click the Deploy tab.
+-   Select GitHub as your **Deplyment method**.
+-   When prompted, select your Github repository and click the **Connect** button.
+-   Go to the **Settings** tab of your app dashboard and select **Config Vars** > **Reveal Config Vars**.
+- Add the following information:
+
+    DEBUG:  FALSE
+
+    IP: 0.0.0.0
+
+    MONGO_URI:  (retrieved from MongDB)
+
+    PORT:  5000
+
+    SECRET_KEY: <your_secret_key>`
+
+- From the app dashboard, return to the Deploy tab and make sure tha Main branch is selected. 
+- Click  **Enable Automatic Deployment** and **Deploy Branch**.
+- Your app is now successfully deployed.
+
+
+***
+
+### Clone and run locally
+<br>
+- Go to the Github repository for Horror House Reviews and click the Code dropdown
+- Click Download Zip, unzip the files, and upload the files to the IDE of your choice. 
+- Upload these files to your IDE
+- In the terminal, install the requirements.txt file using:
+
+        pip3 install -r requirements.txt
+
+- Navigate to MongoDB > Create New Cluster > Create Database and create your database with collections following this database schema. 
+
+- Then, create an env.py file in your IDE with this command:
+
+        touch env.py 
+
+- Add this information to the env.py file:
+
+    DEBUG:  FALSE
+
+    IP: 0.0.0.0
+
+    MONGO_URI:  (retrieved from MongDB)
+
+    PORT:  5000
+
+    SECRET_KEY: <your_secret_key>
+
+- Store the env.py file in your .gitignore file so that this sensitive information is hidden on your GitHub repository. 
+
+- You can now run the app on your IDE by running this command in your terminal: 
+
+        python3 app.py
+
+## Credits
+<br>
+
+### Images
+
+- The background image was sourced from Pexels [here](https://www.pexels.com/photo/white-skull-table-decor-417049/).
+- The pumpkin avatar image is from [this artist](https://pngtree.com/588ku_9041202?type=1) on PNGTree.
+- Book cover images and review content were sourced from Amazon.co.uk.
+
+***
+
+### Code
+
+<br>
+
+- The base code for this project was inspired by the Task Manager mini project.
+- The rating stars were created with [this CSS](https://www.cssscript.com/pure-css-star-rating-component/)
+- I used [this code](https://stackoverflow.com/questions/65156090/remember-css-stylesheet-change-when-templates-are-rendered-in-flask) to help update my light/dark mode toggle to work on Flask templates.
+- I used [this guide](https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/) to inspire how to set up my dark mode toggle. 
+- I used this [Stack Overflow article](https://stackoverflow.com/questions/40813850/python-2-7-regex-for-image-url) to set up Regex to limit the image file field to image files.
+- This [documentation](https://www.kite.com/python/answers/how-to-check-if-a-string-matches-a-pattern-in-python) was also used. 
+<br>
+
+***
+
+## Acknowledgements
+- As always, my mentor Excellence Ilesanmi guided me through this project with patience and brilliance. 
+- Ed_Alumni guided me through adding a category filter, and I'm very grateful. 
+- The rest of the Slack community for their help on this project. 
