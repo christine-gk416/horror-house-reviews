@@ -1,24 +1,14 @@
 # Horror House Reviews: Milestone 3
-
-  
-
-## About this project
-
   
 
 ## Live Site
 
 
-
-  
-
 View live deployed site [HERE](https://horror-house-reviews.herokuapp.com/)
 
-  
 
 ![Responsive demo](static/images/dark-responsive.png)
 
-  
 
 From [Am I Responsive?](http://ami.responsivedesign.is/)
 
@@ -40,7 +30,12 @@ Members can also edit and update their reviews directly from their personal prof
 
 +  [Ux](#ux)
 
-- User Stories
+    - [User Stories](#user-stories)
+    - [Scope](#scope)
+    - [Structure](#structure)
+    - [Wireframes](#wireframes)
+    - [Database](#database-structure)
+    - [Design](#design) 
 
 +  [Features](#features)
 
@@ -53,12 +48,7 @@ Members can also edit and update their reviews directly from their personal prof
 +  [Credits](#credits)
 
 
-  
-
 <a  name="ux"></a>
-
-  
-
 ## UX Planning
 
   
@@ -116,6 +106,7 @@ The functionality and design of the site are also inspired by current sites that
 [Horror Novel Reviews](https://horrornovelreviews.com/)
 
 ***
+<a  name="user-stories"></a>
 
 ### User Stories:
 
@@ -163,6 +154,7 @@ The functionality and design of the site are also inspired by current sites that
 
   
 ***  
+<a  name="scope"></a>
 
 ### Scope
 <br  />
@@ -176,7 +168,7 @@ The functionality and design of the site are also inspired by current sites that
 + Allow superusers to add, edit, and delete featured reviews from their profile.
 
 *** 
-
+<a  name="structure"></a>
 ### Structure
 
   <br  />
@@ -192,16 +184,19 @@ This website allows users to access different parts of the site depending on if 
 + Superusers: can create and edit featured reviews from a tab on their user profile.
 
 ***  
-
+<a  name="wireframes"></a>
 ### Wireframes
 <br  />
   
 ***
 
+<a  name="database-structure"></a>
 ### Database structure
 <br  />
   
 ***
+
+<a  name="design"></a>
 ### Surface/Design Choices
 <br  />
   
