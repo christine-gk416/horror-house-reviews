@@ -50,7 +50,7 @@ div.card-content.toggle-card {
   background-color: #7F678E;
   border: #F5F3F4 0.75px solid;
   text-shadow: 1px 1px 2px black;
-  font-family: 'Crimson Text';
+  font-family: 'Crimson Text', sans-serif;
   text-transform: capitalize;
   font-size: 1.8rem;
 }
