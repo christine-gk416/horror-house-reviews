@@ -1,3 +1,5 @@
+// Sets the type of slider, accessibilty, and styles through the Slide CDNs
+
 document.addEventListener('DOMContentLoaded', function () {
     new Splide( '.splide', {
         type   : 'loop',
@@ -20,8 +22,6 @@ document.addEventListener('DOMContentLoaded', function () {
             next: 'Next slide',
         },
         slideFocus: true,
-
-
 
     } ).mount();
    

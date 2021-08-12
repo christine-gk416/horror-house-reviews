@@ -1,3 +1,5 @@
+// Toggles light mode / dark mode if button is clicked
+
 window.onload = function () {
 
   var lightMode = document.querySelector(".btn-toggle");
@@ -15,6 +17,8 @@ window.onload = function () {
     } else {
       mode.href = "/static/css/dark-mode.css";
     }
+
+    // Adds the light / dark mode settings to local storage to run on Flask
     localStorage.setItem("css", mode.href);
   });
 };

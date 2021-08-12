@@ -1,3 +1,5 @@
+// Materialize JS functions
+
 $(document).ready(function(){
 
     $('.sidenav').sidenav({
@@ -14,7 +16,7 @@ $(document).ready(function(){
 
   });
 
-
+// Sets a navigation link as active with a background colour
 
 $(document).ready(function() {
   $("nav [href]").each(function() {
@@ -24,7 +26,7 @@ $(document).ready(function() {
   });
 });
 
-
+// Sets radio or checkboxes as required
 $(document).ready(function(){
   var checkboxes = $('.required');
   checkboxes.change(function(){
@@ -36,7 +38,7 @@ $(document).ready(function(){
   });
 });
 
-
+// Code from Task Manager Mini Project that sets select box as required
 validateMaterializeSelect();
 function validateMaterializeSelect() {
     let classValid = { "border-bottom": "1px solid #4caf50", "box-shadow": "0 1px 0 0 #4caf50" };
