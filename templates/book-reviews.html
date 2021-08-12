@@ -6,7 +6,7 @@
 
 
 {% block content %}
-
+<!-- Featured reviews-->
 <div class="splide">
   <div class="splide__track">
     <ul class="splide__list">
@@ -46,7 +46,7 @@
 
 {% block below_content %}
 
-
+<!-- Category filter links -->
 <div class="review-container">
 
   <h2 class="center review-heading">Read the latest reviews</h2>
@@ -60,7 +60,7 @@
 
   {% endfor %}
 
-
+<!-- Individual book reviews -->
   <div class="row">
     {% for book in books %}
     <div class="col s12 m6 l6 xl3">
@@ -93,7 +93,7 @@
 
 {% endblock %}
 
-
+<!-- Splide JS -->
 {% block splide_js %}
 <script src="{{ url_for('static', filename='js/splide.js') }}" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/js/splide.min.js" defer></script>

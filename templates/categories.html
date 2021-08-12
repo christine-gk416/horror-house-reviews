@@ -6,6 +6,8 @@
 {% block content %}
 <div class="row">
   <div class="col s12 m12 l12">
+
+    <!-- Breadcrumb bar-->
     <nav>
       <div class="nav-wrapper" id="breadcrumb-bar">
         <div class="col l12">
@@ -19,6 +21,7 @@
 </div>
 <div class="row">
 
+  <!-- Slider for category filtered books -->
   <div class="splide">
     <div class="splide__track">
       <ul class="splide__list">
@@ -58,6 +61,7 @@
 
 {% endblock %}
 
+<!-- Splide JS -->
 {% block splide_js %}
 <script src="{{ url_for('static', filename='js/splide.js') }}" async></script>
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/js/splide.min.js" async></script>

@@ -5,6 +5,7 @@
 
 
 <div class="row overflow-review individual-review-background">
+  <!-- Breadcrumb navigation-->
   <nav>
     <div class="nav-wrapper" id="breadcrumb-bar">
       <div class="col l12">
@@ -14,12 +15,17 @@
     </div>
   </nav>
   <div class="col m12 l5 xl4 center">
+
+    <!-- Book cover image-->
     <img class="book-review-image" src={{ind_book.image}} alt="Book cover for {{ind_book.title}}">
 
+    <!-- Rating stars -->
     {% include "components/rating-template.html" %}
 
     <div class="center">
       <p>Reviewed by {{ind_book.created_by}}</p>
+
+      <!-- Category chips-->
 
       {% for category in ind_book.category_name  %}
 
@@ -33,12 +39,16 @@
     </div>
 
   </div>
+
+  <!-- Review information -->
   <div class="col m12 l7 xl8">
     <div class="review-content">
       <h3 class="custom-font center">{{ind_book.title}} by {{ind_book.author}}</h3>
       <br>
       <p class="review-text">{{ind_book.review}}</p>
       <br>
+
+      <!-- Bookseller link -->
       <div class="center">
         <a href="{{ind_book.affiliate}}" target="_blank" rel="noopener"
           class="btn-large waves-effect waves-dark lighten-1 btn-styles review-btn">
