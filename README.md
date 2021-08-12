@@ -516,7 +516,7 @@ Each book has a book cover image that was sourced from Amazon.co.uk. This is so 
 
 + [EmailJS](https://www.emailjs.com/) is used to accept contact form enquires. 
 
-+ [Sweet](https://sweetalert.js.org/) Alert is used notify the user that the form has been submitted or that there's a submission error.
++ [Sweet Alert](https://sweetalert.js.org/) is used to notify the user that the form has been submitted or that there's a submission error.
 
 ### Deployment 
 
