@@ -120,7 +120,7 @@ The functionality and design of the site are also inspired by current sites that
 
 ***
 
-### User stories:
+### User Stories:
 
 <br  />
 
@@ -465,3 +465,63 @@ Each book has a book cover image that was sourced from Amazon.co.uk. This is so 
 #### Add/Edit/Delete Featured Reviews
 
 - Uses same features as individual reviews, but can only be accessed by superusers from their profile.
+
+### Future Features
+
++ More secure method to verify superusers than a Jinja check/Python if statement.
+
++ Allow users to add comments that can be moderated by superuser.
+
++ Allow users to add featured reviews that must be approved by superuser, using a toggle switch on the Add Review form.
+
++ Set category chips on each individual/feature reviewed page to link to a category page so users can check out similar books.
+
+## Technologies Used
+
+### Languages
+
++ HTML5, CSS3, JavaScript, Python
+
+### Planning site
+
++ [Balsamiq](https://balsamiq.com/) was used to create Wireframes.
++ [QuickDBD](https://www.quickdatabasediagrams.com/) was used to model database structure.
++ [Trello](https://trello.com/) was used to plan user stories and scope out features.
++ [Gimp](https://www.gimp.org/) was used to edit image dimensions and crop images.
++ [TinyJPG](https://tinypng.com/) used to minify image file sizes.
+
+### Libraries
+
++ [Materialize CSS and JavaScript](https://materializecss.com/getting-started.html) is used for the frontend framework to build the site's base template. Materialize JS and CSS tools were applied to speed up development. Most icons on the site are Materialize icons. I used the [Parallax template](https://materializecss.com/templates/parallax-template/preview.html)
+
++ [FontAwesome 5.15.4](https://fontawesome.com/) is used for social links and the rating stars.
+
++ [Google Fonts](https://fonts.google.com/) is used for most fonts on the site.
+
++ [Splide](https://splidejs.com/) CSS and JavaScript CDNs are used to easily add a custom slider.
+
++ [jQuery](https://jquery.com/) to easily manipulate the DOM and update Materialize tools that require initialization.
+
++ [Regex](https://docs.python.org/3/howto/regex.html) is used with Python to set required form field conditions.
+
++ [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/#) is used to securely store passwords, salt the passwords in MongoDB, and authenticate users.
+
++ [PyMongo](https://pymongo.readthedocs.io/en/stable/) is used to connect/communicated between Python and MongoDB.
+
++ [Flask](https://flask.palletsprojects.com/en/2.0.x/) is used to reduce development time when building a site with Python by constructing and rending pages.
+
++ [Jinja](https://jinja.palletsprojects.com/en/3.0.x/) template language is used with Flask to create custom templates and easily pull content from MongoDB using Python.
+
+### JavaScript tools 
+
++ [EmailJS](https://www.emailjs.com/) is used to accept contact form enquires. 
+
++ [Sweet](https://sweetalert.js.org/) Alert is used notify the user that the form has been submitted or that there's a submission error.
+
+### Deployment 
+
++ [Git](https://git-scm.com/) is used to track changes made to the repository and for version control.
++ [GitHub](https://github.com/) is used to store the project and to share the project.
++ [GitPod](https://www.gitpod.io/) is used with the CI base template as an IDE to develop, commit, and push files to GitHub.
++ [MongoDB](https://www.mongodb.com/) is the noSQL database used to store, manipulate, and retrieve data.
++ [Heroku](https://www.heroku.com/) is used to connect with my GitHub repository, manage the project, and deploy the live application.
