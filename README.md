@@ -28,18 +28,18 @@ Members can also edit and update their reviews directly from their personal prof
 
   
 
-+  [Ux](#ux)
++  [Ux](#ux-planning)
 
     - [User Stories](#user-stories)
     - [Scope](#scope)
     - [Structure](#structure)
     - [Wireframes](#wireframes)
     - [Database](#database-structure)
-    - [Design](#design) 
+    - [Design](#design-choices) 
 
 +  [Features](#features)
 
-+  [Technologies used](#technologies)
++  [Technologies used](#technologies-used)
 
 +  [Testing](#testing)
 
@@ -48,7 +48,6 @@ Members can also edit and update their reviews directly from their personal prof
 +  [Credits](#credits)
 
 
-<a  name="ux"></a>
 ## UX Planning
 
   
@@ -106,7 +105,6 @@ The functionality and design of the site are also inspired by current sites that
 [Horror Novel Reviews](https://horrornovelreviews.com/)
 
 ***
-<a  name="user-stories"></a>
 
 ### User Stories:
 
@@ -154,7 +152,6 @@ The functionality and design of the site are also inspired by current sites that
 
   
 ***  
-<a  name="scope"></a>
 
 ### Scope
 <br>
@@ -168,7 +165,7 @@ The functionality and design of the site are also inspired by current sites that
 + Allow superusers to add, edit, and delete featured reviews from their profile.
 
 *** 
-<a  name="structure"></a>
+
 ### Structure
 
   <br>
@@ -184,18 +181,18 @@ This website allows users to access different parts of the site depending on if 
 + Superusers: can create and edit featured reviews from a tab on their user profile.
 
 ***  
-<a  name="wireframes"></a>
+
 ### Wireframes
 
 All Wireframes for site pages are in [this pdf file](static/docs/horror-house-wireframes.pdf). 
 
-As a note, I used the same wireframes to create all the add/edit forms. There are only minor design differences in three forms.In this case, I've used the same wireframe for all four forms.
+As a note, I used the same wireframes to create all the add/edit forms. There are only minor design differences in three forms, so the same general design is used on the site.
 
 <br>
   
 ***
 
-<a  name="database-structure"></a>
+
 ### Database structure
 <br>
 
@@ -203,8 +200,8 @@ As a note, I used the same wireframes to create all the add/edit forms. There ar
   
 ***
 
-<a  name="design"></a>
-### Surface/Design Choices
+
+### Design Choices
 <br>
   
 
@@ -526,6 +523,7 @@ Each book has a book cover image that was sourced from Amazon.co.uk. This is so 
 <br>
 
 + [Balsamiq](https://balsamiq.com/) was used to create Wireframes.
++ [Coolors](https://coolors.co/) was used to create site colour palettes.
 + [QuickDBD](https://www.quickdatabasediagrams.com/) was used to model database structure.
 + [Trello](https://trello.com/) was used to plan user stories and scope out features.
 + [Gimp](https://www.gimp.org/) was used to edit image dimensions and crop images.
@@ -570,7 +568,7 @@ Each book has a book cover image that was sourced from Amazon.co.uk. This is so 
 
 ***
 
-### Deployment 
+### Deployming project 
 
 <br>
 
@@ -606,6 +604,7 @@ Read testing file here
 
 ### Project Creation
 <br>
+
 -   Use the CI [Gitpod Full Template](https://github.com/Code-Institute-Org/gitpod-full-template).
 -   From the template on GitHub click **Use this template** and enter a short and memorable name for the new repository. Select **Create repository from template**.
 -   From this repository, click on green **Gitpod** button to open your new workspace.
@@ -662,6 +661,7 @@ To deploy this project on the Heroku cloud platform:
 
 ### Clone and run locally
 <br>
+
 - Go to the Github repository for Horror House Reviews and click the Code dropdown
 - Click Download Zip, unzip the files, and upload the files to the IDE of your choice. 
 - Upload these files to your IDE
