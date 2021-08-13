@@ -33,8 +33,8 @@
                     </div>
                     <!-- Add book image-->
                     <div class="input-field col s6 l6">
-                        <input id="image" type="url" name="image" class="validate tooltipped" data-position="bottom"
-                            data-tooltip="Add a .png or .jpg image sized at 500 pixels wide" required>
+                        <input id="image" type="url" name="image" class="validate tooltipped" pattern="(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|png)"
+                         data-position="bottom" data-tooltip="Add a .png or .jpg image sized at 500 pixels wide" required>
                         <label for="image">Add book image</label>
                     </div>
                 </div>

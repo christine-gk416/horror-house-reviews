@@ -144,7 +144,7 @@ The functionality and design of the site are also inspired by current sites that
 
 <br>
 
-1. As a superuser, I want the option to add and edit featured review to only appear on my profile or the profile of another superuser.
+1. As a superuser, I want the option to add and edit featured reviews to only appear on my profile or the profile of another superuser.
 
 2. As a superuser, I want to add affiliate links from Amazon so that I can make money from my reviews.
 
@@ -568,7 +568,7 @@ Each book has a book cover image that was sourced from Amazon.co.uk. This is so 
 
 ***
 
-### Deployming project 
+### Deploying project 
 
 <br>
 
@@ -583,7 +583,7 @@ Each book has a book cover image that was sourced from Amazon.co.uk. This is so 
 
 ## Testing
 
-Read testing file here
+Read testing file [here]().
 
 ***
 
@@ -712,8 +712,7 @@ To deploy this project on the Heroku cloud platform:
 - The rating stars were created with [this CSS](https://www.cssscript.com/pure-css-star-rating-component/)
 - I used [this code](https://stackoverflow.com/questions/65156090/remember-css-stylesheet-change-when-templates-are-rendered-in-flask) to help update my light/dark mode toggle to work on Flask templates.
 - I used [this guide](https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/) to inspire how to set up my dark mode toggle. 
-- I used this [Stack Overflow article](https://stackoverflow.com/questions/40813850/python-2-7-regex-for-image-url) to set up Regex to limit the image file field to image files.
-- This [documentation](https://www.kite.com/python/answers/how-to-check-if-a-string-matches-a-pattern-in-python) was also used. 
+
 <br>
 
 ***

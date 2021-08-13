@@ -38,6 +38,7 @@ $(document).ready(function(){
   });
 });
 
+
 // Code from Task Manager Mini Project that sets select box as required
 validateMaterializeSelect();
 function validateMaterializeSelect() {

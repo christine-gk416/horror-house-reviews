@@ -1,5 +1,4 @@
 import os
-import re
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
@@ -175,34 +174,27 @@ def logout():
     return redirect(url_for("login"))
 
 
-# Add review form
 @app.route("/add_review", methods=["GET", "POST"])
 def add():
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
     if request.method == "POST":
-        # Only post form if image link matches image file format
-        matched_imgurl = re.match
-        ("(?:http\:|https\:)?\/\/.*\.(?:png|jpg)",
-            request.form.get("image"))
-        if not bool(matched_imgurl):
-            flash("Please input valid image url")
-        else:
-            review = {
-                "title": request.form.get("title"),
-                "author": request.form.get("author"),
-                "affiliate": request.form.get("affiliate"),
-                "image": request.form.get("image"),
-                "review": request.form.get("review"),
-                "category_name": request.form.getlist("category_name"),
-                "rating": request.form.get("rating"),
-                "created_by": username,
+
+        review = {
+            "title": request.form.get("title"),
+            "author": request.form.get("author"),
+            "affiliate": request.form.get("affiliate"),
+            "image": request.form.get("image"),
+            "review": request.form.get("review"),
+            "category_name": request.form.getlist("category_name"),
+            "rating": request.form.get("rating"),
+            "created_by": username,
             }
 
-            mongo.db.books.insert_one(review)
-            flash("Review Successfully Added")
-            return redirect(url_for("add"))
+        mongo.db.books.insert_one(review)
+        flash("Review Successfully Added")
+        return redirect(url_for("add"))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_review.html", categories=categories)
@@ -215,23 +207,17 @@ def add_featured():
         {"username": session["user"]})["username"]
 
     if request.method == "POST":
-        # Only post form if image link matches image file format
-        matched_imgurl = re.match
-        ("(?:http\:|https\:)?\/\/.*\.(?:png|jpg)",
-            request.form.get("image"))
-        if not bool(matched_imgurl):
-            flash("Please input valid image url")
-        else:
-            review = {
-                "title": request.form.get("title"),
-                "author": request.form.get("author"),
-                "affiliate": request.form.get("affiliate"),
-                "image": request.form.get("image"),
-                "review": request.form.get("review"),
-                "category_name": request.form.getlist("category_name"),
-                "rating": request.form.get("rating"),
-                "created_by": username,
-            }
+
+        review = {
+            "title": request.form.get("title"),
+            "author": request.form.get("author"),
+            "affiliate": request.form.get("affiliate"),
+            "image": request.form.get("image"),
+            "review": request.form.get("review"),
+            "category_name": request.form.getlist("category_name"),
+            "rating": request.form.get("rating"),
+            "created_by": username,
+        }
 
         mongo.db.featured_books.insert_one(review)
         flash("Review Successfully Added")
@@ -246,23 +232,17 @@ def add_featured():
 def edit(book_id):
 
     if request.method == "POST":
-        # Only post form if image link matches image file format
-        matched_imgurl = re.match
-        ("(?:http\:|https\:)?\/\/.*\.(?:png|jpg)",
-            request.form.get("image"))
-        if not bool(matched_imgurl):
-            flash("Please input valid image url")
-        else:
-            submit = {
-                "title": request.form.get("title"),
-                "author": request.form.get("author"),
-                "affiliate": request.form.get("affiliate"),
-                "image": request.form.get("image"),
-                "review": request.form.get("review"),
-                "category_name": request.form.getlist("category_name"),
-                "rating": request.form.get("rating"),
-                "created_by": session["user"],
+        submit = {
+            "title": request.form.get("title"),
+            "author": request.form.get("author"),
+            "affiliate": request.form.get("affiliate"),
+            "image": request.form.get("image"),
+            "review": request.form.get("review"),
+            "category_name": request.form.getlist("category_name"),
+            "rating": request.form.get("rating"),
+            "created_by": session["user"],
             }
+
         mongo.db.books.update({"_id": ObjectId(book_id)}, submit)
         flash("Review successfully updated")
 
@@ -278,22 +258,15 @@ def edit(book_id):
 def edit_featured(featured_id):
 
     if request.method == "POST":
-        # Only post form if image link matches image file format
-        matched_imgurl = re.match
-        ("(?:http\:|https\:)?\/\/.*\.(?:png|jpg)",
-            request.form.get("image"))
-        if not bool(matched_imgurl):
-            flash("Please input valid image url")
-        else:
-            submit = {
-                "title": request.form.get("title"),
-                "author": request.form.get("author"),
-                "affiliate": request.form.get("affiliate"),
-                "image": request.form.get("image"),
-                "review": request.form.get("review"),
-                "category_name": request.form.getlist("category_name"),
-                "rating": request.form.get("rating"),
-                "created_by": session["user"],
+        submit = {
+            "title": request.form.get("title"),
+            "author": request.form.get("author"),
+            "affiliate": request.form.get("affiliate"),
+            "image": request.form.get("image"),
+            "review": request.form.get("review"),
+            "category_name": request.form.getlist("category_name"),
+            "rating": request.form.get("rating"),
+            "created_by": session["user"],
             }
         mongo.db.featured_books.update({"_id": ObjectId(featured_id)}, submit)
         flash("Review successfully updated")
@@ -354,4 +327,4 @@ if __name__ == "__main__":
     app.run(
         host=os.environ.get("IP"),
         port=int(os.environ.get("PORT")),
-        debug=True)
+        debug=False)
