@@ -237,7 +237,7 @@ Dark Mode palette:
 
   
 
-![Dark Mode](static/images/horrorhouse-darkmode.png)
+![Dark Mode](static/docs/horrorhouse-darkmode.png)
 
   
 
@@ -253,7 +253,7 @@ To build light mode styles, I used the dark mode colours as accents and applied 
 
   
 
-![Light Mode](static/images/horrorhouse-lightmode.png)
+![Light Mode](static/docs/horrorhouse-lightmode.png)
 
 ***  
 
@@ -528,7 +528,8 @@ Each book has a book cover image that was sourced from Amazon.co.uk. This is so 
 + [Trello](https://trello.com/) was used to plan user stories and scope out features.
 + [Gimp](https://www.gimp.org/) was used to edit image dimensions and crop images.
 + [TinyJPG](https://tinypng.com/) used to minify image file sizes.
-+ [Responsive Design Checker](https://responsivedesignchecker.com/) used to check the site design and responsiveness on different devices.
++ [Responsive Design Checker](https://responsivedesignchecker.com/) was used to check the site design and responsiveness on different devices.
++ [Lambda Test](https://www.lambdatest.com/) was used to check the site on different browsers and operating systems.
 
 ***
 
@@ -574,16 +575,17 @@ Each book has a book cover image that was sourced from Amazon.co.uk. This is so 
 
 + [Git](https://git-scm.com/) is used to track changes made to the repository and for version control.
 + [GitHub](https://github.com/) is used to store the project and to share the project.
-+ [GitPod](https://www.gitpod.io/) is used with the CI base template as an IDE to develop, commit, and push files to GitHub.
-+ [MongoDB](https://www.mongodb.com/) is the noSQL database used to store, manipulate, and retrieve data.
++ [GitPod](https://www.gitpod.io/) is used with the CI base template as an IDE (integrated development environment) to develop, commit, and push files to GitHub.
++ [MongoDB](https://www.mongodb.com/) is the noSQL database I used to store, manipulate, and retrieve data.
 + [Heroku](https://www.heroku.com/) is used to connect with my GitHub repository, manage the project, and deploy the live application.
 
 *** 
 <br/>
 
 ## Testing
+<br/>
 
-Read testing file [here]().
+Read testing file [here](static/docs/Testing.md).
 
 ***
 
