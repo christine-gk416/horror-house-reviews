@@ -250,7 +250,7 @@
 - I've tested that only a .png or .jpg can be added to the image field on a form.
 - I've tested that an error message or warning appears if a user makes an invalid form input.
 - I've tested login/sign up forms to confirm that only a session user with an account can access the Profile and Add Review pages.
-- I've tested that only superusers can acceess the Featured tab on the profile page to add, edit, and delete these reviews.
+- I've tested that only superusers can access the Featured tab on the profile page to add, edit, and delete these reviews.
 - I've added warning modals that I've tested and confirmed work as expected to Cancel and Delete buttons. This is so a user can't accidentally delete their review.
 
  ## Minor issues
@@ -259,7 +259,7 @@
 
  ## Responsiveness
 
- My main aim when building a site is to design with mobile responsiveness and accessibility first. While developing, I regularly checked the site responsiveness on Chrome and Firefox dev tool, and built my media queries accordingly.
+ My main aim when building a site is to design with mobile responsiveness and accessibility first. While developing, I regularly checked the site responsiveness on Chrome and Firefox dev tools, and built my media queries accordingly.
 
  To test the site responsive design further, I used [Responsive Design Checker](https://responsivedesignchecker.com/checker.php?url=https%3A%2F%2Fhorror-house-reviews.herokuapp.com%2F&width=1400&height=700). With this tool, I reviewed how my site will look on desktop screens from 10-24 inches in width. I also tested it on iPad and Kindle tablet views. The site was tested on all iPhone and Android mobile devices availble. 
 
@@ -276,6 +276,7 @@
  Here's the issue:
 
 Mac
+
  ![Mac](/static/docs/mac-chrome-scrollbar.png) 
 
  Windows

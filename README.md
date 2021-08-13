@@ -225,7 +225,7 @@ Users with autism respond best to 'soft, mild colors', according to [this articl
 
   
 
-The dark mode primary theme colour is a deep blue/grey instead of black. This is to mitigate eye-strain that can be caused by the contrast with light font colours.
+The dark mode primary theme colour is a deep blue/grey. This is to mitigate eye-strain that can be caused by the contrast with lighter font shades.
 
   
 
