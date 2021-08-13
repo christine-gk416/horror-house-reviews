@@ -187,7 +187,7 @@ This website allows users to access different parts of the site depending on if 
 <a  name="wireframes"></a>
 ### Wireframes
 
-All Wireframes for site pages are in [this pdf file](static/docs/Horror-House-Wireframes.pdf). 
+All Wireframes for site pages are in [this pdf file](static/docs/horror-house-wireframes.pdf). 
 
 As a note, I used the same wireframes to create all the add/edit forms. There are only minor design differences in three forms.In this case, I've used the same wireframe for all four forms.
 
@@ -198,6 +198,8 @@ As a note, I used the same wireframes to create all the add/edit forms. There ar
 <a  name="database-structure"></a>
 ### Database structure
 <br>
+
+![DBD Diagram](static/docs/horror-house-quickdbd.png)
   
 ***
 
@@ -667,7 +669,7 @@ To deploy this project on the Heroku cloud platform:
 
         pip3 install -r requirements.txt
 
-- Navigate to MongoDB > Create New Cluster > Create Database and create your database with collections following this database schema. 
+- Navigate to MongoDB > Create New Cluster > Create Database and create your database with collections following this [database schema](#database-structure). 
 
 - Then, create an env.py file in your IDE with this command:
 

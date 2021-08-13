@@ -195,9 +195,8 @@ def add():
 
 @app.route("/add_featured", methods=["GET", "POST"])
 def add_featured():
-    is_superuser = mongo.db.users.find_one({"is_superuser": True,
-                                            "username":
-                                                session["user"]})["username"]
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
 
     if request.method == "POST":
         review = {
@@ -208,7 +207,7 @@ def add_featured():
             "review": request.form.get("review"),
             "category_name": request.form.getlist("category_name"),
             "rating": request.form.get("rating"),
-            "created_by": is_superuser,
+            "created_by": username,
         }
 
         mongo.db.featured_books.insert_one(review)
