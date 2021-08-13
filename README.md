@@ -186,6 +186,11 @@ This website allows users to access different parts of the site depending on if 
 ***  
 <a  name="wireframes"></a>
 ### Wireframes
+
+All Wireframes for site pages are in [this pdf file](static/docs/Horror-House-Wireframes.pdf). 
+
+As a note, I used the same wireframes to create all the add/edit forms. There are only minor design differences in three forms.In this case, I've used the same wireframe for all four forms.
+
 <br>
   
 ***
