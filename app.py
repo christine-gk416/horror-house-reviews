@@ -46,6 +46,13 @@ def individual(book_id):
 
     return render_template("individual-reviews.html", ind_book=ind_book)
 
+# Individual book reviews page
+# @app.route("/individual-reviews/<book_id>")
+# def individual(book_id):
+#     ind_book = mongo.db.books.find_one({"title": book_id})
+
+#     return render_template("individual-reviews.html", ind_book=ind_book)
+
 
 # Featured book reviews page
 @app.route("/featured-reviews/<featured_books_id>")
@@ -176,25 +183,27 @@ def logout():
 
 @app.route("/add_review", methods=["GET", "POST"])
 def add():
-    username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
+    
+    if "user" in session:
+        if request.method == "POST":
 
-    if request.method == "POST":
+            review = {
+                "title": request.form.get("title"),
+                "author": request.form.get("author"),
+                "affiliate": request.form.get("affiliate"),
+                "image": request.form.get("image"),
+                "review": request.form.get("review"),
+                "category_name": request.form.getlist("category_name"),
+                "rating": request.form.get("rating"),
+                "created_by": username,
+                }
 
-        review = {
-            "title": request.form.get("title"),
-            "author": request.form.get("author"),
-            "affiliate": request.form.get("affiliate"),
-            "image": request.form.get("image"),
-            "review": request.form.get("review"),
-            "category_name": request.form.getlist("category_name"),
-            "rating": request.form.get("rating"),
-            "created_by": username,
-            }
-
-        mongo.db.books.insert_one(review)
-        flash("Review Successfully Added")
-        return redirect(url_for("add"))
+            mongo.db.books.insert_one(review)
+            flash("Review Successfully Added")
+            return redirect(url_for("add"))
+    else:
+        flash("You must log in to add recipes.")
+        return redirect(url_for("login"))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_review.html", categories=categories)
@@ -327,4 +336,4 @@ if __name__ == "__main__":
     app.run(
         host=os.environ.get("IP"),
         port=int(os.environ.get("PORT")),
-        debug=False)
+        debug=True)

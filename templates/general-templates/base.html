@@ -59,6 +59,7 @@
         <ul class="right hide-on-med-and-down">
 
           <li><a class="nav-link-style" href="{{ url_for('reviews') }}">Reviews</a></li>
+          
           {% if session.user %}
           <li><a class="nav-link-style" href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
           <li><a class="nav-link-style" href="{{ url_for('add') }}">Add Review</a></li>
